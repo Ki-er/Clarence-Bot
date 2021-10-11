@@ -44,5 +44,4 @@ client.on('guildMemberAdd', async guildmember =>{
     
     } 
 
-  
 })
