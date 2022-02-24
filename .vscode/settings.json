@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/5f5e7461-c92b-4600-a987-15c741e899c2/resourceGroups/Clarence_group/providers/Microsoft.Web/sites/Clarence",
+    "appService.deploySubpath": "."
+}
