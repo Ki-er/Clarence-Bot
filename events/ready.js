@@ -3,8 +3,7 @@ const levels = require('../events/levels')
 
 
 client.on('ready', () => {
-    console.log('Clarence is Online');
-    client.user.setActivity('-help', {type: 'WATCHING'});
+    let activities = [`-help`, `the innercube server`, `the boys` ],i = 0; setInterval(() => bot.user.setActivity(`${activities[i++ % activities.length]}`, {type:"WATCHING"}), 5000)
     const announceChannel = client.channels.cache.get('845386604067029054')
     announceChannel.send("Clarence is online")
     levels(client)
