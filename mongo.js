@@ -1,6 +1,6 @@
   
 const mongoose = require('mongoose')
-const { mongooseConnectionString } = process.env.DJS_MONGO
+const { mongooseConnectionString } = require("./config.json")
 
 module.exports = async () => {
   await mongoose.connect(mongooseConnectionString, {
