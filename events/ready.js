@@ -3,7 +3,7 @@ const levels = require('../events/levels')
 
 
 client.on('ready', () => {
-    let activities = [`-help`, `the innercube server`],i = 0; setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, {type:"WATCHING"}), 120000)
+    let activities = [`-help`, `the innercube server` ],i = 0; setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, {type:"WATCHING"}), 120000)
     const announceChannel = client.channels.cache.get('845386604067029054')
     levels(client)
 
