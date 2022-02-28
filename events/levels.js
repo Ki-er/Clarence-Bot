@@ -2,7 +2,7 @@ const mongo = require('../mongo')
 const profileSchema = require('../schemas/profile-schema')
 
 module.exports = (client) => {
-  client.on('message', (message) => {
+  client.on('messageCreate', (message) => {
     if(message.author.bot) return;
     const { guild, member } = message
     if (message.author.id && guild.id) {
