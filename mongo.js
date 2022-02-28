@@ -1,4 +1,6 @@
-  
+require("dotenv").config({ path: process.env.DJS_MONGO });
+
+
 const mongoose = require('mongoose')
 const { mongooseConnectionString } = process.env.DJS_MONGO
 
