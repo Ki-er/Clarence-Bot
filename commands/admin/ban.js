@@ -27,8 +27,8 @@ module.exports = {
         if (member) {
   
           member
-            .ban('they were bad!')
-            .then(() => {
+          .ban()     
+          .then(() => {
               message.reply(`Successfully Banned`);
             })
             .catch(err => {
