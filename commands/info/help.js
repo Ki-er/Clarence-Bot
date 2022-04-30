@@ -30,6 +30,7 @@ module.exports = {
             const embed = new discord.MessageEmbed()
             .setTitle("Admin Commands")
             .setColor('ORANGE')
+            
             .addField('-ban','Bans a user from the server')
             .addField('-clear', 'Clears x ammount of messages')
             .addField('-kick', 'Kicks a user from the server')
@@ -41,6 +42,7 @@ module.exports = {
             const embed = new discord.MessageEmbed()
             .setTitle("Fun Commands")
             .setColor('ORANGE')
+
             .addField('-8ball', 'Answer your darkest questions')
             .addField('-bonk','Go to horny jail!')
             .addField('-cookie','Give a cookie to someone')
@@ -57,6 +59,7 @@ module.exports = {
             const embed = new discord.MessageEmbed()
             .setTitle("Siege Commands")
             .setColor('ORANGE')
+
             .addField('-limb', 'Displays limb damage per operator')
             .addField('-muzzle','Displays muzzle attachments For all weapons')
             message.channel.send({ embeds: [embed] });
@@ -67,7 +70,9 @@ module.exports = {
             const embed = new discord.MessageEmbed()
             .setTitle("General Comamnds")
             .setColor('ORANGE')
+
             .addField('-addemoji', 'Adds emoji to the server')
+            .addField('-jumbo', 'Enalrges an emoji')
             .addField('-avatar', 'Gets a users avatar')            
             .addField('-translate', 'Translates messages to english')
 
@@ -78,6 +83,7 @@ module.exports = {
             const embed = new discord.MessageEmbed()
             .setTitle("Information Commands")
             .setColor('ORANGE')
+
             .addField('-ping','Displays the ping')
             .addField('-channelinfo', 'Dispalys information about a certain channel')
             .addField('-userinfo', 'Dispalys information about a certain user')
