@@ -21,6 +21,7 @@
         "iso-639-1": "^2.1.9",
         "moment": "^2.29.1",
         "mongoose": "^6.0.2",
-        "reconlx": "^2.3.3"
+        "reconlx": "^2.3.3",
+        "twemoji-parser": "^14.0.0"
     }
 }
