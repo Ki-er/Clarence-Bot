@@ -47,6 +47,10 @@ module.exports = {
             .addField('-bonk','Go to horny jail!')
             .addField('-cookie','Give a cookie to someone')
             .addField('-icarly', 'The lyrics of the greatest song ever')
+            .addField('-mega', 'A mega pint?')
+            .addField('-bong', 'Hit up some friends and hit a bong')
+
+
             //.addField('-ah', 'ah')
             //.addField('-image', 'Search Google Images For An Image')
             //.addField('-flip', 'Flip a coin')
