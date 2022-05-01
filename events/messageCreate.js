@@ -1,5 +1,5 @@
 const client = require("../index");
-
+const config = require("./config.json"); 
 
 client.on("messageCreate", async (message) => {
 
@@ -8,12 +8,12 @@ client.on("messageCreate", async (message) => {
     if (
         message.author.bot ||
         !message.guild ||
-        !message.content.toLowerCase().startsWith(process.env.DJS_PREFIX)
+        !message.content.toLowerCase().startsWith(config.prefix)
     )
         return;
 
     const [cmd, ...args] = message.content
-        .slice(process.env.DJS_PREFIX.length)
+        .slice(config.prefix)
         .trim()
         .split(/ +/g);
 

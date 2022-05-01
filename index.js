@@ -1,3 +1,4 @@
+const config = require("./config.json"); 
 const { Client, Collection } = require("discord.js");
 
 
@@ -15,4 +16,4 @@ client.slashCommands = new Collection();
 // Initializing the project
 require("./handler")(client);
 
-client.login(process.env.DJS_TOKEN);
+client.login(config.token);
