@@ -17,9 +17,7 @@ module.exports = {
         if (!emoji) return message.channel.send("No emoji provided!");
     
         let custom = Discord.Util.parseEmoji(emoji);
-        const embed = new Discord.MessageEmbed()
-        .setTitle(`Enlarged version of ${emoji}`)
-        .setColor("#FFFF00");
+
     
         if (custom.id) 
         {
@@ -30,8 +28,6 @@ module.exports = {
         {
             let parsed = parse(emoji, { assetType: "png" });
             if (!parsed[0]) return message.channel.send("Invalid emoji!");
-    
-            let emoji =(parsed[0].url);
             return message.channel.send(emoji);
         }
 
