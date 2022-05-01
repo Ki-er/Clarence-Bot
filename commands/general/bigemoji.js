@@ -24,7 +24,7 @@ module.exports = {
         if (custom.id) 
         {
             let emoji = (`https://cdn.discordapp.com/emojis/${custom.id}.${custom.animated ? "gif" : "png"}`);
-            return message.channel.send(eoji);
+            return message.channel.send(emoji);
         }
         else 
         {

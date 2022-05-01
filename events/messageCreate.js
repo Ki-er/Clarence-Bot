@@ -1,5 +1,5 @@
 const client = require("../index");
-const config = require("./config.json"); 
+const config = require("../config.json");
 
 client.on("messageCreate", async (message) => {
 
@@ -13,7 +13,7 @@ client.on("messageCreate", async (message) => {
         return;
 
     const [cmd, ...args] = message.content
-        .slice(config.prefix)
+        .slice(config.prefix.length)
         .trim()
         .split(/ +/g);
 

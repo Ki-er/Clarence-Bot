@@ -5,6 +5,7 @@ const levels = require('../events/levels')
 client.on('ready', () => {
     console.log('Clarence is online')
     let activities = [`-help`, `the innercube server` ],i = 0; setInterval(() => client.user.setActivity(`${activities[i++ % activities.length]}`, {type:"WATCHING"}), 120000)
+    console.log(activities)
     levels(client)
 
 
