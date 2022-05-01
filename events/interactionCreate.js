@@ -36,7 +36,8 @@ client.on("interactionCreate", async (interaction) => {
         {
             if(interaction.values.includes("colourLB"))
             {
-                interaction.member.roles.add("744601093702418583") 
+                interaction.member.roles.add("744601093702418583") // Add Lightblue
+
                 interaction.member.roles.remove("744600129218150482") // aqua
                 interaction.member.roles.remove("744600794556399646") //teal
                 interaction.member.roles.remove("744984545916354613") //Red
@@ -47,10 +48,12 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744985758212948058") // DG
                 interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744600128572358697") // Brown
+
             }
             else if(interaction.values.includes("colourAqua"))
             {
-                interaction.member.roles.add("744600129218150482")
+                interaction.member.roles.add("744600129218150482") // Add Aqua
                 interaction.member.roles.remove("744601093702418583") // LB
                 interaction.member.roles.remove("744600794556399646") // teal
                 interaction.member.roles.remove("744984545916354613") // Red
@@ -61,8 +64,10 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744985758212948058") // DG
                 interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744600128572358697") // Brown
+
             }
-            else if(interaction.values.includes("colourTeal"))
+            else if(interaction.values.includes("colourTeal")) // Add teal
             {
                 interaction.member.roles.add("744600794556399646")
                 interaction.member.roles.remove("744601093702418583") //LB
@@ -75,6 +80,8 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744985758212948058") // DG
                 interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744600128572358697") // Brown
+
             }
             else if(interaction.values.includes("colourRed"))
             {
@@ -89,6 +96,7 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744985758212948058") // DG
                 interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744600128572358697") // Brown
             }
             else if(interaction.values.includes("colourOrange"))
             {
@@ -103,6 +111,7 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744985758212948058") // DG
                 interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744600128572358697") // Brown
             }
             else if(interaction.values.includes("colourYellow"))
             {
@@ -117,6 +126,8 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744985758212948058") // DG
                 interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744600128572358697") // Brown
+
             }
             else if(interaction.values.includes("colourPink"))
             {
@@ -131,6 +142,8 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744985758212948058") // DG
                 interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744600128572358697") // Brown
+
             }
             else if(interaction.values.includes("colourMagenta"))
             {
@@ -145,6 +158,8 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744985758212948058") // DG
                 interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744600128572358697") // Brown
+
             }
             else if(interaction.values.includes("colourGreen"))
             {
@@ -159,6 +174,8 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600127645155329") // Magenta
                 interaction.member.roles.remove("744985758212948058") // DG
                 interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744600128572358697") // Brown
+
             }
             else if(interaction.values.includes("colourSilver"))
             {
@@ -173,6 +190,8 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600127645155329") // Magenta
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744985758212948058") // DG
+                interaction.member.roles.remove("744600128572358697") // Brown
+
             }
             else if(interaction.values.includes("colourDG"))
             {
@@ -187,7 +206,24 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.remove("744600127645155329") // Magenta
                 interaction.member.roles.remove("744600129813610536") // Green
                 interaction.member.roles.remove("744600133781684255") // Silver
-        
+                interaction.member.roles.remove("744985758212948058") // DG
+                interaction.member.roles.remove("744600128572358697") // Brown
+            }
+            else if(interaction.values.includes("colourBrown"))
+            {
+                interaction.member.roles.add("744600128572358697")
+                interaction.member.roles.remove("744601093702418583") // LB
+                interaction.member.roles.remove("744600129218150482") // Aqua
+                interaction.member.roles.remove("744600794556399646") // Teal
+                interaction.member.roles.remove("744984545916354613") // Red
+                interaction.member.roles.remove("744987041074512052") // Orange
+                interaction.member.roles.remove("744600127670452314") // Pink
+                interaction.member.roles.remove("744600128471564288") // Yellow
+                interaction.member.roles.remove("744600127645155329") // Magenta
+                interaction.member.roles.remove("744600129813610536") // Green
+                interaction.member.roles.remove("744600133781684255") // Silver
+                interaction.member.roles.remove("744985758212948058") // DG
+
             }
             await interaction.reply({ content: 'Roles have been updated', ephemeral: true});
         }

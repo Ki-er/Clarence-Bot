@@ -14,7 +14,7 @@ module.exports = {
         const row = new MessageActionRow().addComponents(
             new MessageSelectMenu()
             .setCustomId("pronouns")
-            .setPlaceholder("Select your preffered pronouns")
+            .setPlaceholder("Select your preferred pronouns")
             .setMinValues(0)
             .setMaxValues(5)
             .addOptions([

@@ -14,7 +14,7 @@ module.exports = {
         const row = new MessageActionRow().addComponents(
             new MessageSelectMenu()
             .setCustomId("colours")
-            .setPlaceholder("Select a colour")
+            .setPlaceholder("Select a colour ")
             .addOptions([{
                     label:"Light Blue",
                     value:"colourLB",
@@ -75,7 +75,7 @@ module.exports = {
 
         )
 
-        message.channel.send({content: "Select a Colour", components:[row]})
+        message.channel.send({content: "Select a Colour (May take a couple seconds to update.)", components:[row]})
 
 
     },
