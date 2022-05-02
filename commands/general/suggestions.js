@@ -33,6 +33,7 @@ module.exports = {
                 });
 
                 message.delete();
+                message.channel.send('Your suggestion has been sent to: <#970027557607071754>')
             }).catch((err)=>{
                 throw err;
             });
