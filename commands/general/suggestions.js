@@ -11,10 +11,11 @@ module.exports = {
      * @param {String[]} args
      */
     run: async (client, message, args) => {
-        if(message.guild && message.guild.id === '744586833135927366')
+        if(message.guild && message.guild.id === '969944638498680872')
         {
-            const suggestChannel = client.channels.cache.get('858348481412726794')
+            const suggestChannel = client.channels.cache.get('970027557607071754')
             let messageArgs = args.join(' ');
+            const threadAuthor = message.member.displayName;
             const embed = new discord.MessageEmbed()
             .setColor('ORANGE')
             .setFooter(`ID: ${message.author.id}`)
@@ -25,6 +26,12 @@ module.exports = {
             suggestChannel.send({ embeds: [embed] }).then((msg) =>{
                 msg.react('👍');
                 msg.react('👎');
+                msg.startThread({
+                    name: `${threadAuthor} - ${messageArgs}`,
+                    autoArchiveDuration: 60,
+                    type: 'GUILD_PUBLIC_THREAD'
+                });
+
                 message.delete();
             }).catch((err)=>{
                 throw err;
