@@ -24,6 +24,10 @@ module.exports = {
             announceChannel.send(messageArgs).catch((err)=>{
                 throw err;
             });
+                
+            message.channel.send('Your announcement has been sent to: <#845386604067029054>')
+
+
              }
 
         }
