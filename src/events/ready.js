@@ -4,7 +4,7 @@ const levels = require('../events/levels')
 
 client.on('ready', () => {
     console.log('Clarence is online')
-    client.user.setActivity(`-Help`, {type:"WATCHING"})
+    client.user.setActivity(`-help`, {type:"WATCHING"})
     levels(client)
 
 
