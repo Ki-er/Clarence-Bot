@@ -13,7 +13,7 @@ module.exports = {
     run: async (client, message, args) => {
         if(message.guild && message.guild.id === '969944638498680872')
         {
-            const suggestChannel = client.channels.cache.get('970027557607071754')
+            const suggestChannel = client.channels.cache.get('858348481412726794')
             let messageArgs = args.join(' ');
             const threadAuthor = message.member.displayName;
             const embed = new discord.MessageEmbed()
@@ -33,7 +33,7 @@ module.exports = {
                 });
 
                 message.delete();
-                message.channel.send('Your suggestion has been sent to: <#970027557607071754>')
+                message.channel.send('Your suggestion has been sent to: <#858348481412726794>')
             }).catch((err)=>{
                 throw err;
             });
