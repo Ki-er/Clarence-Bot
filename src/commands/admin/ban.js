@@ -10,39 +10,43 @@ module.exports = {
      */
     run: async(client, message, args) => {
 
-    // the perm. that the member need it to ban someone
-    if(!message.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS, Permissions.FLAGS.ADMINISTRATOR))
-    // if someone dont hv perm it will send this message
-    message.channel.send("You don't have permission to use that command.");
-
-    else {
-      if (!message.guild) return;
-  
-      const user = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-  
-      if (user) {
-  
-        const member =message.guild.members.cache.get(user.id);
-  
-        if (member) {
-  
-          member
-          .ban()     
-          .then(() => {
-              message.reply(`Successfully Banned`);
+      try {
+      
+        const member = message.mentions.members.first();
+        const permission = message.member.permissions.has(Discord.Permissions.FLAGS.BAN_MEMBERS)
+      
+        if (!permission)
+          return message.reply({ 
+              contents: "You don't have permission to use this command"
+          });
+      
+        if (!args[0]) return message.reply({ content: `Please specify a user to ban` });
+      
+        if (!member) return message.reply({ content: `💤 | Cannot find that user...` } );
+      
+        if (member.id === message.author.id)
+          return message.reply({ content: `You cannot ban yourself!` });
+      
+        if (message.member.roles.highest.position < member.roles.highest.position)
+          return message.reply({
+            content: `You cannot ban user who have higher role than you...`
+          });
+      
+        if (!member.bannable) return message.reply({ content: `I cannot ban that member`});
+      
+        return (
+          (await member.ban()) +
+          message
+            .reply({
+              content: `User ${member} has been banned`
             })
-            .catch(err => {
-              message.reply('I was unable to ban the member');
-  
-              console.error(err);
-            });
-        } else {
-          message.reply("That user isn't in this guild!");
-        }
-      } else {
-        message.reply("You didn't mention the user ban!");
-      }
-  };
+            .then((msg) => {
+              setTimeout(() => msg.delete(), 5000);
+            })
+        );
+          } catch(err) {
+            message.reply({ content: `There was an ${err}` })
+          }
 
     }
 }
