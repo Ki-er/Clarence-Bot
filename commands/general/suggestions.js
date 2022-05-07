@@ -24,8 +24,8 @@ module.exports = {
             .setDescription(messageArgs);
     
             suggestChannel.send({ embeds: [embed] }).then((msg) =>{
-                msg.react('👍');
-                msg.react('👎');
+                msg.react('<upvote:972553139922292826>');
+                msg.react('<:downvote:972553139922292826>');
                 msg.startThread({
                     name: `${threadAuthor} - ${messageArgs}`,
                     autoArchiveDuration: 60,
