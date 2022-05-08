@@ -11,10 +11,10 @@ module.exports = {
      * @param {String[]} args
      */
     run: async (client, message, args) => {
-        if(message.guild && message.guild.id === '969944638498680872')
+        if(message.guild && message.guild.id === '744586833135927366')
         {
 
-            const suggestChannel = client.channels.cache.get('970027557607071754')
+            const suggestChannel = client.channels.cache.get('858348481412726794')
             let messageArgs = args.join(' ');
             const threadAuthor = message.member.displayName;
             const embed = new discord.MessageEmbed()
