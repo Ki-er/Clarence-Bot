@@ -2,9 +2,6 @@ const client = require("../index");
 const config = require("../config.json");
 
 client.on("messageCreate", async (message) => {
-
-
-
     if (
         message.author.bot ||
         !message.guild ||
