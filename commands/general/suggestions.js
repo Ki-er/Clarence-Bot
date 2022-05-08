@@ -13,7 +13,8 @@ module.exports = {
     run: async (client, message, args) => {
         if(message.guild && message.guild.id === '969944638498680872')
         {
-            const suggestChannel = client.channels.cache.get('858348481412726794')
+
+            const suggestChannel = client.channels.cache.get('970027557607071754')
             let messageArgs = args.join(' ');
             const threadAuthor = message.member.displayName;
             const embed = new discord.MessageEmbed()
@@ -24,8 +25,8 @@ module.exports = {
             .setDescription(messageArgs);
     
             suggestChannel.send({ embeds: [embed] }).then((msg) =>{
-                msg.react('<upvote:972553139922292826>');
-                msg.react('<:downvote:972553139922292826>');
+                msg.react('<:upvote:881547644672024607>');
+                msg.react('<:downvote:881547582650851330>');
                 msg.startThread({
                     name: `${threadAuthor} - ${messageArgs}`,
                     autoArchiveDuration: 60,
