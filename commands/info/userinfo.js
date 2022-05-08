@@ -50,7 +50,7 @@ module.exports = {
               .setTitle(`${status_embed} ${memberTargetID.user.tag}`)
               .setURL(`${memberTargetID.user.avatarURL({dynamic: true})}`)
               .setColor('ORANGE')
-              .setFooter(`ID: ${message.author.id}`)
+              .setFooter(`Called By: ${message.author.tag}`)
               .setThumbnail(memberTargetID.user.displayAvatarURL())
               .setTimestamp()
               .addField("Username",`${memberTargetID.user.username}`)
