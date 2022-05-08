@@ -1,4 +1,4 @@
-const { Client, Message, MessageEmbed, Permissions } = require('discord.js');
+const { Discord, Client, Message, MessageEmbed, Permissions } = require('discord.js');
 
 module.exports = {
     name: 'ban',
@@ -45,7 +45,7 @@ module.exports = {
             })
         );
           } catch(err) {
-            message.reply({ content: `There was an ${err}` })
+            message.reply({ content: `This command is currently being worked on.` })
           }
 
     }

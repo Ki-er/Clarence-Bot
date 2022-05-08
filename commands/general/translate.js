@@ -20,7 +20,7 @@ module.exports = {
         const txt = args.join(" ")
         translate(txt, { to: 'en' }).then(res => {
 
-          let language = (ISO6391.getName(res.from.language.iso)); // 'English'
+        let language = (ISO6391.getName(res.from.language.iso)); // 'English'
 
 
         const embed = new Discord.MessageEmbed()
