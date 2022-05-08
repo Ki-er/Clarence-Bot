@@ -14,6 +14,9 @@ module.exports = {
      * @param {String[]} args
      */
     run: async (client, message, args) => {
+      if (!args[0]) return message.reply({ content: `Please specify a phrase to translate.` });
+
+
         const txt = args.join(" ")
         translate(txt, { to: 'en' }).then(res => {
 
