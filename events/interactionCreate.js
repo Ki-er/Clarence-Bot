@@ -37,7 +37,6 @@ client.on("interactionCreate", async (interaction) => {
             if(interaction.values.includes("colourLB"))
             {
                 interaction.member.roles.add("744601093702418583") // Add Lightblue
-
                 interaction.member.roles.remove("744600129218150482") // aqua
                 interaction.member.roles.remove("744600794556399646") //teal
                 interaction.member.roles.remove("744984545916354613") //Red
