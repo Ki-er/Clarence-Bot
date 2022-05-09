@@ -66,6 +66,7 @@ module.exports = {
 
             .addField('-limb', 'Displays limb damage per operator')
             .addField('-muzzle','Displays muzzle attachments For all weapons')
+            .addField('-help','A link to buy siege for cheap')
             message.channel.send({ embeds: [embed] });
         }
     
