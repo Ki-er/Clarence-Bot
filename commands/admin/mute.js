@@ -12,25 +12,25 @@ module.exports = {
      * @param {String[]} args
      */
     run: async (client, message, args) => {
-    try {
-    // this code check if the member have the perm to mute or the bot hv the perm to mute ppl
-    if(!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) return;
-    let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username === args.slice(0).join(" ") || x.user.username === args[0])
-    if(member.permissions.has(Permissions.FLAGS.ADMINISTRATOR) && !message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) return;
+        try {
+        // this code check if the member have the perm to mute or the bot hv the perm to mute ppl
+        if(!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) return;
+        let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username === args.slice(0).join(" ") || x.user.username === args[0])
+        if(member.permissions.has(Permissions.FLAGS.ADMINISTRATOR) && !message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) return;
 
-        //it reorgnize the muted role and the member and add the muted and remove the member role
-        let mutedRole = message.guild.roles.cache.get('858335519000100864'); // u put the muted role ID
-        let verifiedRole = message.guild.roles.cache.get('744587248216834150'); // the member role ID
-        if(mutedRole) {
-            member.roles.add(mutedRole);
-            member.roles.remove(verifiedRole);
-            // it will send this message once the bot mute the member
-            message.reply(`${member} has been muted`);
+            //it reorgnize the muted role and the member and add the muted and remove the member role
+            let mutedRole = message.guild.roles.cache.get('858335519000100864'); // u put the muted role ID
+            let verifiedRole = message.guild.roles.cache.get('744587248216834150'); // the member role ID
+            if(mutedRole) {
+                member.roles.add(mutedRole);
+                member.roles.remove(verifiedRole);
+                // it will send this message once the bot mute the member
+                message.reply(`${member} has been muted`);
 
+            }
+        }
+        catch(){
+            message.reply({ content: `This command is currently being worked on.` })
         }
     }
-    catch(err){
-        message.reply({ content: `This command is currently being worked on.` })
-    }
-}
 }

@@ -1,5 +1,21 @@
-`npm install` - install all required dependancies
+# Clarence Bot
+> Clarence is a multipurpose discord bot for The Innercube Discord Server. 
 
-`node index.js` - start the project
+This bot features multiple command types from:
+* Admin
+* Fun
+* General
+* Info
+* Rainbow Six Siege
 
-Only open pull requests for bug fixes, I want to keep the code as clean as possible, thanks!
+# Installation
+* Create a `config.js` file within the root.
+* Add the following lines and fill them in.
+```{
+    "token": "",
+    "prefix": "-",
+    "mongooseConnectionString": ""
+}
+```
+* Run `npm i` within terminal.
+* Run `node .`
