@@ -11,7 +11,7 @@ This bot features multiple command types from:
 # Installation
 * Create a `config.js` file within the root.
 * Add the following lines and fill them in.
-```
+```json
 {
     "token": "",
     "prefix": "-",
