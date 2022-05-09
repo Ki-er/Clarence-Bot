@@ -20,3 +20,6 @@ This bot features multiple command types from:
 ```
 * Run `npm i` within terminal.
 * Run `node .`
+
+# Invite
+Invite Clarence to your discord server: https://discord.com/api/oauth2/authorize?client_id=875491402497294447&permissions=8&scope=bot
