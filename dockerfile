@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:16.x
 
 # Create the directory!
 RUN mkdir -p /usr/src/bot
