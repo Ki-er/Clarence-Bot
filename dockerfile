@@ -12,4 +12,5 @@ RUN npm install
 COPY . /usr/src/bot
 
 # Start me!
+EXPOSE 3000
 CMD ["node", "index.js"]
