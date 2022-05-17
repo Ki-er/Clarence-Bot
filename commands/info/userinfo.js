@@ -1,6 +1,6 @@
 const { Message, Client, MessageEmbed, Permissions } = require("discord.js");
 const moment = require('moment');
-const discord = require('discord.js')
+const discord = require('discord.js');
 
 
 module.exports = {
@@ -15,11 +15,8 @@ module.exports = {
     run: async (client, message, args) => {
         let member3 = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
         if (!member3) member3 = message.member;
-        let memberTargetID = message.guild.members.cache.get(member3.id);
+        let memberTargetID = message.guild.fetch(member3.id);
         if (!memberTargetID) memberTargetID = message.author.id;
- 
-        const target_avatar = memberTargetID.user.displayAvatarURL({dynamic: true, size: 2048})
- 
  
         let rolemap_size = memberTargetID.roles.cache
         .sort((a, b) => b.position - a.position)
@@ -51,16 +48,18 @@ module.exports = {
               .setURL(`${memberTargetID.user.avatarURL({dynamic: true})}`)
               .setColor('ORANGE')
               .setFooter(`Called By: ${message.author.tag}`)
-              .setThumbnail(memberTargetID.user.displayAvatarURL())
+              .setThumbnail(memberTargetID.displayAvatarURL())
               .setTimestamp()
               .addField("Username",`${memberTargetID.user.username}`)
               .addField('Nickname', memberTargetID.nickname ? memberTargetID.nickname : 'User has no nickname')
               .addField("ID",`${memberTargetID.user.id}`)
-              .addField(':video_game: Game', game)
-              .addField(':clock2: Joined at: ',`${moment(memberTargetID.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
+              .addField('Hex Colour', `${memberTargetID.displayHexColor}`)
+              .addField('Game', game)
+              .addField('Joined at: ',`${moment(memberTargetID.joinedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
               .addField("Created at: ",`${moment(Account_CreatedAt).format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
               .addField("Account age: ",`${account_age}`)
               .addField("Bot?", `${isBot}`)
+              .addField("Avatar URL", `[Link](${memberTargetID.user.avatarURL({dynamic: true})})`, true)
               .addField(`Roles [${memberTargetID.roles.cache.size-1}]`,`${rolemap_size}`)
 
     
