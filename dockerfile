@@ -12,7 +12,7 @@ RUN npm install
 COPY . /usr/src/bot
 
 # Start me!
-EXPOSE 3000
+EXPOSE 5000
 VOLUME ["latest"]
 HEALTHCHECK --interval=60s --timeout=30s --start-period=180s --retries=5 CMD node extra/healthcheck.js
 CMD ["node", "index.js"]
