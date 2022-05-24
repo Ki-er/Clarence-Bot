@@ -15,4 +15,11 @@ client.slashCommands = new Collection();
 // Initializing the project
 require("./handler")(client);
 
+client.on('ready', () => {
+    console.log('Clarence is online')
+    client.user.setActivity(`-help`, {type:"WATCHING"})
+    levels(client)
+})
+
+
 client.login(process.env.DISCORD_TOKEN);
