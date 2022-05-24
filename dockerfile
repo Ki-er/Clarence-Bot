@@ -15,3 +15,4 @@ COPY . /usr/src/clarence
 EXPOSE 5000
 VOLUME ["latest"]
 CMD ["node", "index.js"]
+
