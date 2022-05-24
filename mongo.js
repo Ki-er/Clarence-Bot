@@ -1,6 +1,5 @@
-const config = require("./config.json");
 const mongoose = require('mongoose')
-const mongooseConnectionString = config.mongooseConnectionString
+const mongooseConnectionString = process.env.MONGOOSE
 
 module.exports = async () => {
   await mongoose.connect(mongooseConnectionString, {
