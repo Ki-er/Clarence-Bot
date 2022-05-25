@@ -20,7 +20,7 @@ module.exports = {
         }
     
 
-        const row = new MessageActionRow()
+        const row = new discord.MessageActionRow()
         .addComponents(
             new MessageSelectMenu()
             .setCustomId("help")
