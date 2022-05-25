@@ -1,4 +1,5 @@
 const { Client, Collection } = require("discord.js");
+require("dotenv").config();
 
 
 
