@@ -16,6 +16,7 @@ module.exports = {
         const Responses = [
             "<@365297607276363776>", 
             "<@544191902946164756>",
+            "<@652830018858254346>"
             ];
 
             let atta = new discord.MessageAttachment("https://c.tenor.com/9kwNAT9bTkEAAAAC/bong-smoke.gif");
