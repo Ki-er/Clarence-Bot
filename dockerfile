@@ -12,7 +12,5 @@ RUN npm install
 COPY . /usr/src/clarence
 
 # Start me!
-EXPOSE 5000
-VOLUME ["latest"]
 CMD ["node", "index.js"]
 
