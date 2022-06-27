@@ -38,5 +38,5 @@ PREFIX = !
 ## Contributions
 While this bot is maintained by [Kieran](https://github.com/KieranRobson), contributors are welcome! 
 
-# Invite
+## Invite
 Invite Clarence to your discord server: https://discord.com/api/oauth2/authorize?client_id=875491402497294447&permissions=8&scope=bot
