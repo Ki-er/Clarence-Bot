@@ -26,11 +26,8 @@ Using a tool like [Ouroboros](https://github.com/pyouroboros/ouroboros), you can
 
 ## 👷 Manual
 - Clone the repo 
-- Create a `.env` file with the following lines:
-```
-DISCORD_TOKEN = <Discord Token>
-PREFIX = !
-```
+- Remove the `.template` from `.env.template`
+- Add Discord Bot Token where `DISCORD_TOKEN` is within the `.env` file 
 - Run `npm i`
 - Run `node .`
 
