@@ -12,7 +12,9 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle("iCarly")
         .setColor('ORANGE')
-        .setFooter(`Called By: ${message.author.tag}`)
+        .setFooter({
+            text: `Called By: ${message.author.tag}`
+            })        
         .setTimestamp()
         .setDescription(`
     I know, you see

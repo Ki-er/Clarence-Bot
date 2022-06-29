@@ -16,6 +16,9 @@ module.exports = {
             .setTitle("Clarence Help")
             .setDescription("Select a category from below to see the commands.\r\nThis embed will update.")
             .setColor('ORANGE')
+            .setFooter({
+                text: `Called By: ${message.author.tag}`
+                })
 
             const row = new discord.MessageActionRow()
             .addComponents(

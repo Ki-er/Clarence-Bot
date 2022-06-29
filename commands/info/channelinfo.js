@@ -16,7 +16,9 @@ module.exports = {
             .addField("**Channel Description**", `${channel.topic || "No Description"}`)
             .addField("**Channel Created At**", `${channel.createdAt}`)
             .setColor("ORANGE")
-            .setFooter(`ID: ${message.author.id}`)
+            .setFooter({
+                text: `Called By: ${message.author.tag}`
+                })            
             .setTimestamp()
             message.channel.send({ embeds: [channelembed] });
         }

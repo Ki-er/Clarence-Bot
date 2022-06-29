@@ -16,7 +16,9 @@ module.exports = {
 
         const embed = new MessageEmbed()
         .setColor('ORANGE')
-        .setFooter(`Called By: ${message.author.tag}`)
+        .setFooter({
+            text: `Called By: ${message.author.tag}`
+            })        
         .setTimestamp()
         .setTitle("Cookie")
         .setDescription(`${message.author.toString()}, has given a cookie to ${member.toString()}`)

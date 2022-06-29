@@ -1,5 +1,4 @@
 const { Message, MessageEmbed  } = require("discord.js");
-const { parse } = require("dotenv");
 const client = require("../../index");
 require("dotenv").config();
 const blames = require('../../schemas/blamestitch-schema');

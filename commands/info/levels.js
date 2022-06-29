@@ -16,8 +16,9 @@ module.exports = {
         const leaderboard = await profile.find({guildId: message.guildId, userId: message.author.id});
             const embed = new MessageEmbed()
                 .setColor('ORANGE')
-                .setFooter(`Called By: ${message.author.tag}`)
-                .setTimestamp()
+                .setFooter({
+                    text: `Called By: ${message.author.tag}`
+                    })                .setTimestamp()
                 .setTitle(``)
 
 

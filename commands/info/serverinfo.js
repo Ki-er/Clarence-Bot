@@ -28,7 +28,9 @@ module.exports = {
         .addField('Roles', rolemap)
         .setTimestamp()
         .setThumbnail(thumbnail)
-        .setFooter(`Called By: ${message.author.tag}`)
+        .setFooter({
+            text: `Called By: ${message.author.tag}`
+            })
         message.channel.send({ embeds: [embed] });
         }
 }
