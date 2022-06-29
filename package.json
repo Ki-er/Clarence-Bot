@@ -15,18 +15,12 @@
         "@iamtraction/google-translate": "^1.1.2",
         "canvas": "^2.9.1",
         "discord.js": "^13.6.0",
-        "djs-voice": "^1.2.0",
-        "dot-prop": "^7.2.0",
         "dotenv": "^16.0.1",
-        "express": "^4.18.1",
         "glob": "^7.2.0",
         "google-translate-api": "^2.3.0",
         "iso-639-1": "^2.1.13",
         "moment": "^2.29.3",
         "mongoose": "^6.3.1",
-        "npm-check-updates": "^12.5.11",
-        "ping": "^0.4.2",
-        "reconlx": "^2.5.6",
         "twemoji-parser": "^14.0.0"
     }
 }
