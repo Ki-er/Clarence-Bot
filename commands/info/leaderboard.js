@@ -1,13 +1,11 @@
-const { Message, MessageEmbed  } = require("discord.js");
-const { parse } = require("dotenv");
+const { MessageEmbed  } = require("discord.js");
 const client = require("../../index");
+const profile = require('../../schemas/profile-schema');
 require("dotenv").config();
-const blames = require('../../schemas/blamestitch-schema');
-
 
 module.exports = {
-    name: "blamescan",
-    aliases: ['bs'],
+    name: "xpleaderboard",
+    aliases: ['xpl'],
     /**
      *
      * @param {Client} client
@@ -15,16 +13,18 @@ module.exports = {
      * @param {String[]} args
      */
     run: async (client, message, args) => {
-        const blame = await blames.find({});
-        message.channel.send(`Stitch has been blamed ${19 + blame.length} times.\r\nThere were 19 blames before the database.\r\nGetting all database blames, this may take a while.`)
-
+        const leaderboard = await profile.find({guildId: message.guildId}).sort({level : -1}).limit(10);;
             const embed = new MessageEmbed()
                 .setColor('ORANGE')
                 .setFooter(`Called By: ${message.author.tag}`)
                 .setTimestamp()
-                .addField('Reason:', `${blame[i].reason}`)
-                .addField('Date', `${blame[i].date.toLocaleDateString("en-UK")}`)
-                .addField('Added by', `<@${blame[i].userId}>`);
+                
+                for(let i = 0; i < leaderboard.length; ++i) {
+                    embed.addField(`${i+1}`, `<@${leaderboard[i].userId}> - Level: ${leaderboard[i].level}`)
+                }
+                embed.setTitle(`The Top ${leaderboard.length} levels`)
+
+
             message.channel.send({ embeds: [embed] });
         }
     };
