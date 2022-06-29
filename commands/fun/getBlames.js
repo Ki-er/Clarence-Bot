@@ -16,10 +16,12 @@ module.exports = {
      */
     run: async (client, message, args) => {
         const blame = await blames.find({});
-
+        message.channel.send(`<@${544191902946164756}> has been blamed ${blames.length} times.\r\nGetting all blames, this may take a while.`)
         for(let i = 0; i < blames.length; i++) {
             const reason = blame[i].reason;
-            const date = blame[i].date;
+            const date = blame[i].date.toLocaleDateString("en-UK");
+
+
             const id = blame[i].userId;
 
             const embed = new MessageEmbed()
