@@ -15,23 +15,21 @@ module.exports = {
      * @param {String[]} args
      */
     run: async (client, message, args) => {
-        const blame = await blames.find({})
+        const blame = await blames.find({});
 
-        for(i = 1; i < blame.length; i++);
-        {
-            let index = parseInt(i)
-            reason = blame[index].reason;
-            date = blame[index].date;
-            id = blame[index].userId;
+        for(let i = 0; i < blames.length; i++) {
+            const reason = blame[i].reason;
+            const date = blame[i].date;
+            const id = blame[i].userId;
 
             const embed = new MessageEmbed()
-            .setColor('ORANGE')
-            .setFooter(`Called By: ${message.author.tag}`)
-            .setTimestamp()
-            .addField('Reason:', `${reason}`)
-            .addField('Date', `${date}`)
-            .addField('Added by', `<@${id}>`)
-            message.channel.send({ embeds: [embed] })
+                .setColor('ORANGE')
+                .setFooter(`Called By: ${message.author.tag}`)
+                .setTimestamp()
+                .addField('Reason:', `${reason}`)
+                .addField('Date', `${date}`)
+                .addField('Added by', `<@${id}>`);
+            message.channel.send({ embeds: [embed] });
         }
     },
 };
