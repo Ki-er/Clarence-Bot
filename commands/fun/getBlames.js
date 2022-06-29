@@ -16,7 +16,7 @@ module.exports = {
      */
     run: async (client, message, args) => {
         const blame = await blames.find({});
-        message.channel.send(`<@544191902946164756> has been blamed ${19 + blame.length} times.\r\nThere were 19 blames before the database.\r\nGetting all database blames, this may take a while.`)
+        message.channel.send(`Stitch has been blamed ${19 + blame.length} times.\r\nThere were 19 blames before the database.\r\nGetting all database blames, this may take a while.`)
 
         for(let i = 0; i < blame.length; ++i) {
             const reason = blame[i].reason;
