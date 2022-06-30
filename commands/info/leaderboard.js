@@ -1,7 +1,7 @@
 const { MessageEmbed  } = require("discord.js");
 const client = require("../../index");
-const profile = require('../../schemas/profile-schema');
 require("dotenv").config();
+const profiles = require('../../schemas/profile-schema');
 
 module.exports = {
     name: "xpleaderboard",
@@ -14,7 +14,7 @@ module.exports = {
      */
 
     run: async (client, message, args) => {
-        const leaderboard = await profile.find({guildId: message.guildId}).sort({level : -1}).limit(10);;
+        const leaderboard = await profiles.find({guildId: message.guildId}).sort({level: -1}).limit(10);;
             const embed = new MessageEmbed()
                 .setColor('ORANGE')
                 .setFooter({
