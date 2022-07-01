@@ -21,9 +21,7 @@ module.exports = {
         for(let i = 0; i < blame.length; ++i) {
             const embed = new MessageEmbed()
                 .setColor('ORANGE')
-                .setFooter({
-                    text: `Called By: ${message.author.tag}`
-                })                   
+                .setFooter({ text: `Called By: ${message.author.tag}`})                   
                 .setTimestamp()
                 .addField('Reason:', `${blame[i].reason}`)
                 .addField('Date', `${blame[i].date.toLocaleDateString("en-UK")}`)
