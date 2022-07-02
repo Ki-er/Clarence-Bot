@@ -1,8 +1,8 @@
 const { Client, CommandInteraction } = require("discord.js");
 
 module.exports = {
-    name: "bonk",
-    description: "Go to horny jail",
+    name: "bob",
+    description: "The goodest boy",
     type: 'CHAT_INPUT',
     /**
      *
@@ -11,6 +11,6 @@ module.exports = {
      * @param {String[]} args
      */
     run: async (client, interaction, args) => {
-        interaction.reply({ content: `https://tenor.com/bkKml.gif` });
+        interaction.reply({ files: ['./images/bob.png'] });
     },
 };
