@@ -1,7 +1,16 @@
 const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
+const { SlashCommandBuilder } = require('@discordjs/builders');
+
 
 module.exports = {
-
+    ...new SlashCommandBuilder()
+        .setName('8ball')
+        .setDescription('Answer your deepest questions')
+        .addStringOption((option) => option
+            .setName('question')
+            .setDescription("Your question")
+            .setRequired(true)
+        ),
 
     /**
      *
@@ -9,23 +18,24 @@ module.exports = {
      * @param {CommandInteraction} interaction
      * @param {String[]} args
      */
+
     run: async (client, interaction, args) => {
+        const questionToSend = interaction.options.getString("question")
+
         const Responses = [
             "Yes", 
             "No", 
             "Maybe", 
             "It is likely",
             "It is unlikely"
-            ];
+        ];
 
-            let messageArgs = args.join(' ');
-            const embed = new MessageEmbed()
-            .setColor('ORANGE')
-            .setFooter(`ID: ${message.author.id}`)
-            .setTimestamp()
-            .setTitle("8Ball")
-            .addField(`${messageArgs}`,`${Responses[Math.floor(Math.random() * Responses.length)]}`)
-            
-            interaction.followUp({ embeds: [embed] });
+        const embed = new MessageEmbed()
+        .setColor('GREEN')
+        .setFooter({ text: `Called By: ${interaction.user.tag}`})         
+        .setTimestamp()
+        .setTitle("8ball")
+        .addField(`${questionToSend}`,`${Responses[Math.floor(Math.random() * Responses.length)]}`)
+        interaction.reply({ embeds: [embed]});
     },
 };

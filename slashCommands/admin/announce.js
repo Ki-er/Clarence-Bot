@@ -25,5 +25,6 @@ module.exports = {
         if(!interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS, Permissions.FLAGS.ADMINISTRATOR)) return interaction.reply("You don't have permission to use that command.")
         const announceChannel = client.channels.cache.get('845386604067029054')
         announceChannel.send(string)
+        interaction.reply("Announcement sent!")
     },
 };
