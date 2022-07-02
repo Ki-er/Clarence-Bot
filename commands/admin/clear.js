@@ -15,6 +15,7 @@ module.exports = {
     if (!args[0]) { return message.reply(`Please enter a amount between 1 to 100`)}
     
     let int = args[0];
+    int++;
     if (int > 100) int = 100;
     try {
         await message.delete()
@@ -32,8 +33,8 @@ module.exports = {
         const finalResult = `${deletedMessages.size} message${deletedMessages.size > 1 ? 's' : ''} were removed!\n\n${userMessageMap.map(([user, messages]) => `**${user}** : ${messages}`).join('\n')}`;
         await message.channel.send({ content: finalResult }).then(async (msg) => setTimeout(() => msg.delete(), 1000))
         } catch (err) {
-            
+
         if (String(err).includes('Unknown Message')) return console.log('[ERROR!] Unknown Message');
+        }
     }
-}
 }
