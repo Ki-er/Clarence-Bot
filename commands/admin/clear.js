@@ -10,18 +10,12 @@ module.exports = {
      * @param {String[]} args 
      */
     run: async(client, message, args) => {
-        if (!message.member.permissions.has(Permissions.FLAGS.KICK_MEMBERS, Permissions.FLAGS.ADMINISTRATOR)) // sets the perm.
-        return message.reply(
-            `You do not have correct permissions to do this action, ${message.author.username}` // return this msg if the user dont hv perm
-        );
-   
-    if (!args[0]) {
-        return message.reply(`Please enter a amount between 1 to 100`) // of he didnt provide a number to delete send this
-    }
+        if (!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) return message.reply(`You do not have correct permissions to do this action`);
+
+    if (!args[0]) { return message.reply(`Please enter a amount between 1 to 100`)}
     
     let int = args[0];
     if (int > 100) int = 100;
-
     try {
         await message.delete()
         const fetch = await message.channel.messages.fetch({ limit: int });
@@ -35,10 +29,10 @@ module.exports = {
         }
 
         const userMessageMap = Object.entries(results);
-
         const finalResult = `${deletedMessages.size} message${deletedMessages.size > 1 ? 's' : ''} were removed!\n\n${userMessageMap.map(([user, messages]) => `**${user}** : ${messages}`).join('\n')}`;
         await message.channel.send({ content: finalResult }).then(async (msg) => setTimeout(() => msg.delete(), 1000))
-    } catch (err) {
+        } catch (err) {
+            
         if (String(err).includes('Unknown Message')) return console.log('[ERROR!] Unknown Message');
     }
 }

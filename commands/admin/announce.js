@@ -17,20 +17,15 @@ module.exports = {
             if(!message.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS, Permissions.FLAGS.ADMINISTRATOR))
             {
                 message.channel.send("You don't have permission to use that command.");
-
             }
-         else{
+        else{
             const announceChannel = client.channels.cache.get('845386604067029054')
             let messageArgs = args.join(' ');
             announceChannel.send(messageArgs).catch((err)=>{
                 throw err;
             });
-                
             message.channel.send('Your announcement has been sent to: <#845386604067029054>')
-
-
-             }
-
+            }
         }
         else
         {
