@@ -1,7 +1,6 @@
 const { glob } = require("glob");
 const { promisify } = require("util");
 const { Client } = require("discord.js");
-const mongoose = require("mongoose");
 
 const globPromise = promisify(glob);
 
@@ -41,6 +40,10 @@ module.exports = async (client) => {
         arrayOfSlashCommands.push(file);
     });
     client.on("ready", async () => {
+        const guild1 = client.guilds.cache.get("969944638498680872");
+        guild1.commands.set([]);
+
+        // Register for all the guilds the bot is in
         await client.application.commands.set(arrayOfSlashCommands);
     });
 };
