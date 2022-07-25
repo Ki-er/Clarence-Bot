@@ -5,12 +5,17 @@ const { st } = require("google-translate-api/languages");
 
 module.exports = {
     ...new SlashCommandBuilder()
-        .setName('announce')
+        .setName('aannounce')
         .setDescription('announce')
         .addStringOption((option) => option
             .setName('string')
             .setDescription("string for announcement")
             .setRequired(true)
+        )
+        .addChannelOption((option) => option
+        .setName('channel')
+        .setDescription("channel for announcement")
+        .setRequired(true)
         ),
 
     /**
@@ -21,10 +26,10 @@ module.exports = {
      */
     run: async (client, interaction, args) => {
         const string = interaction.options.getString("string")
-        if(interaction.guild && interaction.guild.id !== '744586833135927366') return interaction.reply("That is not available within this server")
-        if(!interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS, Permissions.FLAGS.ADMINISTRATOR)) return interaction.reply("You don't have permission to use that command.")
-        const announceChannel = client.channels.cache.get('845386604067029054')
-        announceChannel.send(string)
+        const channel = interaction.options.getChannel("channel")
+
+        if(!interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS | Permissions.FLAGS.ADMINISTRATOR)) return interaction.reply("You don't have permission to use that command.")
+        channel.send(string)
         interaction.reply("Announcement sent!")
     },
 };
