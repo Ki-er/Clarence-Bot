@@ -10,8 +10,7 @@ module.exports = {
             .setName('integer')
             .setDescription("number of messages to clear")
             .setRequired(true)
-        )
-        .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages),
+        ),
     /**
      *
      * @param {Client} client
