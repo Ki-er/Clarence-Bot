@@ -1,6 +1,8 @@
 const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
 const client = require("../../index");
 const blames = require('../../schemas/blamestitch-schema');
+const wait = require('node:timers/promises').setTimeout;
+
 
 module.exports = {
     name: "blamescan",
@@ -14,7 +16,9 @@ module.exports = {
      */
     run: async (client, interaction, args) => {
         const blame = await blames.find({});
-        await interaction.reply(`Stitch has been blamed ${19 + blame.length} times.\r\nThere were 19 blames before the database.\r\nGetting all database blames, this may take a while.`)
+        await interaction.deferReply()
+        await wait(3000)
+        await interaction.editReply(`Stitch has been blamed ${19 + blame.length} times.\r\nThere were 19 blames before the database.\r\nGetting all database blames, this may take a while.`)
 
 
         for(let i = 0; i < blame.length; ++i) {
@@ -28,4 +32,4 @@ module.exports = {
             interaction.channel.send({ embeds: [embed] });
         }
     }
-}; 
+};  
