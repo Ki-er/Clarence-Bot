@@ -39,11 +39,7 @@ module.exports = async (client) => {
         if (["MESSAGE", "USER"].includes(file.type)) delete file.description;
         arrayOfSlashCommands.push(file);
     });
-    client.on("ready", async () => {
-        const guild1 = client.guilds.cache.get("969944638498680872");
-        guild1.commands.set([]);
 
         // Register for all the guilds the bot is in
         await client.application.commands.set(arrayOfSlashCommands);
-    });
-};
+    };
