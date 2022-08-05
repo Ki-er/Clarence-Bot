@@ -1,5 +1,4 @@
 const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
-const client = require("../../index");
 const blames = require('../../schemas/blamestitch-schema');
 const wait = require('node:timers/promises').setTimeout;
 

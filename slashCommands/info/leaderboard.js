@@ -1,5 +1,4 @@
 const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
-const client = require("../../index");
 const profiles = require('../../schemas/profile-schema');
 
 module.exports = {

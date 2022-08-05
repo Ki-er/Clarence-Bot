@@ -1,5 +1,4 @@
 const { Message, MessageActionRow, MessageButton  } = require("discord.js");
-const client = require("../../index");
 require("dotenv").config();
 const blame = require('../../schemas/blamestitch-schema');
 
