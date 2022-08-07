@@ -1,5 +1,4 @@
 const { Message, MessageEmbed  } = require("discord.js");
-const client = require("../../index");
 require("dotenv").config();
 const profiles = require('../../schemas/profile-schema');
 

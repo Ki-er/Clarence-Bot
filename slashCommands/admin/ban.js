@@ -1,21 +1,15 @@
 const { Client, CommandInteraction, Permissions } = require("discord.js");
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { PermissionFlagsBits } = require('discord-api-types/v10');
+
 
 
 module.exports = {
     ...new SlashCommandBuilder()
-        .setName('ban')
-        .setDescription('ban a user')
-        .addUserOption((option) => option
-            .setName('user')
-            .setDescription("a user")
-            .setRequired(true)
-        )
-        .addStringOption((option) => option
-            .setName('reason')
-            .setDescription("reason")
-            .setRequired(true)
-        ),
+	.setName('ban')
+	.setDescription('Ban a member!')
+	.addUserOption(option =>
+		option.setName('target').setDescription('The member to ban')),
     /**
      *
      * @param {Client} client

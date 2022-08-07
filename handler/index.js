@@ -1,16 +1,12 @@
-const { glob } = require("glob");
-const { promisify } = require("util");
+const { globby } = require("globby");
 const { Client } = require("discord.js");
-const mongoose = require("mongoose");
-
-const globPromise = promisify(glob);
 
 /**
  * @param {Client} client
  */
 module.exports = async (client) => {
     // Commands
-    const commandFiles = await globPromise(`${process.cwd()}/commands/**/*.js`);
+    const commandFiles = await globby(`${process.cwd()}/commands/**/*.js`);
     commandFiles.map((value) => {
         const file = require(value);
         const splitted = value.split("/");
@@ -23,13 +19,11 @@ module.exports = async (client) => {
     });
 
     // Events
-    const eventFiles = await globPromise(`${process.cwd()}/events/*.js`);
+    const eventFiles = await globby(`${process.cwd()}/events/*.js`);
     eventFiles.map((value) => require(value));
 
     // Slash Commands
-    const slashCommands = await globPromise(
-        `${process.cwd()}/SlashCommands/*/*.js`
-    );
+    const slashCommands = await globby(`${process.cwd()}/SlashCommands/*/*.js`);
 
     const arrayOfSlashCommands = [];
     slashCommands.map((value) => {
@@ -41,6 +35,8 @@ module.exports = async (client) => {
         arrayOfSlashCommands.push(file);
     });
     client.on("ready", async () => {
+        console.log("Slash commands registered!")
+        // Register for all the guilds the bot is in
         await client.application.commands.set(arrayOfSlashCommands);
     });
 };
