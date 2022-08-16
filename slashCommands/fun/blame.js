@@ -6,7 +6,7 @@ const wait = require('node:timers/promises').setTimeout;
 
 module.exports = {
     ...new SlashCommandBuilder()
-        .setName('notworking')
+        .setName('blame')
         .setDescription('Blame Stitch')
         .addStringOption((option) => option
             .setName('reason')
@@ -24,17 +24,13 @@ module.exports = {
     run: async (client, interaction, args) => {
         const reasonToSend = interaction.options.getString("reason")
 
-        console.log(reasonToSend)
-        console.log(interaction.user.id)
-        console.log(new Date())
-
         const addBlame = await blame.create({
             reason: reasonToSend,
             userId: interaction.user.id,
             date: new Date()
         })
         await interaction.deferReply()
-        await wait(3000)
+        await wait(1000)
         interaction.editReply("Blame Added")
 
 
