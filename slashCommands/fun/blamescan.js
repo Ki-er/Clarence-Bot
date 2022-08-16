@@ -2,7 +2,6 @@ const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
 const blames = require('../../schemas/blamestitch-schema');
 const wait = require('node:timers/promises').setTimeout;
 
-
 module.exports = {
     name: "blamescan",
     description: "Scan blames",
