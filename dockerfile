@@ -1,4 +1,4 @@
-FROM node:16.15.0
+FROM node:16.16.0
 
 # Create the directory!
 RUN mkdir -p /usr/src/clarence
