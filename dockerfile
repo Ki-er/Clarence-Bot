@@ -1,4 +1,4 @@
-FROM node:16.16.0
+FROM node:lts-alpine3.16
 
 # Create the directory!
 RUN mkdir -p /usr/src/clarence
