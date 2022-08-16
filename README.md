@@ -15,9 +15,10 @@ Due to the [Publish.yml](.github/workflows/publish.yml) workflow, the newest bui
 ```docker
 docker run -d \
 --name=clarence \
--p 6000:6000 \
+-p 6002:6002 \
 -e DISCORD_TOKEN='INSERT DISCORD TOKEN' \
 -e PREFIX='-' \
+-e MONGOOSE='INSERT MONGODB URL' \
 --restart unless-stopped \
 kieranr27/clarence:latest
 ```
