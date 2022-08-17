@@ -40,8 +40,10 @@ module.exports = async (client) => {
         if (["MESSAGE", "USER"].includes(file.type)) delete file.description;
         arrayOfSlashCommands.push(file);
     });
+
     client.on("ready", async () => {
         // Register for all the guilds the bot is in
         await client.application.commands.set(arrayOfSlashCommands);
+
     });
 };
