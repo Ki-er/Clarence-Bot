@@ -1,7 +1,5 @@
 const { Client, CommandInteraction, Permissions } = require("discord.js");
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { st } = require("google-translate-api/languages");
-
 
 module.exports = {
     ...new SlashCommandBuilder()
