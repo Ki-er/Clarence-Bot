@@ -5,7 +5,7 @@ const { st } = require("google-translate-api/languages");
 
 module.exports = {
     ...new SlashCommandBuilder()
-        .setName('aannounce')
+        .setName('announce')
         .setDescription('announce')
         .addStringOption((option) => option
             .setName('string')
