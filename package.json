@@ -19,7 +19,7 @@
         "google-translate-api": "^2.3.0",
         "iso-639-1": "^2.1.15",
         "moment": "^2.29.4",
-        "mongoose": "^6.5.1",
+        "mongoose": "^6.5.2",
         "twemoji-parser": "^14.0.0"
     }
 }
