@@ -14,7 +14,6 @@
         "discord.js": "^13.10.2",
         "dotenv": "^16.0.1",
         "glob": "^7.2.3",
-        "moment": "^2.29.4",
         "mongoose": "^6.5.2",
         "twemoji-parser": "^14.0.0"
     }
