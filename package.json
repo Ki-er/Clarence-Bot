@@ -13,7 +13,6 @@
     "dependencies": {
         "@discordjs/builders": "^1.1.0",
         "@iamtraction/google-translate": "^1.1.2",
-        "discord-api-types": "^0.37.1",
         "discord.js": "^13.10.2",
         "dotenv": "^16.0.1",
         "glob": "^7.2.3",

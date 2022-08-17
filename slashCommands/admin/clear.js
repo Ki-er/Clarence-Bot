@@ -1,6 +1,5 @@
 const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { PermissionFlagsBits } = require('discord-api-types/v10');
 
 module.exports = {
     ...new SlashCommandBuilder()
