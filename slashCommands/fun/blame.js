@@ -29,6 +29,6 @@ module.exports = {
             userId: interaction.user.id,
             date: new Date()
         })
-        interaction.reply("Blame Added")
+        interaction.reply(`Blame Added: ${reasonToSend}`)
     },
 };
