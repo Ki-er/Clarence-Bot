@@ -1,4 +1,5 @@
 const { MessageEmbed } = require('discord.js');
+const { time} = require("@discordjs/builders");
 
 module.exports = {
     name: "serverinfo",

@@ -17,12 +17,10 @@ module.exports = {
   
 
         const embed = new MessageEmbed()
-        .setColor('ORANGE')
-        .setFooter({
-            text: `Called By: ${message.author.tag}`
-            })
+        .setColor('GREEN')
+        .setFooter({ text: `Called By: ${message.author.tag}`}) 
         .setTimestamp()
-        .setTitle("Ping")
+        .setTitle("Pong!")
         .setDescription(`${client.ws.ping} ping to host`)
         .addField('Uptime', ` ${days}days ${hours}hrs ${minutes}min ${seconds}sec`, true)	    
 
