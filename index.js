@@ -1,5 +1,7 @@
 const { Client, Collection } = require("discord.js");
 require("dotenv").config();
+const mongoose = require('mongoose')
+
 
 const client = new Client({
     intents: 98819,
@@ -12,5 +14,13 @@ client.slashCommands = new Collection();
 
 // Initializing the project
 require("./handler")(client);
+
+const mongooseConnectionString = process.env.MONGOOSE
+
+mongoose.connect(mongooseConnectionString, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+console.log("Connected to db")
 
 client.login(process.env.DISCORD_TOKEN);
