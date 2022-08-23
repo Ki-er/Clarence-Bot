@@ -1,8 +1,6 @@
 const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const blame = require('../../schemas/blamestitch-schema');
-const wait = require('node:timers/promises').setTimeout;
-
 
 module.exports = {
     ...new SlashCommandBuilder()
@@ -29,6 +27,6 @@ module.exports = {
             userId: interaction.user.id,
             date: new Date()
         })
-        interaction.reply(`Blame Added: ${reasonToSend}`)
+        interaction.reply({content: `Blame Added: ${reasonToSend}`})
     },
 };
