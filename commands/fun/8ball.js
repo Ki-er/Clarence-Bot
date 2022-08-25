@@ -23,9 +23,7 @@ module.exports = {
 
             const embed = new MessageEmbed()
             .setColor('ORANGE')
-            .setFooter({
-                text: `Called By: ${message.author.tag}`
-                })            
+            .setFooter({text: `Called By: ${message.author.tag}`})            
             .setTimestamp()
             .setTitle("8Ball")
             .addField(`${messageArgs}`,`${Responses[Math.floor(Math.random() * Responses.length)]}`)

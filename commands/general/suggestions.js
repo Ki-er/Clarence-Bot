@@ -19,9 +19,7 @@ module.exports = {
             const threadAuthor = message.member.displayName;
             const embed = new discord.MessageEmbed()
             .setColor('ORANGE')
-            .setFooter({
-                text: `Called By: ${message.author.tag}`
-            })                   
+            .setFooter({text: `Called By: ${message.author.tag}`})                   
             .setTimestamp()
             .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
             .setDescription(messageArgs);
