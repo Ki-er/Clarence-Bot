@@ -1,5 +1,5 @@
 const client = require("../index");
-const discord = require('discord.js');
+
 client.on('guildMemberRemove', guildmember => {
     if(guildmember.guild.id == "744586833135927366")
     {

@@ -1,6 +1,5 @@
 const client = require("../index");
 const discord = require("discord.js");
-const { channels } = require("../index");
 
 client.on("interactionCreate", async (interaction) => {
     // Slash Command Handling

@@ -14,7 +14,6 @@ module.exports = {
         let hours = Math.floor(client.uptime / 3600000) % 24;
         let minutes = Math.floor(client.uptime / 60000) % 60;
         let seconds = Math.floor(client.uptime / 1000) % 60;
-  
 
         const embed = new MessageEmbed()
         .setColor('ORANGE')
@@ -25,7 +24,5 @@ module.exports = {
         .addField('Uptime', ` ${days}days ${hours}hrs ${minutes}min ${seconds}sec`, true)	    
 
         message.channel.send({ embeds: [embed] })
-
-
     },
 };

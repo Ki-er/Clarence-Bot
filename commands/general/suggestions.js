@@ -1,5 +1,4 @@
 const { Message, Client, MessageEmbed } = require("discord.js");
-const discord = require('discord.js')
 
 module.exports = {
     name: "suggestion",
@@ -13,11 +12,10 @@ module.exports = {
     run: async (client, message, args) => {
         if(message.guild && message.guild.id === '744586833135927366')
         {
-
             const suggestChannel = client.channels.cache.get('858348481412726794')
             let messageArgs = args.join(' ');
             const threadAuthor = message.member.displayName;
-            const embed = new discord.MessageEmbed()
+            const embed = new MessageEmbed()
             .setColor('ORANGE')
             .setFooter({text: `Called By: ${message.author.tag}`})                   
             .setTimestamp()

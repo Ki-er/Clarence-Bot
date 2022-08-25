@@ -1,5 +1,4 @@
-const { Message, Client, MessageEmbed } = require("discord.js");
-const { MessageActionRow, MessageSelectMenu } = require('discord.js')
+const { Message, Client, MessMessageActionRow, MessageSelectMenuageEmbed } = require("discord.js");
 
 module.exports = {
     name: "pingables",

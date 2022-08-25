@@ -1,5 +1,4 @@
 const { Message, Client, MessageEmbed, Permissions } = require("discord.js");
-const discord = require('discord.js')
 
 module.exports = {
     name: "announcement",
@@ -21,6 +20,7 @@ module.exports = {
         else{
             const announceChannel = client.channels.cache.get('845386604067029054')
             let messageArgs = args.join(' ');
+            
             announceChannel.send(messageArgs).catch((err)=>{
                 throw err;
             });

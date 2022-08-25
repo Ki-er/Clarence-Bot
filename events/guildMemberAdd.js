@@ -1,6 +1,4 @@
-const { Permissions } = require('discord.js');
 const client = require("../index");
-const discord = require('discord.js');
 
 client.on('guildMemberAdd', async guildmember =>{
     const guild = client.guilds.cache.get('744586833135927366');
