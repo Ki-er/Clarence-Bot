@@ -15,9 +15,7 @@ module.exports = {
             .setColor('ORANGE')
             .setAuthor({name:`${user.tag}`, iconURL: `${user.displayAvatarURL({dynamic: true, size: 512})}`})
             .setImage(user.displayAvatarURL({dynamic: true}))
-            .setFooter({
-                text: `Called By: ${message.author.tag}`
-            })                   
+            .setFooter({text: `Called By: ${message.author.tag}`})                   
             .setTimestamp()
             message.channel.send({ embeds: [avatarEmbed] });
         
