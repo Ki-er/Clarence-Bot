@@ -1,9 +1,9 @@
 const { MessageEmbed } = require('discord.js');
-const { time} = require("@discordjs/builders");
 
 module.exports = {
     name: "serverinfo",
-    description: "Shows Informations About Mentioned Channel",
+    description: "Shows information from mentioned server",
+
     async run (client, message, args) {
         const owner = await message.guild.fetchOwner();
         const guild = message.guild

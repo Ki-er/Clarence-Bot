@@ -2,7 +2,8 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "channelinfo",
-    description: "Shows Informations About Mentioned Channel",
+    description: "Shows information About mentioned Channel",
+    
     async run (client, message, args) {
         let channel = message.mentions.channels.first() || client.guilds.cache.get(message.guild.id).channels.cache.get(args[0]) || message.guild.channels.cache.find(r => r.name.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.channel;
         if (!channel) return message.channel.send("**Channel Not Found!**");

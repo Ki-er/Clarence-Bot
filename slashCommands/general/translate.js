@@ -30,7 +30,7 @@ module.exports = {
             .setTitle('Translation')
             .setColor('ORANGE')
             .addField(`**Translated Text:**`, `${res.text.charAt(0).toUpperCase()}${res.text.slice(1)}`)
-            .addField(`**Originial Text:**`, `${inputString.charAt(0).toUpperCase()}${inputString.slice(1)}`)
+            .addField(`**Original Text:**`, `${inputString.charAt(0).toUpperCase()}${inputString.slice(1)}`)
             .addField(`**Language:**`, `${language.charAt(0).toUpperCase()}${language.slice(1)}`)
             .setFooter({ text: `Called By: ${interaction.user.tag}`})               
             .setTimestamp()

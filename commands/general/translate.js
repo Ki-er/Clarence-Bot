@@ -25,7 +25,7 @@ module.exports = {
         .setTitle('Translation')
         .setColor('ORANGE')
         .addField(`**Translated Text:**`, `${res.text.charAt(0).toUpperCase()}${res.text.slice(1)}`)
-        .addField(`**Originial Text:**`, `${txt.charAt(0).toUpperCase()}${txt.slice(1)}`)
+        .addField(`**Original Text:**`, `${txt.charAt(0).toUpperCase()}${txt.slice(1)}`)
         .addField(`**Language:**`, `${language.charAt(0).toUpperCase()}${language.slice(1)}`)
         .setFooter({ text: `Called By: ${message.author.tag}`})               
         .setTimestamp()
