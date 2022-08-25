@@ -11,9 +11,11 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@iamtraction/google-translate": "^1.1.2",
         "discord.js": "^13.10.2",
         "dotenv": "^16.0.1",
         "glob": "^7.2.3",
+        "iso-639-1": "^2.1.15",
         "mongoose": "^6.5.2"
     }
 }
