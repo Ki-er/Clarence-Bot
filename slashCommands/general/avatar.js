@@ -25,7 +25,7 @@ module.exports = {
         {
             const avatarEmbed = new MessageEmbed()
             .setColor('ORANGE')
-            .setAuthor(interaction.user.tag, interaction.user.displayAvatarURL({ dynamic: true }))
+            .setAuthor({name:`${interaction.user.tag}`, iconURL: `${interaction.user.displayAvatarURL({dynamic: true, size: 512})}`})
             .setImage(interaction.user.displayAvatarURL({dynamic: true}))
             .setFooter({text: `Called By: ${interaction.user.tag}`})                   
             .setTimestamp()
@@ -35,7 +35,7 @@ module.exports = {
         {
             const avatarEmbed = new MessageEmbed()
             .setColor('ORANGE')
-            .setAuthor(inputUser.user.tag, inputUser.displayAvatarURL({ dynamic: true }))
+            .setAuthor({name:`${inputUser.user.tag}`, iconURL: `${inputUser.displayAvatarURL({dynamic: true, size: 512})}`})
             .setImage(inputUser.displayAvatarURL({dynamic: true}))
             .setFooter({text: `Called By: ${interaction.user.tag}`})                   
             .setTimestamp()

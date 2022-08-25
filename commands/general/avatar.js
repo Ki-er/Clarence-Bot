@@ -13,7 +13,7 @@ module.exports = {
             const user = message.mentions.users.first() || message.author;
             const avatarEmbed = new MessageEmbed()
             .setColor('ORANGE')
-            .setAuthor(user.tag, user.displayAvatarURL({ dynamic: true }))
+            .setAuthor({name:`${user.tag}`, iconURL: `${user.displayAvatarURL({dynamic: true, size: 512})}`})
             .setImage(user.displayAvatarURL({dynamic: true}))
             .setFooter({
                 text: `Called By: ${message.author.tag}`

@@ -12,9 +12,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
         .setColor('ORANGE')
-        .setFooter({
-            text: `Called By: ${message.author.tag}`
-        })        
+        .setFooter({text: `Called By: ${message.author.tag}`})        
         .setTimestamp()
         .setTitle("Purchase")
         .addField(`While Kieran and others are not affiliated with CD Keys, we have had good expiriences with CD keys, buy siege here: `, `https://www.cdkeys.com/tom-clancy-s-rainbow-six-siege-pc-cd-key-uplay`)
