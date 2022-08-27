@@ -1,7 +1,7 @@
 {
     "name": "clarence",
-    "version": "1.0.0",
-    "description": "",
+    "version": "2.0.0",
+    "description": "A multipurpose bot with admin, fun and information commands",
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
