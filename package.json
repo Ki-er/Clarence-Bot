@@ -12,6 +12,7 @@
     "license": "ISC",
     "dependencies": {
         "@iamtraction/google-translate": "^1.1.2",
+        "canvas": "^2.9.3",
         "discord.js": "^13.10.2",
         "dotenv": "^16.0.1",
         "glob": "^7.2.3",
