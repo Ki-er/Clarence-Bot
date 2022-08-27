@@ -1,4 +1,4 @@
-const { Client, Message, Permissions } = require('discord.js');
+const { Client, CommandInteraction, Permissions } = require("discord.js");
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { PermissionFlagsBits } = require('discord-api-types/v10');
 
