@@ -1,8 +1,6 @@
-const { Permissions } = require('discord.js');
 const client = require("../index");
-const discord = require('discord.js');
+const { MessageAttachment } = require('discord.js');
 const Canvas = require('canvas')
-
 
 client.on('guildMemberAdd', async guildmember =>{
     const guild = client.guilds.cache.get('744586833135927366');
@@ -35,11 +33,13 @@ client.on('guildMemberAdd', async guildmember =>{
         canvas.context.arc(512, 166, 119, 0, Math.PI * 2, true)
         canvas.context.closePath()
         canvas.context.clip()
+
         await Canvas.loadImage(guildmember.user.displayAvatarURL({format: 'png', size: 1024}))
         .then(img => {
             canvas.context.drawImage(img, 393, 47, 238, 238);
         })
-        let welcomeatta = new discord.MessageAttachment(canvas.create.toBuffer(), `welcome-${guildmember.id}.png`)
+        
+        let welcomeatta = new MessageAttachment(canvas.create.toBuffer(), `welcome-${guildmember.id}.png`)
         welcomechannel.send({ content: `<:hi:858281121611513897> Welcome! **${guildmember.user}** has just joined the server!, Grab some roles from <#744595661495861379>`, files: [welcomeatta] });
     
     } 
