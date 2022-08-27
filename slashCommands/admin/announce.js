@@ -2,7 +2,6 @@ const { Client, CommandInteraction, Permissions } = require("discord.js");
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { PermissionFlagsBits } = require('discord-api-types/v10');
 
-
 module.exports = {
     ...new SlashCommandBuilder()
         .setName('announce')
@@ -25,6 +24,7 @@ module.exports = {
      * @param {CommandInteraction} interaction
      * @param {String[]} args
      */
+    
     run: async (client, interaction, args) => {
         const string = interaction.options.getString("string")
         const channel = interaction.options.getChannel("channel")
