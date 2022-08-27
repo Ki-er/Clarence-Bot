@@ -30,7 +30,7 @@ client.on('guildMemberAdd', async guildmember =>{
         canvas.context.textAlign = 'center';
         canvas.context.fillText(guildmember.user.tag.toUpperCase(), 512, 410)
         canvas.context.font = '32px sans-serif'
-        canvas.context.fillText(`You are the ${guildmember.guild.memberCount}th member`, 512, 455)
+        canvas.context.fillText(`You are member: ${guildmember.guild.memberCount}`, 512, 455)
         canvas.context.beginPath()
         canvas.context.arc(512, 166, 119, 0, Math.PI * 2, true)
         canvas.context.closePath()
