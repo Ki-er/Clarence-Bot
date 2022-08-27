@@ -1,5 +1,15 @@
 # Clarence Bot
+<img src="https://img.shields.io/github/workflow/status/KieranRobson/Clarence-Bot/ci?style=for-the-badge">
+<img src="https://img.shields.io/badge/Discord.JS-13.10.2-blue?style=for-the-badge&logo=DISCORD" />
+<img src="https://img.shields.io/badge/Node%20Version-16.16.0-brightgreen?style=for-the-badge&logo=Node.js">
+<img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge">
+</br>
+</br>
+
+
 > Clarence is a multipurpose discord bot for The Innercube Discord Server. 
+
+
 This bot features multiple command types from:
 * Admin
 * Fun
@@ -16,8 +26,8 @@ docker run -d \
 --name=clarence \
 -p 6002:6002 \
 -e DISCORD_TOKEN='INSERT DISCORD TOKEN' \
--e PREFIX='-' \
 -e MONGOOSE='INSERT MONGODB URL' \
+-e PREFIX='-' \
 --restart unless-stopped \
 kieranr27/clarence:latest
 ```
