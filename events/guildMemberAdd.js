@@ -1,6 +1,7 @@
 const client = require("../index");
 
 client.on('guildMemberAdd', async guildmember =>{
+    const welcomechannel = client.channels.cache.get('549373904603578369')
     const guild = client.guilds.cache.get('744586833135927366');
 
     if(guild == guildmember.guild.id )
