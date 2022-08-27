@@ -2,7 +2,7 @@ const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: "ping",
-    description: "returns ping to Clarence",
+    description: "Output ping to Clarence",
     type: 'CHAT_INPUT',
     /**
      *

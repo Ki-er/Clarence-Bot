@@ -2,7 +2,7 @@ const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: "about",
-    description: "returns information about Clarence",
+    description: "Output information about Clarence",
     type: 'CHAT_INPUT',
     /**
      *

@@ -4,7 +4,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 module.exports = {
     ...new SlashCommandBuilder()
         .setName('avatar')
-        .setDescription('output a users avatar')
+        .setDescription('Output a users avatar')
         .addUserOption((option) => option
             .setName('user')
             .setDescription("user for the avatar you want")

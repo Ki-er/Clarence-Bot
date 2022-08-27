@@ -5,7 +5,7 @@ const { PermissionFlagsBits } = require('discord-api-types/v10');
 module.exports = {
     ...new SlashCommandBuilder()
         .setName('announce')
-        .setDescription('announce')
+        .setDescription('Announce a message inside of another channel')
         .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers | PermissionFlagsBits.BanMembers)
         .addStringOption((option) => option
             .setName('string')

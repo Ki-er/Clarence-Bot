@@ -5,7 +5,7 @@ const { PermissionFlagsBits } = require('discord-api-types/v10');
 module.exports = {
     ...new SlashCommandBuilder()
         .setName('clear')
-        .setDescription('clear messages')
+        .setDescription('Clear messages')
         .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers | PermissionFlagsBits.BanMembers)
         .addIntegerOption((option) => option
             .setName('integer')

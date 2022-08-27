@@ -28,8 +28,6 @@ module.exports = {
               message.channel.send(`Successfully added: ${emoji} - ${emoji.name} to the server!!`))
           }
       }
-
-
     };
   }
 }

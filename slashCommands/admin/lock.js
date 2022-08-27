@@ -5,7 +5,7 @@ const { PermissionFlagsBits } = require('discord-api-types/v10');
 module.exports = {
     ...new SlashCommandBuilder()
         .setName('lock')
-        .setDescription('lock a channel')
+        .setDescription('Lock a channel')
         .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers | PermissionFlagsBits.BanMembers),
 
     /**

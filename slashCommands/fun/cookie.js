@@ -5,7 +5,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 module.exports = {
     ...new SlashCommandBuilder()
         .setName('cookie')
-        .setDescription('give a cookie')
+        .setDescription('Give a cookie')
         .addUserOption((option) => option
             .setName('user')
             .setDescription("a user")
