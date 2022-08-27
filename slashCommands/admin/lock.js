@@ -7,12 +7,14 @@ module.exports = {
         .setName('lock')
         .setDescription('lock a channel')
         .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers | PermissionFlagsBits.BanMembers),
+
     /**
      *
      * @param {Client} client
      * @param {CommandInteraction} interaction
      * @param {String[]} args
      */
+    
     run: async (client, interaction, args) => {
 
         const permission = interaction.member.permissions.has(Permissions.FLAGS.MANAGE_CHANNELS)

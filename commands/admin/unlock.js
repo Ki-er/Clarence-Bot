@@ -1,8 +1,14 @@
 const { Client, Message, Permissions } = require('discord.js');
+const { SlashCommandBuilder } = require('@discordjs/builders');
+const { PermissionFlagsBits } = require('discord-api-types/v10');
+
 
 module.exports = {
-    name: 'unlock',
-    aliases: [''],
+    ...new SlashCommandBuilder()
+        .setName('unlock')
+        .setDescription('unlocks a channel')
+        .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers | PermissionFlagsBits.BanMembers),
+
     /** 
      * @param {Client} client 
      * @param {Message} message 
