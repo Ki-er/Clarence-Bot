@@ -42,12 +42,5 @@ module.exports = {
             interaction.reply({ embeds: [avatarEmbed] });
 
         }
-
-
-
-
-
-
-
     },
 };

@@ -1,10 +1,13 @@
 const { Client, CommandInteraction, Permissions } = require("discord.js");
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { PermissionFlagsBits } = require('discord-api-types/v10');
+
 
 module.exports = {
     ...new SlashCommandBuilder()
         .setName('announce')
         .setDescription('announce')
+        .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers | PermissionFlagsBits.BanMembers)
         .addStringOption((option) => option
             .setName('string')
             .setDescription("string for announcement")

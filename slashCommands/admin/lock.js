@@ -1,9 +1,12 @@
 const { Client, CommandInteraction, Permissions } = require("discord.js");
+const { SlashCommandBuilder } = require('@discordjs/builders');
+const { PermissionFlagsBits } = require('discord-api-types/v10');
 
 module.exports = {
-    name: "lock",
-    description: "locks a channel",
-    type: 'CHAT_INPUT',
+    ...new SlashCommandBuilder()
+        .setName('lock')
+        .setDescription('lock a channel')
+        .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers | PermissionFlagsBits.BanMembers),
     /**
      *
      * @param {Client} client
