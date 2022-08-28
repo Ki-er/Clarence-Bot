@@ -41,7 +41,7 @@ module.exports = {
         if(inputType == null)
         {
             const stats = await R6.general(inputPlatform, inputUser);
-
+            console.log(stats)
             const embed = new MessageEmbed()
             .setTitle(`General Stats`)
             .setColor('ORANGE')
