@@ -40,29 +40,30 @@ module.exports = {
 
         if(inputType == null)
         {
-            let general = await R6.general(inputPlatform, inputUser);
+            const stats = await R6.general(inputPlatform, inputUser);
+
             const embed = new MessageEmbed()
             .setTitle(`General Stats`)
             .setColor('ORANGE')
             .setTimestamp()
-            .setThumbnail(general.header)
+            .setThumbnail(stats.header)
             .setFooter({ text: `Called By: ${interaction.user.tag}`})
-            .addField(`Username`, `${general.name}`)
-            .addField(`URL`, `${general.url}`)
-            .addField(`Level`, `${general.level}`, true)
-            .addField(`Total XP`, `${general.total_xp}`, true)
-            .addField(`Matches Played`, `${general.matches_played}`)
-            .addField(`Time Played`, `${general.time_played}`)
-            .addField(`KD`, `${general.kd}`, true)
-            .addField(`Kills`, `${general.kills}`, true)
-            .addField(`Deaths`, `${general.deaths}`, true)
-            .addField(`Melee Kills`, `${general.melee_kills}`)
-            .addField(`Blind Kills`, `${general.blind_kills}`)
-            .addField(`Win Percentage`, `${general.win_}`,true)
-            .addField(`Wins`, `${general.wins}`, true)
-            .addField(`Loses`, `${general.losses}`, true)
-            .addField(`Headshot Percentage`, `${general.headshot_}`, true)
-            .addField(`Total Headshots`, `${general.headshots}`, true)
+            .addField(`Username`, `${stats.name}`)
+            .addField(`URL`, `${stats.url}`)
+            .addField(`Level`, `${stats.level}`, true)
+            .addField(`Total XP`, `${stats.total_xp}`, true)
+            .addField(`Matches Played`, `${stats.matches_played}`)
+            .addField(`Time Played`, `${stats.time_played}`)
+            .addField(`KD`, `${stats.kd}`, true)
+            .addField(`Kills`, `${stats.kills}`, true)
+            .addField(`Deaths`, `${stats.deaths}`, true)
+            .addField(`Melee Kills`, `${stats.melee_kills}`)
+            .addField(`Blind Kills`, `${stats.blind_kills}`)
+            .addField(`Win Percentage`, `${stats.win_}`,true)
+            .addField(`Wins`, `${stats.wins}`, true)
+            .addField(`Loses`, `${stats.losses}`, true)
+            .addField(`Headshot Percentage`, `${stats.headshot_}`, true)
+            .addField(`Total Headshots`, `${stats.headshots}`, true)
             interaction.reply({embeds: [embed]})
         }
         else if(inputType == 'casual')
@@ -89,7 +90,9 @@ module.exports = {
             .addField(`Win Percentage`, `${stats.win_}`,true)
             .addField(`Wins`, `${stats.wins}`, true)
             .addField(`Loses`, `${stats.losses}`, true)
-            interaction.reply({embeds: [embed]})
+
+            await  interaction.reply({embeds: [embed]})
+
         }
     },
 };
