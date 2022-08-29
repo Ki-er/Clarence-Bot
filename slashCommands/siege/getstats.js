@@ -21,6 +21,7 @@ module.exports = {
         .addStringOption((option) => option
             .setName('platform')
             .setDescription('target platform')
+            .setRequired(true)
             .addChoices(
                 { name: 'Uplay', value: 'uplay' },
                 { name: 'Xbox', value: 'xbl' },

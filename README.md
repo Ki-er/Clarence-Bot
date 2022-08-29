@@ -23,6 +23,8 @@ docker run -d \
 -p 6002:6002 \
 -e DISCORD_TOKEN='INSERT DISCORD TOKEN' \
 -e MONGOOSE='INSERT MONGODB URL' \
+-e UBI_EMAIL='INSERT UBISOFT EMAIL' \
+-e UBI_PASSWORD='INSERT UBISOFT PASSWORD' \
 -e PREFIX='-' \
 --restart unless-stopped \
 kieranr27/clarence:latest
