@@ -28,7 +28,7 @@ module.exports = {
             }
 
             const embed = new MessageEmbed()
-            for(let j = 0; j < 10; ++j) 
+            for(let j = 0; j < 30; ++j) 
             {
                 if(counter == blame.length)
                 {
