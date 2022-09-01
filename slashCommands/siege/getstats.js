@@ -1,13 +1,6 @@
 const { Client, CommandInteraction, MessageEmbed } = require("discord.js");
 const { SlashCommandBuilder } = require('@discordjs/builders');
-require("dotenv").config();
-
-const R6API = require('r6api.js').default;
-email = process.env.UBI_EMAIL
-password = process.env.UBI_PASSWORD
-const r6api = new R6API({ email, password });
-
-
+const R6 = require('r6s-stats-api');
 
 module.exports = {
     ...new SlashCommandBuilder()
@@ -20,76 +13,88 @@ module.exports = {
         )
         .addStringOption((option) => option
             .setName('platform')
-            .setDescription('target platform')
+            .setDescription("target platform")
             .setRequired(true)
             .addChoices(
-                { name: 'Uplay', value: 'uplay' },
-                { name: 'Xbox', value: 'xbl' },
+                { name: 'PC', value: 'pc' },
+                { name: 'Xbox', value: 'xbox' },
                 { name: 'PSN', value: 'psn' },
+            ))
+        .addStringOption((option) => option
+            .setName('type')
+            .setDescription('target type')
+            .addChoices(
+                { name: 'Casual', value: 'casual' },
+                { name: 'Unranked', value: 'unranked' },
+                { name: 'Ranked', value: 'ranked' },
+                { name: 'Deathmatch', value: 'deathmatch' },
             )),
-        
+
     /**
      *
      * @param {Client} client
      * @param {CommandInteraction} interaction
      * @param {String[]} args
      */
-    
+
     run: async (client, interaction, args) => {
         const inputUser = interaction.options.getString("user")
         const inputPlatform = interaction.options.getString("platform")
+        const inputType = interaction.options.getString("type")
 
-        const { 0: player } = await r6api.findByUsername(inputPlatform, inputUser);
-        if (!player) return interaction.reply({ contents: "Player not found", ephemeral: true });
-
-        const { 0: stats } = await r6api.getStats(inputPlatform, player.id);
-        if (!stats) return interaction.reply({ contents: "Stats not found", ephemeral: true });
-        const { pvp: { general } } = stats;
-        console.log(stats)
-
-
-        const embed = new MessageEmbed()
-        .setTitle(`${player.username} (${player.userId})`)
-        .setThumbnail(`https://ubisoft-avatars.akamaized.net/${player.id}/default_146_146.png`)
-        .setTimestamp()
-        .setColor(`ORANGE`)
-        .setFooter({ text: `Called By: ${interaction.user.tag}`})        
-        .addField(`Kill Death Assists`, `- KD: ${general.kd}
-        - Kills: ${general.kills}\r\n- Deaths: ${general.deaths}
-        - Assists: ${general.assists}
-        - Suicides: ${general.suicides}
-        `)
-    
-        .addField(`Win Loss`, 
-        `- Matches: ${general.matches}
-        - Win/Loss: ${general.winRate}
-        - Wins: ${general.wins}
-        - Losses: ${general.losses}`)
-
-        .addField(`Bullet Stats`, 
-        `- Bullets Fired: ${general.bulletsFired}
-        - Bullets Connected: ${general.bulletsConnected}
-        `)
-
-        .addField(`Down Stats`, 
-        `- Down But Not Outs: ${general.dbno}
-        - Down But Not Outs Assists: ${general.dbnoAssists}
-        `)
-
-        .addField(`Misc Stats`, 
-        `- Blind Kills: ${general.blindKills}
-        - Penetration Kills: ${general.penetrationKills}
-        - Melee Kills: ${general.meleeKills}
-        - Rappel Breaches: ${general.rappelBreaches}
-        - Gadgets Destroyed: ${general.gadgetsDestroyed}
-        - Barricades Deployed: ${general.barricadesDeployed}
-        - Reinforcements Deployed: ${general.reinforcementsDeployed}
-        
-        `)
-
-        interaction.reply({ embeds: [embed] })
-        console.log(`${player.username} has played ${general.matches} matches.`) 
-        console.log(`${player.username} has played for ${general.playtime}.`)
-
+        if(inputType == null)
+        {
+            let general = await R6.general(inputPlatform, inputUser);
+            const embed = new MessageEmbed()
+            .setTitle(`General Stats`)
+            .setColor('ORANGE')
+            .setTimestamp()
+            .setThumbnail(general.header)
+            .setFooter({ text: `Called By: ${interaction.user.tag}`})
+            .addField(`Username`, `${general.name}`)
+            .addField(`URL`, `${general.url}`)
+            .addField(`Level`, `${general.level}`, true)
+            .addField(`Total XP`, `${general.total_xp}`, true)
+            .addField(`Matches Played`, `${general.matches_played}`)
+            .addField(`Time Played`, `${general.time_played}`)
+            .addField(`KD`, `${general.kd}`, true)
+            .addField(`Kills`, `${general.kills}`, true)
+            .addField(`Deaths`, `${general.deaths}`, true)
+            .addField(`Melee Kills`, `${general.melee_kills}`)
+            .addField(`Blind Kills`, `${general.blind_kills}`)
+            .addField(`Win Percentage`, `${general.win_}`,true)
+            .addField(`Wins`, `${general.wins}`, true)
+            .addField(`Loses`, `${general.losses}`, true)
+            .addField(`Headshot Percentage`, `${general.headshot_}`, true)
+            .addField(`Total Headshots`, `${general.headshots}`, true)
+            interaction.reply({embeds: [embed]})
+        }
+        else if(inputType == 'casual')
+        {
+            let stats = await R6.casual(inputPlatform, inputUser);
+            console.log(stats)
+            const embed = new MessageEmbed()
+            .setTitle(`Casual Stats`)
+            .setColor('ORANGE')
+            .setTimestamp()
+            .setThumbnail(stats.header)
+            .setFooter({ text: `Called By: ${interaction.user.tag}`})
+            .setImage(stats.rank_img)
+            .addField(`Username`, `${stats.name}`)
+            .addField(`URL`, `${stats.url}`)
+            .addField(`MMR`, `${stats.mmr}`, true)
+            .addField(`Rank`, `${stats.rank}`)
+            .addField(`Matches Played`, `${stats.matches}`)
+            .addField(`Time Played`, `${stats.time_played}`)
+            .addField(`KD`, `${stats.kd}`, true)
+            .addField(`Kills`, `${stats.kills}`, true)
+            .addField(`Deaths`, `${stats.deaths}`, true)
+            .addField(`Kills per Match`, `${stats.kills_match}`)
+            .addField(`Kills per Minute`, `${stats.kills_min}`)
+            .addField(`Win Percentage`, `${stats.win_}`,true)
+            .addField(`Wins`, `${stats.wins}`, true)
+            .addField(`Loses`, `${stats.losses}`, true)
+            interaction.reply({embeds: [embed]})
+        }
     },
-};
+}; 
