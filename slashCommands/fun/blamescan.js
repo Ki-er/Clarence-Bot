@@ -16,7 +16,7 @@ module.exports = {
     run: async (client, interaction, args) => {
         const blame = await blames.find({});
         await interaction.deferReply()
-        await wait(3000)
+        await wait(1000)
         await interaction.editReply(`Stitch has been blamed ${19 + blame.length} times.\r\nThere were 19 blames before the database.\r\nGetting all database blames, this may take a while.`)
 
         let counter = 0
@@ -28,7 +28,7 @@ module.exports = {
             }
 
             const embed = new MessageEmbed()
-            for(let j = 0; j < 30; ++j) 
+            for(let j = 0; j < 24; ++j) 
             {
                 if(counter == blame.length)
                 {
