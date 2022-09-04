@@ -1,10 +1,18 @@
-# Clarence Bot
+<div align="center">
 
-<img src="https://img.shields.io/github/workflow/status/KieranRobson/Clarence-Bot/ci?style=for-the-badge"> <img src="https://img.shields.io/badge/Discord.JS-13.10.2-blue?style=for-the-badge&logo=DISCORD" /> <img src="https://img.shields.io/badge/Node%20Version-16.16.0-brightgreen?style=for-the-badge&logo=Node.js"> <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge">
-</br>
+<img src="https://cdn.discordapp.com/avatars/875491402497294447/54e4808cf46edbeb5ef702d3af14087a.webp" width="150" height="150">
 
-> Clarence is a multipurpose discord bot for The Innercube Discord Server. 
+## Clarence Bot
 
+Clarence is a multipurpose discord bot for The Innercube Discord Server. 
+
+<img src="https://img.shields.io/github/workflow/status/KieranRobson/Clarence-Bot/ci?style=for-the-badge"> 
+<img src="https://img.shields.io/badge/Discord.JS-13.10.2-blue?style=for-the-badge&logo=DISCORD" /> 
+<img src="https://img.shields.io/badge/Node%20Version-16.16.0-brightgreen?style=for-the-badge&logo=Node.js"> 
+<img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge">
+</div align="center">
+
+---
 
 This bot features multiple command types from:
 * Admin
@@ -13,8 +21,9 @@ This bot features multiple command types from:
 * Info
 * Rainbow Six Siege
 
-# Installation
-## 🐋 Docker 
+---
+## Installation
+### 🐋 Docker 
 Due to the [Publish.yml](.github/workflows/publish.yml) workflow, the newest build will automatically be pushed to dockerhub.
 
 ```docker
@@ -30,10 +39,10 @@ kieranr27/clarence:latest
 
 Using a tool like [Ouroboros](https://github.com/pyouroboros/ouroboros), you can automatically update containers without the need for restarts.
 
-## 👷 Manual
+### 👷 Manual
 - Clone the repo 
 - Remove the `.template` from `.env.template`
-- Add Discord Bot Token where `DISCORD_TOKEN` is within the `.env` file 
+- Add required variables to `.env` 
 - Run `npm i`
 - Run `node .`
 
