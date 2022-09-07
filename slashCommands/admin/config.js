@@ -38,8 +38,5 @@ module.exports = {
             suggestionChannelId: suggestionChannel.id
         })
         interaction.reply({content: `Configuration added`})
-
-
-
     },
 }
