@@ -37,6 +37,6 @@ module.exports = {
             welcomeChannelId: welcomeChannel.id,
             suggestionChannelId: suggestionChannel.id
         })
-        interaction.reply({content: `Configuration added`})
+        interaction.reply({content: `Configuration added`, ephemeral: true})
     },
 }

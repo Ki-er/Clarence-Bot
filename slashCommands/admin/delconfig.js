@@ -19,6 +19,6 @@ module.exports = {
 
     run: async (client, interaction, args) => {
         await guildSchema.findByIdAndRemove(interaction.guild.id)
-        interaction.reply(`Config Removed! Add a new configuration by running /config.`)
+        interaction.reply({ content:`Config Removed! Add a new configuration by running /config.`, ephemeral: true})
     },
 }
