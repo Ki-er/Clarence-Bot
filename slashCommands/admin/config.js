@@ -33,9 +33,9 @@ module.exports = {
 
 
         const addGuild = await guild.create({
-            Guild: interaction.guildId,
-            WelcomeChannel: welcomeChannel,
-            SuggestionChannel: suggestionChannel
+            _id: interaction.guildId,
+            welcomeChannelId: welcomeChannel.id,
+            suggestionChannelId: suggestionChannel.id
         })
         interaction.reply({content: `Configuration added`})
 

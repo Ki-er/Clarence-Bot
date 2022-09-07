@@ -6,10 +6,9 @@ const reqString = {
 }
 
 const guildSchema = new mongoose.Schema({
-    Guild: reqString,
-    WelcomeChannel: reqString,
-    SuggestionChannel: String,
+    _id: reqString,
+    welcomeChannelId: reqString,
+    suggestionChannelId: String,
 })
-
 
 module.exports = mongoose.model('guild', guildSchema)
