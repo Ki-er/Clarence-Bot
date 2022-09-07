@@ -38,10 +38,6 @@ client.on('guildMemberAdd', async guildmember =>{
     })
     
     let welcomeatta = new MessageAttachment(canvas.create.toBuffer(), `welcome-${guildmember.id}.png`)
-
-
-
-
     welcomechannel.send({ content: `<:hi:858281121611513897> Welcome! **${guildmember.user}** has just joined the server!`, files: [welcomeatta] });
     
 })
