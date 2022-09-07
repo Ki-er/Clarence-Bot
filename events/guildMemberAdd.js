@@ -1,9 +1,18 @@
 const client = require("../index");
 const { MessageAttachment } = require('discord.js');
 const Canvas = require('canvas')
+const guild = require('../../schemas/guild-schema');
+
 
 client.on('guildMemberAdd', async guildmember =>{
+
+
+
+    
     const guild = client.guilds.cache.get('744586833135927366');
+    const welcomechannel = client.channels.cache.get('744594748815310930')
+
+
 
     if(guild == guildmember.guild.id )
     {
@@ -22,7 +31,6 @@ client.on('guildMemberAdd', async guildmember =>{
         welcomeCanvas.context.font = '72px sans-serif';
         welcomeCanvas.context.fillStyle = '#ffffff';
     
-        const welcomechannel = client.channels.cache.get('744594748815310930')
         let canvas = welcomeCanvas;
         canvas.context.font = '42px sans-serif',
         canvas.context.textAlign = 'center';
