@@ -1,4 +1,6 @@
 const { MessageEmbed } = require('discord.js');
+const { time } = require("@discordjs/builders");
+
 
 module.exports = {
     name: "serverinfo",
@@ -24,7 +26,7 @@ module.exports = {
         .addField('Member Count', `People: ${guild.memberCount - message.guild.members.cache.filter(m=>m.user.bot).size}\r\n Bots: ${message.guild.members.cache.filter(m=>m.user.bot).size}`)
         .addField('Boosts',  guild.premiumSubscriptionCount.toString(), true )
         .addField('Boost Level',  guild.premiumTier, true)
-        .addField('Created', guild.createdAt.toLocaleString())
+        .addField('Created', `${guild.createdAt ? time(guild.createdAt, "R") : "Unknown"}`)
         .addField('Roles', rolemap)
         .setTimestamp()
         .setThumbnail(thumbnail)
