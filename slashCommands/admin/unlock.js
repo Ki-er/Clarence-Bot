@@ -26,7 +26,9 @@ module.exports = {
 			});
 		interaction.channel.permissionOverwrites.edit(
 			interaction.guild.roles.everyone.id,
-			{ SEND_MESSAGES: true }
+			{
+				SEND_MESSAGES: true,
+			}
 		);
 		interaction.reply('Channel has been unlocked.');
 	},

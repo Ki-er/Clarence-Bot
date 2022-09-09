@@ -28,8 +28,10 @@ module.exports = {
 			});
 		interaction.channel.permissionOverwrites.edit(
 			interaction.guild.roles.everyone.id,
-			{ SEND_MESSAGES: false }
+			{
+				SEND_MESSAGES: false,
+			}
 		);
-		interaction.reply('Channel has been locked.');
+		interaction.reply({ content: `Channel has been locked.` });
 	},
 };
