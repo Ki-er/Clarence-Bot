@@ -20,7 +20,7 @@ module.exports = {
 
     run: async (client, interaction, args) => {
         const channel = interaction.options.getChannel("channel")
-        if (channel.type !== `GUILD_TEXT`) return interaction.reply({content: `Could ot parse channel`}, true) 
+        if (channel.type !== `GUILD_TEXT`) return interaction.reply({content: `Could ot parse channel`, ephemeral: true}) 
         console.log(channel)
 
         let channelembed = new MessageEmbed()
