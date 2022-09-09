@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js');
+const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -45,10 +45,17 @@ module.exports = {
 						size: 512,
 					})}`,
 				})
-				.setImage(inputUser.displayAvatarURL({ dynamic: true }))
+				.setImage(inputUser.displayAvatarURL({ dynamic: true, size: 4096 }))
 				.setFooter({ text: `Called By: ${interaction.user.tag}` })
 				.setTimestamp();
-			interaction.reply({ embeds: [avatarEmbed] });
+
+			const row = new MessageActionRow().addComponents(
+				new MessageButton()
+					.setStyle('LINK')
+					.setURL(inputUser.displayAvatarURL({ dynamic: true, size: 4096 }))
+					.setLabel('Link to Avatar')
+			);
+			interaction.reply({ embeds: [avatarEmbed], components: [row] });
 		}
 	},
 };
