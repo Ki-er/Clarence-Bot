@@ -1,3 +1,4 @@
+const { Client, CommandInteraction, Util } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { PermissionFlagsBits } = require('discord-api-types/v10');
 const guild = require('../../schemas/guild-schema');
@@ -17,7 +18,7 @@ module.exports = {
 			option
 				.setName('suggestionchannel')
 				.setDescription('Suggestion channel')
-				.setRequired(false)
+				.setRequired(true)
 		),
 
 	/**
@@ -27,7 +28,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (interaction) => {
+	run: async (client, interaction) => {
 		const welcomeChannel = interaction.options.getChannel('welcomechannel');
 		const suggestionChannel =
 			interaction.options.getChannel('suggestionchannel');
@@ -37,6 +38,6 @@ module.exports = {
 			welcomeChannelId: welcomeChannel.id,
 			suggestionChannelId: suggestionChannel.id,
 		});
-		interaction.reply({ content: 'Configuration added', ephemeral: true });
+		interaction.reply({ content: `Configuration added`, ephemeral: true });
 	},
 };
