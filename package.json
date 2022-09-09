@@ -2,12 +2,12 @@
     "name": "clarence",
     "version": "2.0.0",
     "description": "A multipurpose bot with admin, fun and information commands",
-    "main": "index.js",
+    "main": "src/index.js",
     "scripts": {
-        "start": "node index.js",
+        "start": "node src/index.js",
         "test": "nodemon index.js",
-        "lint": "eslint ./ --fix",
-        "spell": "cspell **"
+        "lint": "eslint . --fix",
+        "spell": "cspell src/**/"
     },
     "keywords": [],
     "author": "",
