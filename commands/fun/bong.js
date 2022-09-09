@@ -9,21 +9,21 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (message) => {
 		const Responses = [
 			'<@365297607276363776>',
 			'<@544191902946164756>',
 			'<@652830018858254346>',
 		];
 
-		const atta = new MessageAttachment(
+		const attachment = new MessageAttachment(
 			'https://c.tenor.com/9kwNAT9bTkEAAAAC/bong-smoke.gif'
 		);
 		message.channel.send({
 			content: `Time to hit up: ${
 				Responses[Math.floor(Math.random() * Responses.length)]
 			}`,
-			files: [atta],
+			files: [attachment],
 		});
 	},
 };

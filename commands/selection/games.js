@@ -9,7 +9,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (client, message) => {
 		const row = new MessageActionRow().addComponents(
 			new MessageSelectMenu()
 				.setCustomId('games')
@@ -23,9 +23,9 @@ module.exports = {
 						id: 'R6',
 					},
 					{
-						label: 'Minecraft',
-						value: 'gameMinecraft',
-						id: 'gameMinecraft',
+						label: 'MineCraft',
+						value: 'MineCraft',
+						id: 'gameMineCraft',
 					},
 				])
 		);

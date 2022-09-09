@@ -10,7 +10,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (message, args) => {
 		if (!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR))
 			return message.reply(
 				`You do not have correct permissions to do this action`

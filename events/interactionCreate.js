@@ -59,9 +59,9 @@ client.on("interactionCreate", async (interaction) => {
             else if(interaction.values.includes("general"))
             {
                 const embed = new discord.MessageEmbed()
-                .setTitle("General Comamnds")
+                .setTitle("General Commands")
                 .setColor('ORANGE')
-                .addField('-jumbo', 'Enalrges an emoji')
+                .addField('-jumbo', 'Enlarges an emoji')
                 .addField('-avatar', 'Gets a users avatar')            
                 .addField('-translate', 'Translates messages to english')
             }
@@ -72,8 +72,8 @@ client.on("interactionCreate", async (interaction) => {
                 .setColor('ORANGE')
 
                 .addField('-ping','Displays the ping')
-                .addField('-channelinfo', 'Dispalys information about a certain channel')
-                .addField('-userinfo', 'Dispalys information about a certain user')
+                .addField('-channelinfo', 'Displays information about a certain channel')
+                .addField('-userinfo', 'Displays information about a certain user')
             }
             else if(interaction.values.includes("admin") && (interaction.member.permissions.has(discord.Permissions.FLAGS.ADMINISTRATOR)))
             {
@@ -81,7 +81,7 @@ client.on("interactionCreate", async (interaction) => {
                 .setTitle("Admin Commands")
                 .setColor('ORANGE')
                 .addField('-ban','Bans a user from the server')
-                .addField('-clear', 'Clears x ammount of messages')
+                .addField('-clear', 'Clears x amount of messages')
                 .addField('-kick', 'Kicks a user from the server')
                 .addField('-mute', 'Mutes a user')  
                 .addField('-addemoji', 'Adds emoji to the server')
@@ -307,7 +307,7 @@ client.on("interactionCreate", async (interaction) => {
             if(interaction.values.includes("R6"))  interaction.member.roles.add("805540203132878869") 
             else interaction.member.roles.remove("805540203132878869")
     
-            if(interaction.values.includes("gameMinecraft")) interaction.member.roles.add("856086822030802944") 
+            if(interaction.values.includes("gameMineCraft")) interaction.member.roles.add("856086822030802944") 
             else interaction.member.roles.remove("856086822030802944")
     
             await interaction.reply({ content: 'Roles have been updated', ephemeral: true});

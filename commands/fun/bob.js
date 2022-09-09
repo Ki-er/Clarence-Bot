@@ -7,7 +7,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (message) => {
 		message.channel.send({ files: ['./images/bob.png'] });
 	},
 };

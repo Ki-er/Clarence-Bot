@@ -19,7 +19,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const channel = interaction.options.getChannel('channel');
 		if (channel.type !== `GUILD_TEXT`)
 			return interaction.reply({
@@ -27,7 +27,7 @@ module.exports = {
 				ephemeral: true,
 			});
 
-		const channelembed = new MessageEmbed()
+		const embed = new MessageEmbed()
 			.setTitle(`#${channel.name} - ${channel.id}`)
 			.setThumbnail(interaction.guild.iconURL())
 			.addField(
@@ -43,6 +43,6 @@ module.exports = {
 			.setColor('ORANGE')
 			.setFooter({ text: `Called By: ${interaction.user.tag}` })
 			.setTimestamp();
-		interaction.reply({ embeds: [channelembed] });
+		interaction.reply({ embeds: [embed] });
 	},
 };

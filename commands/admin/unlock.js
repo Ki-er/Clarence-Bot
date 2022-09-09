@@ -8,7 +8,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (message) => {
 		const permission = message.member.permissions.has(
 			Permissions.FLAGS.MANAGE_CHANNELS
 		);

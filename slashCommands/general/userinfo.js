@@ -19,7 +19,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const user = interaction.options.getUser('user');
 		const memberTargetID = user.id;
 		console.log(memberTargetID);
@@ -31,7 +31,7 @@ module.exports = {
 
 		let statusEmbed;
 
-		if (status == 'dnd') statusEmbed = '<:dnd:881522766472441886>'; // if the person is dnd  so it will type in the embed Do no Distrub
+		if (status == 'dnd') statusEmbed = '<:dnd:881522766472441886>'; // if the person is dnd  so it will type in the embed Do no Disturb
 		if (status == 'online') statusEmbed = '<:online:881595015875416095>';
 		if (status == 'offline') statusEmbed = '<:offline:881596009069817907>';
 		if (status === 'idle') statusEmbed = '<:idle:881595951419105331>';

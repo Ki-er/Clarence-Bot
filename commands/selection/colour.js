@@ -9,7 +9,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (message) => {
 		const row = new MessageActionRow().addComponents(
 			new MessageSelectMenu()
 				.setCustomId('colours')

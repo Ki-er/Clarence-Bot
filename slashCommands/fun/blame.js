@@ -16,10 +16,10 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (interaction) => {
 		const reasonToSend = interaction.options.getString('reason');
 
-		const addBlame = await blame.create({
+		await blame.create({
 			reason: reasonToSend,
 			userId: interaction.user.id,
 			date: new Date(),

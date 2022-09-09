@@ -9,7 +9,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (message, args) => {
 		const member =
 			message.mentions.members.first() ||
 			message.guild.members.cache.get(args[0]);

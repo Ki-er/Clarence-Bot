@@ -17,7 +17,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const permission = interaction.member.permissions.has(
 			Permissions.FLAGS.MANAGE_CHANNELS
 		);

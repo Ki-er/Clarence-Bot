@@ -29,7 +29,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const string = interaction.options.getString('string');
 		const channel = interaction.options.getChannel('channel');
 

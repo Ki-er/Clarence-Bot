@@ -6,7 +6,8 @@
     "scripts": {
         "start": "node index.js",
         "test": "nodemon index.js",
-        "lint": "eslint ./ --fix"
+        "lint": "eslint ./ --fix",
+        "spell": "cspell **"
     },
     "keywords": [],
     "author": "",
@@ -25,6 +26,7 @@
         "twemoji-parser": "^14.0.0"
     },
     "devDependencies": {
+        "cspell": "^6.8.1",
         "eslint": "^8.23.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-base": "^15.0.0",

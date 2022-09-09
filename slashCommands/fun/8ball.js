@@ -19,7 +19,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const questionToSend = interaction.options.getString('question');
 
 		const Responses = ['Yes', 'No', 'Maybe', 'It is likely', 'It is unlikely'];

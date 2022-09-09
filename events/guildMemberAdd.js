@@ -24,6 +24,7 @@ client.on('guildMemberAdd', async (guildmember) => {
 	welcomeCanvas.context.fillStyle = '#ffffff';
 
 	const canvas = welcomeCanvas;
+	// eslint-disable-next-line no-unused-expressions, no-sequences
 	(canvas.context.font = '42px sans-serif'),
 		(canvas.context.textAlign = 'center');
 	canvas.context.fillText(guildmember.user.tag.toUpperCase(), 512, 410);
@@ -44,12 +45,12 @@ client.on('guildMemberAdd', async (guildmember) => {
 		canvas.context.drawImage(img, 393, 47, 238, 238);
 	});
 
-	const welcomeatta = new MessageAttachment(
+	const attachment = new MessageAttachment(
 		canvas.create.toBuffer(),
 		`welcome-${guildmember.id}.png`
 	);
 	welcomechannel.send({
 		content: `<:hi:858281121611513897> Welcome! **${guildmember.user}** has just joined the server!`,
-		files: [welcomeatta],
+		files: [attachment],
 	});
 });

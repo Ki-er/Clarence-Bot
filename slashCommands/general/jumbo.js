@@ -9,7 +9,7 @@ module.exports = {
 		.addStringOption((option) =>
 			option
 				.setName('emoji')
-				.setDescription('Emoji to be jumbofied')
+				.setDescription('Emoji to be enlarged')
 				.setRequired(true)
 		),
 
@@ -20,7 +20,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const inputEmoji = interaction.options.getString('emoji');
 		const custom = Util.parseEmoji(inputEmoji);
 

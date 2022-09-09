@@ -39,7 +39,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const inputUser = interaction.options.getString('user');
 		const inputPlatform = interaction.options.getString('platform');
 		const inputType = interaction.options.getString('type');

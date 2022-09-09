@@ -27,12 +27,12 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (interaction) => {
 		const welcomeChannel = interaction.options.getChannel('welcomechannel');
 		const suggestionChannel =
 			interaction.options.getChannel('suggestionchannel');
 
-		const addGuild = await guild.create({
+		await guild.create({
 			_id: interaction.guildId,
 			welcomeChannelId: welcomeChannel.id,
 			suggestionChannelId: suggestionChannel.id,

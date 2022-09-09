@@ -14,7 +14,7 @@ module.exports = {
 			message.channel;
 		if (!channel) return message.channel.send('**Channel Not Found!**');
 
-		const channelembed = new MessageEmbed()
+		const embed = new MessageEmbed()
 			.setTitle(`Channel Information for ${channel.name}`)
 			.setThumbnail(message.guild.iconURL())
 			.addField('**NSFW**', `${channel.nsfw}`)
@@ -28,6 +28,6 @@ module.exports = {
 			.setColor('ORANGE')
 			.setFooter({ text: `Called By: ${message.author.tag}` })
 			.setTimestamp();
-		message.channel.send({ embeds: [channelembed] });
+		message.channel.send({ embeds: [embed] });
 	},
 };

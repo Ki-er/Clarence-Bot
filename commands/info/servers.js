@@ -6,7 +6,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (client, message) => {
 		client.guilds.cache.forEach((guild) => {
 			message.channel.send(
 				`${guild.name} has a total of ${guild.memberCount} members`

@@ -5,7 +5,7 @@ module.exports = {
 	name: 'serverinfo',
 	description: 'Shows information from mentioned server',
 
-	async run(client, message, args) {
+	async run(message) {
 		const owner = await message.guild.fetchOwner();
 		const { guild } = message;
 		const thumbnail = guild.iconURL();

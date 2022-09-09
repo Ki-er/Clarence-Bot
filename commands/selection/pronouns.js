@@ -9,7 +9,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (client, message) => {
 		const row = new MessageActionRow().addComponents(
 			new MessageSelectMenu()
 				.setCustomId('pronouns')
@@ -41,7 +41,7 @@ module.exports = {
 		);
 
 		message.channel.send({
-			content: 'Select your prefered pronouns',
+			content: 'Select your preferred pronouns',
 			components: [row],
 		});
 	},

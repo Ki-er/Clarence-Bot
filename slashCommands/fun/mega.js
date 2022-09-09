@@ -8,7 +8,7 @@ module.exports = {
 	 * @param {CommandInteraction} interaction
 	 * @param {String[]} args
 	 */
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		interaction.reply({
 			content: `https://c.tenor.com/7_6SE-1lyT0AAAAd/johnny-depp.gif`,
 		});

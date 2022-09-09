@@ -10,7 +10,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		interaction.reply({ content: `https://tenor.com/bkKml.gif` });
 	},
 };

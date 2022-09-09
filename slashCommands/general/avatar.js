@@ -18,7 +18,7 @@ module.exports = {
 	 * @param {CommandInteraction} interaction
 	 * @param {String[]} args
 	 */
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const inputUser = interaction.options.getMember('user');
 
 		if (inputUser == null) {

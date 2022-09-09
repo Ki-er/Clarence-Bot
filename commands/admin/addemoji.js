@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-const { Message, Client, Permissions } = require('discord.js');
+const { Permissions } = require('discord.js');
 const Discord = require('discord.js');
 
 module.exports = {
@@ -11,7 +11,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (message, args) => {
 		if (
 			!message.member.permissions.has(
 				Permissions.FLAGS.MANAGE_EMOJIS_AND_STICKERS,

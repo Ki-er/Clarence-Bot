@@ -8,7 +8,7 @@ module.exports = {
 	 * @param {Message} message
 	 * @param {String[]} args
 	 */
-	run: async (client, message, args) => {
+	run: async (message) => {
 		const user = message.mentions.users.first() || message.author;
 		const avatarEmbed = new MessageEmbed()
 			.setColor('ORANGE')

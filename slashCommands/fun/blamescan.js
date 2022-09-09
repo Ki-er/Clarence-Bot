@@ -14,7 +14,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (interaction) => {
 		const blame = await blames.find({});
 		await interaction.deferReply();
 		await wait(1000);

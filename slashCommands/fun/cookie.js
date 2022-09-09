@@ -14,7 +14,7 @@ module.exports = {
 	 * @param {CommandInteraction} interaction
 	 * @param {String[]} args
 	 */
-	run: async (client, interaction, args) => {
+	run: async (interaction) => {
 		const user = interaction.options.getUser('user');
 		const embed = new MessageEmbed()
 			.setColor('ORANGE')

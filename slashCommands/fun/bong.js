@@ -12,21 +12,21 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (interaction) => {
 		const Responses = [
 			'<@365297607276363776>',
 			'<@544191902946164756>',
 			'<@652830018858254346>',
 		];
 
-		const atta = new MessageAttachment(
+		const attachment = new MessageAttachment(
 			'https://c.tenor.com/9kwNAT9bTkEAAAAC/bong-smoke.gif'
 		);
 		interaction.reply({
 			content: `Time to hit up: ${
 				Responses[Math.floor(Math.random() * Responses.length)]
 			}`,
-			files: [atta],
+			files: [attachment],
 		});
 	},
 };

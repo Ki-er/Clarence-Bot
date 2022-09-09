@@ -1,0 +1,49 @@
+{
+    // Enable your dictionary by adding it to the list of `dictionaries`
+    "dictionaries": [
+        "cspell-words"
+    ],
+    // Tell CSpell about your dictionary
+    "dictionaryDefinitions": [
+        {
+            // The name of the dictionary is used to look it up.
+            "name": "custom-words",
+            // Path to the custom word file. Relative to this `cspell.json` file.
+            "path": "./.cspell/custom-words.txt",
+            // Some editor extensions will use `addWords` for adding words to your
+            // personal dictionary.
+            "addWords": true
+        }
+    ],
+    "words": [
+        "addemoji",
+        "blamescan",
+        "blamestitch",
+        "channelinfo",
+        "colour",
+        "colours",
+        "Deathmatch",
+        "delconfig",
+        "discordjs",
+        "dockerhub",
+        "goodest",
+        "guildmember",
+        "Headshot",
+        "Headshots",
+        "iamtraction",
+        "icarly",
+        "Innercube",
+        "Kieran",
+        "kieranr",
+        "Ouroboros",
+        "pingables",
+        "rolemap",
+        "serverinfo",
+        "simulatejoin",
+        "suggestionchannel",
+        "twemoji",
+        "unban",
+        "Unranked",
+        "welcomechannel"
+    ]
+}

@@ -10,7 +10,7 @@ module.exports = {
 	 * @param {CommandInteraction} interaction
 	 * @param {String[]} args
 	 */
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const embed = new MessageEmbed()
 			.setColor('ORANGE')
 			.setFooter({ text: `Called By: ${interaction.user.tag}` })

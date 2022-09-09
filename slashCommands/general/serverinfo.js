@@ -13,7 +13,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (client, interaction, args) => {
+	run: async (client, interaction) => {
 		const owner = await interaction.guild.fetchOwner();
 		const { guild } = interaction;
 		const thumbnail = guild.iconURL();
