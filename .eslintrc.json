@@ -1,0 +1,21 @@
+{
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "eqeqeq": "off",
+    "node/no-unsupported-features/es-syntax": "off",
+    "consistent-return": "off",
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off"
+  }
+}

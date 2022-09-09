@@ -5,14 +5,17 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "test": "nodemon index.js"
+        "test": "nodemon index.js",
+        "lint": "eslint ./ --fix"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@discordjs/builders": "^1.2.0",
         "@iamtraction/google-translate": "^1.1.2",
         "canvas": "^2.9.3",
+        "discord-api-types": "^0.37.8",
         "discord.js": "^13.10.2",
         "dotenv": "^16.0.1",
         "glob": "^7.2.3",
@@ -23,7 +26,16 @@
     },
     "devDependencies": {
         "eslint": "^8.23.0",
+        "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-plugin-import": "^2.26.0"
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "prettier": "^2.7.1"
     }
 }

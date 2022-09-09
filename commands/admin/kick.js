@@ -1,23 +1,28 @@
-const { Message, Client, Permissions } = require("discord.js");
+const { Permissions } = require('discord.js');
 
 module.exports = {
-    name: "kick",
-    aliases: [''],
-    /**
-     *
-     * @param {Client} client
-     * @param {Message} message
-     * @param {String[]} args
-     */
-    run: async (client, message, args) => {
+	name: 'kick',
+	aliases: [''],
+	/**
+	 *
+	 * @param {Client} client
+	 * @param {Message} message
+	 * @param {String[]} args
+	 */
+	run: async (client, message, args) => {
+		const member =
+			message.mentions.members.first() ||
+			message.guild.members.cache.get(args[0]);
+		if (!message.member.permissions.has(Permissions.FLAGS.KICK_MEMBERS))
+			return message.reply("You don't have permission to use that command.");
+		if (!args[0])
+			return message.reply({ content: `Please specify a user to kick` });
+		if (member.id == message.author.id)
+			return message.reply('You cant kick yourself!');
 
-
-    let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-    if(!message.member.permissions.has(Permissions.FLAGS.KICK_MEMBERS)) return message.reply("You don't have permission to use that command.")
-    if (!args[0]) return message.reply({ content: `Please specify a user to kick` });
-    if(member.id == message.author.id) return message.reply("You cant kick yourself!")
-    
-    return ((await member.kick()) + message.reply({content: `User ${member} has been kicked`}))
-
-  }
-}
+		return (
+			(await member.kick()) +
+			message.reply({ content: `User ${member} has been kicked` })
+		);
+	},
+};
