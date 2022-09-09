@@ -26,14 +26,16 @@ module.exports = {
         if (!rolemap) rolemap = "No roles";
 
         let embed = new MessageEmbed()
-        .setAuthor(guild.name, guild.iconURL)
+        .setTitle(`${guild.name} (${guild.id})`)
         .setColor('ORANGE')
         .addField(`Owner`, `${owner.user.tag} (${owner.user.id})`)
-        .addField('ID', `${guild.id}`)
-        .addField('Member Count', `People: ${guild.memberCount - guild.members.cache.filter(m=>m.user.bot).size}\r\n Bots: ${guild.members.cache.filter(m=>m.user.bot).size}`)
-        .addField('Boosts',  guild.premiumSubscriptionCount.toString(), true )
-        .addField('Boost Level',  guild.premiumTier, true)
         .addField('Created', `${guild.createdAt ? time(guild.createdAt, "R") : "Unknown"}`)
+        .addField('Member Count', `${guild.memberCount}`)
+        .addField('Boost Stats',  `Boosts: ${guild.premiumSubscriptionCount.toString()}
+                Boost Level: ${guild.premiumTier}`)
+        .addField(`Channels`, `Text channels: ${interaction.guild.channels.cache.filter((r) => r.type == 'GUILD_TEXT').size}
+                Voice channels: ${interaction.guild.channels.cache.filter((r) => r.type == 'GUILD_VOICE').size}
+                Categories: ${interaction.guild.channels.cache.filter((r) => r.type === 'GUILD_CATEGORY').size}`)
         .addField('Roles', rolemap)
         .setTimestamp()
         .setThumbnail(thumbnail)
