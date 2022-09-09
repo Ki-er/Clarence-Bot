@@ -47,10 +47,7 @@ module.exports = {
 			.setImage(
 				fetchUser.bannerURL({ dynamic: true, size: 4096, format: 'png' })
 			)
-			.setFooter(
-				`Requested by ${interaction.user.tag}`,
-				interaction.user.displayAvatarURL({ dynamic: true })
-			)
+			.setFooter(`Called by ${interaction.user.tag}`)
 			.setColor('ORANGE');
 
 		const row = new MessageActionRow().addComponents(
