@@ -8,4 +8,4 @@ RUN npm install
 
 COPY . /usr/clarence/src
 
-CMD ["node", "index.js"]
+CMD ["node", "src/index.js"]
