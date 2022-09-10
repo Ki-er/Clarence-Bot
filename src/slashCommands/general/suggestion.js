@@ -23,7 +23,11 @@ module.exports = {
 		const string = interaction.options.getString('string');
 
 		const data = await guildSchema.findById(interaction.guild.id);
-		if (!data) return;
+		if (!data)
+			return interaction.reply({
+				content: `:x: There is no channel for this suggestion. Please ask an administrator to run /config!`,
+				ephemeral: true,
+			});
 
 		const suggestionChannel = interaction.guild.channels.cache.get(
 			data.suggestionChannelId
