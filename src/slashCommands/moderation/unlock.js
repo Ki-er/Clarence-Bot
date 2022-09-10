@@ -1,4 +1,3 @@
-const { Permissions } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { PermissionFlagsBits } = require('discord-api-types/v10');
 
@@ -15,15 +14,7 @@ module.exports = {
 	 * @param {CommandInteraction} interaction
 	 * @param {String[]} args
 	 */
-	run: async (interaction) => {
-		const permission = interaction.member.permissions.has(
-			Permissions.FLAGS.MANAGE_CHANNELS
-		);
-		if (!permission)
-			return interaction.reply({
-				contents: "You don't have permission to use this command",
-				ephemeral: true,
-			});
+	run: async (client, interaction) => {
 		interaction.channel.permissionOverwrites.edit(
 			interaction.guild.roles.everyone.id,
 			{
