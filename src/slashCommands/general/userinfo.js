@@ -21,59 +21,21 @@ module.exports = {
 
 	run: async (client, interaction) => {
 		const user = interaction.options.getUser('user');
-		const memberTargetID = user.id;
-		console.log(memberTargetID);
 
-		const { status } = memberTargetID.presence;
-		const game = memberTargetID.presence.activities[0]
-			? memberTargetID.presence.activities[0].name
-			: `User isn't playing a game`;
-
-		let statusEmbed;
-
-		if (status == 'dnd') statusEmbed = '<:dnd:881522766472441886>'; // if the person is dnd  so it will type in the embed Do no Disturb
-		if (status == 'online') statusEmbed = '<:online:881595015875416095>';
-		if (status == 'offline') statusEmbed = '<:offline:881596009069817907>';
-		if (status === 'idle') statusEmbed = '<:idle:881595951419105331>';
+		const joinedTime = Date.now() - user.joinedAt;
 
 		const embed = new MessageEmbed()
-			.setTitle(`${statusEmbed} ${memberTargetID.user.tag}`)
-			.setURL(`${memberTargetID.user.avatarURL({ dynamic: true })}`)
+			.setTitle(`${user.tag}`)
+			.setURL(`${user.avatarURL({ dynamic: true })}`)
 			.setColor('ORANGE')
 			.setFooter({ text: `Called By: ${interaction.user.tag}` })
-			.setThumbnail(memberTargetID.user.displayAvatarURL())
+			.setThumbnail(user.avatarURL({ dynamic: true }))
 			.setTimestamp()
-			.addField('Username', `${memberTargetID.user.username}`)
-			.addField(
-				'Nickname',
-				memberTargetID.nickname
-					? memberTargetID.nickname
-					: 'User has no nickname'
-			)
-			.addField('ID', `${memberTargetID.user.id}`)
-			.addField('Game', game)
-			.addField(
-				'Joined at: ',
-				`${
-					memberTargetID.user.joinedAt
-						? time(memberTargetID.joinedAt, 'R')
-						: 'Unknown'
-				}}`
-			)
-			.addField(
-				'Created at: ',
-				`${
-					memberTargetID.user.createdAt
-						? time(memberTargetID.createdAt, 'R')
-						: 'Unknown'
-				}`
-			)
-			.addField(
-				'Avatar URL',
-				`[Link](${memberTargetID.user.avatarURL({ dynamic: true })})`,
-				true
+			.setDescription(
+				`- Known as: ${user}
+			- Joined: ${joinedTime ? time(joinedTime, 'R') : 'Unknown'}
+			- Created: ${user.createdAt ? time(user.createdAt, 'R') : 'Unknown'}`
 			);
-
 		interaction.reply({ embeds: [embed] });
 	},
 };
