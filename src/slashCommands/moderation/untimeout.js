@@ -32,6 +32,7 @@ module.exports = {
 		await member.disableCommunicationUntil(null, `By: ${interaction.user.tag}`);
 		interaction.reply({
 			content: `Timeout has been removed from ${member}`,
+			ephemeral: true,
 		});
 	},
 };
