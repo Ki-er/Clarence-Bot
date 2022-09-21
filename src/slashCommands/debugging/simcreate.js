@@ -1,10 +1,13 @@
-const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { PermissionFlagsBits } = require('discord-api-types/v10');
 
 module.exports = {
 	...new SlashCommandBuilder()
 		.setName('simcreate')
-		.setDescription('Simulate guild create event'),
+		.setDescription('Simulate guild create event')
+		.setDefaultMemberPermissions(
+			PermissionFlagsBits.KickMembers || PermissionFlagsBits.BanMembers
+		),
 
 	/**
 	 *
@@ -12,6 +15,7 @@ module.exports = {
 	 * @param {CommandInteraction} interaction
 	 * @param {String[]} args
 	 */
+
 	run: async (client, interaction) => {
 		client.emit('guildCreate', interaction.guild);
 		interaction.reply({ content: 'Simulated', ephemeral: true });
