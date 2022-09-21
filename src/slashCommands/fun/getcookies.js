@@ -5,7 +5,7 @@ const cookie = require('../../schemas/cookie-schema');
 module.exports = {
 	...new SlashCommandBuilder()
 		.setName('showcookies')
-		.setDescription('Output ammount of cookies')
+		.setDescription('Output amount of cookies')
 		.addUserOption((option) =>
 			option
 				.setName('user')
