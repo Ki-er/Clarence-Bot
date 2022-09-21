@@ -33,66 +33,6 @@ client.on('interactionCreate', async (interaction) => {
 	}
 
 	if (interaction.isSelectMenu()) {
-		if (interaction.customId == 'help') {
-			if (interaction.values.includes('fun')) {
-				const embed = new discord.MessageEmbed()
-					.setTitle('Fun Commands')
-					.setColor('ORANGE')
-					.addField('-8ball', 'Answer your darkest questions')
-					.addField('-bonk', 'Go to horny jail!')
-					.addField('-cookie', 'Give a cookie to someone')
-					.addField('-icarly', 'The lyrics of the greatest song ever')
-					.addField('-mega', 'A mega pint?')
-					.addField('-bong', 'Hit up some friends and hit a bong');
-				await interaction.update({ embeds: [embed], ephemeral: true });
-			} else if (interaction.values.includes('siege')) {
-				const embed = new discord.MessageEmbed()
-					.setTitle('Siege Commands')
-					.setColor('ORANGE')
-
-					.addField('-limb', 'Displays limb damage per operator')
-					.addField('-muzzle', 'Displays muzzle attachments For all weapons')
-					.addField('-buy', 'A link to buy siege for cheap');
-			} else if (interaction.values.includes('general')) {
-				const embed = new discord.MessageEmbed()
-					.setTitle('General Commands')
-					.setColor('ORANGE')
-					.addField('-jumbo', 'Enlarges an emoji')
-					.addField('-avatar', 'Gets a users avatar')
-					.addField('-translate', 'Translates messages to english');
-			} else if (interaction.values.includes('info')) {
-				const embed = new discord.MessageEmbed()
-					.setTitle('Information Commands')
-					.setColor('ORANGE')
-
-					.addField('-ping', 'Displays the ping')
-					.addField(
-						'-channelinfo',
-						'Displays information about a certain channel'
-					)
-					.addField('-userinfo', 'Displays information about a certain user');
-			} else if (
-				interaction.values.includes('admin') &&
-				interaction.member.permissions.has(
-					discord.Permissions.FLAGS.ADMINISTRATOR
-				)
-			) {
-				const embed = new discord.MessageEmbed()
-					.setTitle('Admin Commands')
-					.setColor('ORANGE')
-					.addField('-ban', 'Bans a user from the server')
-					.addField('-clear', 'Clears x amount of messages')
-					.addField('-kick', 'Kicks a user from the server')
-					.addField('-mute', 'Mutes a user')
-					.addField('-addemoji', 'Adds emoji to the server');
-			} else {
-				await interaction.update({
-					content: 'You do not have permission to view these commands.',
-					ephemeral: true,
-				});
-			}
-		}
-
 		if (interaction.customId == 'colours') {
 			if (interaction.values.includes('colourLB')) {
 				interaction.member.roles.add('744601093702418583'); // Add Lightblue
