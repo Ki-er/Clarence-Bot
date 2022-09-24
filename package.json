@@ -10,7 +10,6 @@
         "spell": "cspell /**/",
         "spell-code": "cspell src/**/",
         "ci": "eslint . --fix && cspell /**/"
-
     },
     "keywords": [],
     "author": "",
@@ -18,7 +17,7 @@
     "dependencies": {
         "@discordjs/builders": "^1.2.0",
         "@iamtraction/google-translate": "^1.1.2",
-        "canvas": "^2.9.3",
+        "canvas": "^2.10.1",
         "discord-api-types": "^0.37.10",
         "discord.js": "^13.10.2",
         "dotenv": "^16.0.2",
@@ -29,8 +28,8 @@
         "twemoji-parser": "^14.0.0"
     },
     "devDependencies": {
-        "cspell": "^6.9.1",
-        "eslint": "^8.23.1",
+        "cspell": "^6.10.1",
+        "eslint": "^8.24.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-prettier": "^4.2.1",
