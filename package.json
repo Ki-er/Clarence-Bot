@@ -4,11 +4,9 @@
     "description": "A multipurpose bot with admin, fun and information commands",
     "main": "src/index.js",
     "scripts": {
-        "start": "node src/index.js",
-        "test": "nodemon index.js",
         "lint": "eslint . --fix",
         "spell": "cspell /**/",
-        "spell-code": "cspell src/**/",
+        "spell-code": "cspell srddddd/**/",
         "ci": "eslint . --fix && cspell /**/"
     },
     "keywords": [],
