@@ -6,7 +6,7 @@
     "scripts": {
         "lint": "eslint . --fix",
         "spell": "cspell /**/",
-        "spell-code": "cspell srddddd/**/",
+        "spell-code": "cspell src/**/",
         "ci": "eslint . --fix && cspell /**/"
     },
     "keywords": [],
