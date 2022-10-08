@@ -16,7 +16,7 @@
         "@discordjs/builders": "^1.2.0",
         "@iamtraction/google-translate": "^1.1.2",
         "canvas": "^2.10.1",
-        "discord-api-types": "^0.37.11",
+        "discord-api-types": "^0.37.12",
         "discord.js": "^13.11.0",
         "dotenv": "^16.0.3",
         "glob": "^7.2.3",
@@ -27,7 +27,7 @@
     },
     "devDependencies": {
         "cspell": "^6.12.0",
-        "eslint": "^8.24.0",
+        "eslint": "^8.25.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-prettier": "^4.2.1",
