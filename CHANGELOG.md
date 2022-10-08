@@ -1,4 +1,13 @@
-# 2.1.0 (2022-10-08)
+## [2.1.1](https://github.com/KieranRobson/Clarence-Bot/compare/v2.1.0...v2.1.1) (2022-10-08)
+
+
+### Reverts
+
+* Remove npm tests ([a4cc059](https://github.com/KieranRobson/Clarence-Bot/commit/a4cc059acd0fbc7308d8d77c036112f45e7b1c82))
+
+
+
+# [2.1.0](https://github.com/KieranRobson/Clarence-Bot/compare/5e5a5182a477bda9686341647d95054c7afbe194...v2.1.0) (2022-10-08)
 
 
 ### Bug Fixes
