@@ -5,22 +5,25 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'npm' # See documentation for possible values
+    directory: '/' # Location of package manifests
     schedule:
-      interval: "daily"
-    rebase-strategy: "auto"
+      interval: 'daily'
+      time: "07:00"
+    rebase-strategy: 'auto'
     ignore:
-    - dependency-name: "*"
-      update-types: ["version-update:semver-major"]      
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
 
-  - package-ecosystem: "docker"
-    directory: "/"
+  - package-ecosystem: 'docker'
+    directory: '/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
+      time: "07:00"
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
       # Check for updates to GitHub Actions every week
-      interval: "weekly"
+      interval: 'weekly'
+      time: "07:00"
