@@ -1,5 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder, time } = require('@discordjs/builders');
+const cookie = require('../../schemas/cookie-schema');
 
 module.exports = {
 	...new SlashCommandBuilder()
@@ -24,18 +25,48 @@ module.exports = {
 
 		const joinedTime = Date.now() - user.joinedAt;
 
-		const embed = new MessageEmbed()
-			.setTitle(`${user.tag}`)
-			.setURL(`${user.avatarURL({ dynamic: true })}`)
-			.setColor('ORANGE')
-			.setFooter({ text: `Called By: ${interaction.user.tag}` })
-			.setThumbnail(user.avatarURL({ dynamic: true }))
-			.setTimestamp()
-			.setDescription(
-				`- Known as: ${user}
-			- Joined: ${joinedTime ? time(joinedTime, 'R') : 'Unknown'}
-			- Created: ${user.createdAt ? time(user.createdAt, 'R') : 'Unknown'}`
-			);
-		interaction.reply({ embeds: [embed] });
+		cookie.find().exec(function (err, results) {
+			let globalGotCookies = results.filter((cookie) => {
+				return cookie.receiverId === interaction.user.id;
+			});
+
+			let globalSentCookies = results.filter((cookie) => {
+				return cookie.giverId === interaction.user.id;
+			});
+
+			let localGotCookies = globalGotCookies.filter((cookie) => {
+				return cookie.guildId === interaction.guild.id;
+			});
+
+			let localSentCookies = globalSentCookies.filter((cookie) => {
+				return cookie.guildId === interaction.guild.id;
+			});
+
+			const embed = new MessageEmbed()
+				.setTitle(`${user.tag}`)
+				.setURL(`${user.avatarURL({ dynamic: true })}`)
+				.setColor('ORANGE')
+				.setFooter({ text: `Called By: ${interaction.user.tag}` })
+				.setThumbnail(user.avatarURL({ dynamic: true }))
+				.setTimestamp()
+				.setDescription(
+					`- Known as: ${user}
+				- Joined: ${joinedTime ? time(joinedTime, 'R') : 'Unknown'}
+				- Created: ${user.createdAt ? time(user.createdAt, 'R') : 'Unknown'}`
+				)
+				.addFields(
+					{
+						name: 'Sent cookies',
+						value: `This server: ${localSentCookies.length}\nGlobally: ${globalSentCookies.length}`,
+						inline: true,
+					},
+					{
+						name: 'Received cookies',
+						value: `This server: ${localGotCookies.length}\nGlobally: ${globalGotCookies.length}`,
+						inline: true,
+					}
+				);
+			interaction.reply({ embeds: [embed] });
+		});
 	},
 };

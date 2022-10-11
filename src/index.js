@@ -17,10 +17,16 @@ require('./handler')(client);
 
 // Connect to database
 const mongooseConnectionString = process.env.MONGOOSE;
-mongoose.connect(mongooseConnectionString, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-});
-console.log('Connected to db');
+mongoose
+	.connect(mongooseConnectionString, {
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	})
+	.then(() => {
+		console.log('Connected to db');
+	})
+	.catch((err) => {
+		console.log('Error occured:', err);
+	});
 
 client.login(process.env.DISCORD_TOKEN);
