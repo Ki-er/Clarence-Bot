@@ -33,16 +33,35 @@ module.exports = {
 			date: new Date(),
 		});
 
-		const embed = new MessageEmbed()
-			.setColor('ORANGE')
-			.setFooter({ text: `Called By: ${interaction.user.tag}` })
-			.setTimestamp()
-			.setTitle('Cookie')
-			.setDescription(
-				`${interaction.user.toString()}, has given a cookie to ${receiver.toString()}`
-			)
-			.setImage('https://i.imgur.com/ioaWGdf.png');
+		cookie.find().exec(function (err, results) {
+			let receiverGotCookies = results.filter((cookie) => {
+				return (
+					cookie.receiverId === receiver.id &&
+					cookie.guildId === interaction.guild.id
+				);
+			}).length;
 
-		interaction.reply({ embeds: [embed] });
+			let senderSentCookies = results.filter((cookie) => {
+				return (
+					cookie.giverId === interaction.user.id &&
+					cookie.guildId === interaction.guild.id
+				);
+			}).length;
+
+			const embed = new MessageEmbed()
+				.setColor('ORANGE')
+				.setFooter({
+					text: `Called By: ${interaction.user.tag}\nSent cookies: ${senderSentCookies}\n`,
+				})
+				.setTimestamp()
+				.setTitle('Cookie')
+				.setDescription(
+					`${interaction.user.toString()} has given a cookie to ${receiver.toString()}
+					who has now ${receiverGotCookies} cookies!`
+				)
+				.setImage('https://i.imgur.com/ioaWGdf.png');
+
+			interaction.reply({ embeds: [embed] });
+		});
 	},
 };
