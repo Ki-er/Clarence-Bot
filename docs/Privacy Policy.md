@@ -8,7 +8,7 @@ Usage Data: Anonymous slash commands you run (with the channel name logged for d
 
 Server IDs: Server ids are stored to identify and store your server specify settings.
 
-User IDs: User ids are stored for the [Cookie](https://github.com/KieranRobson/Clarence-Bot/blob/master/src/slashCommands/fun/givecookie.js) and [Blame](https://github.com/KieranRobson/Clarence-Bot/blob/master/src/slashCommands/fun/blame.js) commands. 
+User IDs: User ids are stored for the [Cookie](https://github.com/KieranRobson/Clarence-Bot/blob/master/src/slashCommands/fun/givecookie.js) and [Blame](https://github.com/KieranRobson/Clarence-Bot/blob/master/src/slashCommands/fun/blame.js) commands.
 
 ## Contact Us
 
