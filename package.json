@@ -8,7 +8,7 @@
 		"prettier": "prettier -w .",
 		"spell": "cspell /**/",
 		"spell-code": "cspell src/**/",
-		"ci": "eslint . --fix && cspell /**/"
+		"ci": "eslint . --fix && cspell /**/ && prettier -w ."
 	},
 	"keywords": [],
 	"author": "",
