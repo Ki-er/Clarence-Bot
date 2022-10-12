@@ -52,3 +52,7 @@ While this bot is maintained by [Kieran](https://github.com/KieranRobson), contr
 
 ## Invite
 Invite Clarence to your discord server: https://discord.com/api/oauth2/authorize?client_id=875491402497294447&permissions=8&scope=bot
+
+## License
+
+Clarence-Bot is licensed under the MIT License. The full license text is included in the [LICENSE](LICENSE) file in this repository. Tldr legal have a [great summary](https://www.tldrlegal.com/l/mit) of the license if you're interested.
