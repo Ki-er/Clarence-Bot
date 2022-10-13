@@ -16,18 +16,14 @@ module.exports = {
 		await axios({
 			method: 'get',
 			url: url,
-		})
-			.then((response) => {
-				const embed = new MessageEmbed()
-					.setColor('ORANGE')
-					.setFooter({ text: `Called By: ${message.author.tag}` })
-					.setTimestamp()
-					.setTitle(`**Number Fact**`)
-					.setDescription(`${response.data}`);
-				message.channel.send({ embeds: [embed] });
-			})
-			.catch((error) => {
-				message.channel.send(`some error occured`);
-			});
+		}).then((response) => {
+			const embed = new MessageEmbed()
+				.setColor('ORANGE')
+				.setFooter({ text: `Called By: ${message.author.tag}` })
+				.setTimestamp()
+				.setTitle(`**Number Fact**`)
+				.setDescription(`${response.data}`);
+			message.channel.send({ embeds: [embed] });
+		});
 	},
 };

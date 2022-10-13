@@ -63,4 +63,4 @@ Invite Clarence to your discord server: https://discord.com/api/oauth2/authorize
 
 ## License
 
-Clarence-Bot is licensed under the MIT License. The full license text is included in the [LICENSE](LICENSE) file in this repository. Tldr legal have a [great summary](https://www.tldrlegal.com/l/mit) of the license if you're interested.
+Clarence-Bot is licensed under the MIT License. The full license text is included in the [LICENSE](LICENSE) file in this repository. TLDR legal have a [great summary](https://www.tldrlegal.com/l/mit) of the license if you're interested.

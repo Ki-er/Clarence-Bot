@@ -26,7 +26,7 @@ mongoose
 		console.log('Connected to db');
 	})
 	.catch((err) => {
-		console.log('Error occured:', err);
+		console.log('Error occurred:', err);
 	});
 
 client.login(process.env.DISCORD_TOKEN);
