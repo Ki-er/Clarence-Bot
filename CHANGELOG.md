@@ -1,3 +1,12 @@
+# [2.6.0](https://github.com/KieranRobson/Clarence-Bot/compare/v2.5.1...v2.6.0) (2022-10-14)
+
+
+### Features
+
+* Add simleave ([d9b2867](https://github.com/KieranRobson/Clarence-Bot/commit/d9b28675dff96aa85d15741b420a3d23ab585d3d))
+
+
+
 ## [2.5.1](https://github.com/KieranRobson/Clarence-Bot/compare/v2.4.0...v2.5.1) (2022-10-14)
 
 
