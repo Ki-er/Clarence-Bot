@@ -3,7 +3,7 @@ const axios = require(`axios`);
 
 module.exports = {
 	name: 'joke',
-	aliases: ['n'],
+	aliases: [''],
 	run: async (client, message) => {
 		// Call the Joke API and get a random joke excluding the NSFW ones and other categories
 		let url = `https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,racist,sexist,explicit`;

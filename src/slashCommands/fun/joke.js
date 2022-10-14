@@ -14,6 +14,7 @@ module.exports = {
 	run: async (client, interaction) => {
 		// Call the Joke API and get a random joke excluding the NSFW ones and other categories
 		let url = `https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,racist,sexist,explicit`;
+		await interaction.deferReply();
 		await axios({
 			method: 'get',
 			url: url,
@@ -34,7 +35,7 @@ module.exports = {
 					.setTimestamp()
 					.setTitle(`**Random Joke**`)
 					.setDescription(`${description}`);
-				interaction.reply({ embeds: [embed] });
+				interaction.editReply({ embeds: [embed] });
 			})
 			.catch(() => {
 				// If the API is down or something else happens
