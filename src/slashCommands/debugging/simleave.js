@@ -18,6 +18,6 @@ module.exports = {
 
 	run: async (client, interaction) => {
 		client.emit('guildMemberRemove', interaction);
-		interaction.reply({content: 'Leave simulated', ephemeral: true});
+		interaction.reply({ content: 'Leave simulated', ephemeral: true });
 	},
 };
