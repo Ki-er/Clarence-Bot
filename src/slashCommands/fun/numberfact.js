@@ -2,11 +2,10 @@ const { MessageEmbed } = require('discord.js');
 const axios = require(`axios`);
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
-
 module.exports = {
-    ...new SlashCommandBuilder()
-        .setName('numberfact')
-        .setDescription('Get a Random Joke'),
+	...new SlashCommandBuilder()
+		.setName('numberfact')
+		.setDescription('Get a Random Joke'),
 
 	/**
 	 *
