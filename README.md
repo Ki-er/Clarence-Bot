@@ -46,7 +46,7 @@ Using a tool like [Ouroboros](https://github.com/pyouroboros/ouroboros), you can
 ### 👷 Manual
 
 - Clone the repo
-- Remove the `.template` from `.env.template`
+- Remove the `.template` from `.env.template` - If contributing, please revert this change!
 - Add required variables to `.env`
 - Run `npm i`
 - Run `node .`
