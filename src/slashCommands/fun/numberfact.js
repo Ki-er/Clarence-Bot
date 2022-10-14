@@ -15,6 +15,7 @@ module.exports = {
 	 */
 
 	run: async (client, interaction) => {
+		await interaction.deferReply();
 		let number = Math.round(Math.random() * 101);
 		let url = `http://numbersapi.com/${number}`;
 		await axios({
@@ -27,7 +28,7 @@ module.exports = {
 				.setTimestamp()
 				.setTitle(`**Number Fact**`)
 				.setDescription(`${response.data}`);
-			interaction.reply({ embeds: [embed] });
+			interaction.editReply({ embeds: [embed] });
 		});
 	},
 };
