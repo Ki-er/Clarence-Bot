@@ -17,7 +17,7 @@ module.exports = {
 	 */
 
 	run: async (client, interaction) => {
-		client.emit('guildMemberAdd', interaction.user);
+		client.emit('guildMemberAdd', interaction);
 		interaction.reply('join simulated');
 	},
 };
