@@ -5,7 +5,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 module.exports = {
 	...new SlashCommandBuilder()
 		.setName('numberfact')
-		.setDescription('Get a Random Joke'),
+		.setDescription('Get a Random Number fact'),
 
 	/**
 	 *
