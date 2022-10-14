@@ -2,7 +2,7 @@ const client = require('../index');
 const guildSchema = require('../schemas/guild-schema');
 
 client.on('guildMemberRemove', async (guildmember) => {
-	const data = await guildSchema.findById(guildmember.guild.id);
+	const data = await guildSchema.findById(guildmember.id);
 	if (!data) return;
 	const welcomechannel = guildmember.guild.channels.cache.get(
 		data.welcomeChannelId
