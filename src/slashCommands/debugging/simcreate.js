@@ -3,8 +3,8 @@ const { PermissionFlagsBits } = require('discord-api-types/v10');
 
 module.exports = {
 	...new SlashCommandBuilder()
-		.setName('simcreate')
-		.setDescription('Simulate guild create event')
+		.setName('simulatecreate')
+		.setDescription('Simulate guildCreate')
 		.setDefaultMemberPermissions(
 			PermissionFlagsBits.KickMembers || PermissionFlagsBits.BanMembers
 		),
