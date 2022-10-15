@@ -29,7 +29,7 @@ module.exports = {
 					.setFooter({ text: `Called By: ${interaction.user.tag}` })
 					.setTimestamp()
 					.setTitle(`**Trivia Question**`)
-					.setDescription(`${description}`);
+					.setDescription(`${description} \n\n**True(t)** or **False(f)**?`);
 				await interaction.editReply({ embeds: [embed] });
 				// Type t to signify true and f to signify false
 				// If the user does not respond in 30 seconds, the interaction will be ended
