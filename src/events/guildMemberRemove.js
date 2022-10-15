@@ -8,14 +8,6 @@ client.on('guildMemberRemove', async (guildmember) => {
 		data.welcomeChannelId
 	);
 
-	const membercountChannel = guildmember.guild.channels.cache.get(
-		data.membercountChannelId
-	);
-
-	membercountChannel.setName(
-		`Discord Members: ${guildmember.guild.memberCount}`
-	);
-
 	welcomechannel.send({
 		content: `<:bye:875359507503546438> Goodbye **${guildmember.user.tag}** has just left server!`,
 	});

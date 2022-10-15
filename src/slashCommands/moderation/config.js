@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { PermissionFlagsBits } = require('discord-api-types/v10');
+const { PermissionFlagsBits, ChannelType } = require('discord-api-types/v10');
 const guild = require('../../schemas/guild-schema');
 
 module.exports = {
@@ -23,6 +23,7 @@ module.exports = {
 			option
 				.setName('membercountchannel')
 				.setDescription('memberCount channel')
+				.addChannelTypes(ChannelType.GuildVoice)
 				.setRequired(true)
 		),
 
