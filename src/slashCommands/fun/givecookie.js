@@ -13,7 +13,7 @@ module.exports = {
 			option
 				.setName('string')
 				.setDescription('reason for cookie')
-				.setRequired(false)
+				.setRequired(true)
 		),
 	/**
 	 *
@@ -51,13 +51,15 @@ module.exports = {
 			const embed = new MessageEmbed()
 				.setColor('ORANGE')
 				.setFooter({
-					text: `Called By: ${interaction.user.tag}\nSent cookies: ${senderSentCookies}\n`,
+					text: `Called By: ${interaction.user.tag}`,
 				})
 				.setTimestamp()
 				.setTitle('Cookie')
 				.setDescription(
 					`${interaction.user.toString()} has given a cookie to ${receiver.toString()}
-					who has now ${receiverGotCookies} cookies!`
+					
+					<@${receiver.id}> now ${receiverGotCookies} has cookies!
+					<@${interaction.user.id}> has sent ${senderSentCookies} cookies`
 				)
 				.setImage('https://i.imgur.com/ioaWGdf.png');
 

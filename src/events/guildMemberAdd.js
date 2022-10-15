@@ -13,7 +13,7 @@ client.on('guildMemberAdd', async (guildmember) => {
 	const welcomeCanvas = {};
 	welcomeCanvas.create = Canvas.createCanvas(1024, 500);
 	welcomeCanvas.context = welcomeCanvas.create.getContext('2d');
-	await Canvas.loadImage('./images/bg.jpg').then(async (img) => {
+	await Canvas.loadImage('src/images/bg.jpg').then(async (img) => {
 		welcomeCanvas.context.drawImage(img, 0, 0, 1024, 500);
 		welcomeCanvas.context.beginPath();
 		welcomeCanvas.context.arc(512, 166, 128, 0, Math.PI * 2, true);

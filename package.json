@@ -1,15 +1,17 @@
 {
 	"name": "clarence",
-	"version": "2.4.0",
+	"version": "2.6.1",
 	"description": "A multipurpose bot with admin, fun and information commands",
 	"main": "src/index.js",
 	"scripts": {
-		"dev": "nodemon src/index.js",
-		"lint": "eslint . --fix",
-		"prettier": "prettier -w .",
+    "dev": "nodemon src/index.js",
 		"spell": "cspell /**/",
-		"spell-code": "cspell src/**/",
-		"ci": "eslint . --fix && cspell /**/ && prettier -w ."
+		"lint": "npx eslint src",
+		"lint:fix": "npm run lint -- --fix",
+		"prettier": "npx prettier src --check",
+		"prettier:fix": "npm run prettier -- --write",
+		"format": "npm run prettier:fix && npm run lint:fix",
+		"spell-code": "cspell src/**/"
 	},
 	"keywords": [],
 	"author": "",
