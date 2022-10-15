@@ -3,8 +3,8 @@ const { PermissionFlagsBits } = require('discord-api-types/v10');
 
 module.exports = {
 	...new SlashCommandBuilder()
-		.setName('simulatejoin')
-		.setDescription('Simulate guildMemberAdd')
+		.setName('simulateleave')
+		.setDescription('Simulate guildMemberRemove')
 		.setDefaultMemberPermissions(
 			PermissionFlagsBits.KickMembers || PermissionFlagsBits.BanMembers
 		),
@@ -17,7 +17,7 @@ module.exports = {
 	 */
 
 	run: async (client, interaction) => {
-		client.emit('guildMemberAdd', interaction);
-		interaction.reply({ content: 'Join simulated', ephemeral: true });
+		client.emit('guildMemberRemove', interaction);
+		interaction.reply({ content: 'Leave simulated', ephemeral: true });
 	},
 };
