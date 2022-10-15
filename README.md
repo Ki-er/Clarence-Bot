@@ -25,8 +25,8 @@ This bot features multiple command types from:
 ---
 
 ## Installation
-### Docker
 
+### Docker
 
 Due to the [Publish.yml](.github/workflows/publish.yml) workflow, the newest build will automatically be pushed to DockerHub.
 
