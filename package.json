@@ -4,6 +4,7 @@
 	"description": "A multipurpose bot with admin, fun and information commands",
 	"main": "src/index.js",
 	"scripts": {
+		"dev": "nodemon -L src/index.js",
 		"spell": "cspell /**/",
 		"lint": "npx eslint src",
 		"lint:fix": "npm run lint -- --fix",
@@ -35,6 +36,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.26.0",
 		"eslint-plugin-prettier": "^4.2.1",
+		"nodemon": "^2.0.20",
 		"prettier": "^2.7.1"
 	}
 }
