@@ -4,7 +4,7 @@
 	"description": "A multipurpose bot with admin, fun and information commands",
 	"main": "src/index.js",
 	"scripts": {
-		"dev": "nodemon src/index.js",
+		"dev": "nodemon -L src/index.js",
 		"spell": "cspell /**/",
 		"lint": "npx eslint src",
 		"lint:fix": "npm run lint -- --fix",
