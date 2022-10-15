@@ -12,62 +12,83 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 	run: async (client, interaction) => {
-		try {
-			await interaction.deferReply();
-			const response = await axios({
-				method: 'get',
-				url: 'https://opentdb.com/api.php?amount=1&type=boolean',
-				responseType: 'json',
-			});
-			console.log(response.data);
-			if (response.response_code) {
-				return interaction.editReply({
-					content: 'Something went wrong, please try again later!',
-				});
-			}
-			const message = await interaction.editReply({
-				content: `${response.data.results[0].question}`,
-				fetchReply: true,
-			});
-			message.react('✅').then(() => message.react('❌'));
-			let filter = (reaction, user) => {
-				return (
-					['✅', '❌'].includes(reaction.emoji.name) &&
-					user.id === interaction.user.id
-				);
-			};
-			message
-				.awaitReactions({
+		// Call the Trivia API
+		let url = `https://opentdb.com/api.php?amount=1&type=boolean`;
+		await interaction.deferReply();
+		await axios({
+			method: 'get',
+			url: url,
+		})
+			.then(async (response) => {
+				let description = response.data.results[0].question;
+				//replace "quot" with " "
+				description = description.replace(/&quot;/g, '"');
+				// Create an embed with the joke
+				const embed = new MessageEmbed()
+					.setColor('ORANGE')
+					.setFooter({ text: `Called By: ${interaction.user.tag}` })
+					.setTimestamp()
+					.setTitle(`**Trivia Question**`)
+					.setDescription(`${description}`);
+				await interaction.editReply({ embeds: [embed] });
+				// Type t to signify true and f to signify false
+				// If the user does not respond in 30 seconds, the interaction will be ended
+				const filter = (m) => m.author.id === interaction.user.id;
+				const collector = interaction.channel.createMessageCollector({
 					filter,
-					max: 1,
-					time: 10000,
-				})
-				.then((collected) => {
-					const reaction = collected.first();
-
-					if (reaction.emoji.name === '✅') {
-						if (response.data.results[0].correct_answer == 'True') {
-							message.editReply(`✅ Correct Answer!`);
-						} else {
-							message.editReply(`❌ Wrong Answer!`);
+					time: 30000,
+				});
+				collector.on('collect', async (m) => {
+					// If the user responds with t or f, the interaction will be ended
+					if (m.content === 't' || m.content === 'f') {
+						collector.stop();
+						// If the user's answer is correct, send a correct embed
+						if (
+							(m.content === 't' &&
+								response.data.results[0].correct_answer === 'True') ||
+							(m.content === 'f' &&
+								response.data.results[0].correct_answer === 'False')
+						) {
+							const embed = new MessageEmbed()
+								.setColor('GREEN')
+								.setFooter({
+									text: `Called By: ${interaction.user.tag}`,
+								})
+								.setTimestamp()
+								.setTitle(`**Correct!**`)
+								.setDescription(
+									`The answer was ${response.data.results[0].correct_answer}`
+								);
+							await interaction.editReply({ embeds: [embed] });
 						}
-					} else {
-						if (response.data.results[0].correct_answer == 'False') {
-							message.editReply(`✅ Correct Answer!`);
-						} else {
-							message.editReply(`❌ Wrong Answer!`);
+						// If the user's answer is incorrect, send an incorrect embed
+						else {
+							const embed = new MessageEmbed()
+								.setColor('RED')
+								.setFooter({
+									text: `Called By: ${interaction.user.tag}`,
+								})
+								.setTimestamp()
+								.setTitle(`**Incorrect!**`)
+								.setDescription(
+									`The answer was ${response.data.results[0].correct_answer}`
+								);
+							await interaction.editReply({ embeds: [embed] });
 						}
 					}
-				})
-				.catch(() => {
-					const correct_answer =
-						response.data.results[0].correct_answer == 'True' ? '✅' : '❌';
-					message.editReply(
-						`❌ You failed to react in time! The correct answer was ${correct_answer}`
-					);
 				});
-		} catch (error) {
-			console.log(error);
-		}
+			})
+			.catch(() => {
+				// If the API is down or something else happens
+				const embed = new MessageEmbed()
+					.setColor('ORANGE')
+					.setFooter({ text: `Called By: ${interaction.user.tag}` })
+					.setTimestamp()
+					.setTitle(`**Sorry!**`)
+					.setDescription(
+						`The Trivia API did not response :( Try again later!`
+					);
+				interaction.editReply({ embeds: [embed] });
+			});
 	},
 };
