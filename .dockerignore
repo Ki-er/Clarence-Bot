@@ -1,3 +1,6 @@
+# .git folder
+.git/
+
 # Logs
 logs
 *.log

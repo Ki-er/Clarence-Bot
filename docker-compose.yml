@@ -1,0 +1,23 @@
+services:
+  discord-ser:
+    image: discord-bot-prod-img
+    build:
+      context: .
+      dockerfile: dockerfile
+    # This reads directly from `.env` file
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - MONGOOSE=${MONGOOSE}
+      - PREFIX='-'
+    ports:
+      - 6002:6002
+    container_name: discord-cont-prod
+  # if you are going to use local MongoDB, uncomment:
+  # mongo-ser:
+  #   image: mongo
+  #   ports:
+  #     - 27017:27017
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USERNAME}
+  #     MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
+  #   container_name: mongo-discord-cont
