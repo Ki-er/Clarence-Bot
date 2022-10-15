@@ -18,6 +18,12 @@ module.exports = {
 				.setName('suggestionchannel')
 				.setDescription('Suggestion channel')
 				.setRequired(true)
+		)
+		.addChannelOption((option) =>
+			option
+				.setName('membercountchannel')
+				.setDescription('memberCount channel')
+				.setRequired(true)
 		),
 
 	/**
@@ -31,11 +37,14 @@ module.exports = {
 		const welcomeChannel = interaction.options.getChannel('welcomechannel');
 		const suggestionChannel =
 			interaction.options.getChannel('suggestionchannel');
+		const membercountChannel =
+			interaction.options.getChannel('membercountchannel');
 
 		await guild.create({
 			_id: interaction.guildId,
 			welcomeChannelId: welcomeChannel.id,
 			suggestionChannelId: suggestionChannel.id,
+			membercountChannelId: membercountChannel.id,
 		});
 		interaction.reply({ content: `Configuration added`, ephemeral: true });
 	},
