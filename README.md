@@ -7,8 +7,8 @@
 Clarence is a multipurpose discord bot for The Innercube Discord Server.
 
 <img src="https://img.shields.io/github/workflow/status/KieranRobson/Clarence-Bot/ci?style=for-the-badge"> 
-<img src="https://img.shields.io/badge/Discord.JS-13.10.2-blue?style=for-the-badge&logo=DISCORD" /> 
-<img src="https://img.shields.io/badge/Node%20Version-16.16.0-brightgreen?style=for-the-badge&logo=Node.js"> 
+<img src="https://img.shields.io/badge/Discord.JS-13.12.0-blue?style=for-the-badge&logo=DISCORD" /> 
+<img src="https://img.shields.io/badge/Node%20Version-16.17.1-brightgreen?style=for-the-badge&logo=Node.js"> 
 <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge">
 </div align="center">
 
@@ -25,10 +25,12 @@ This bot features multiple command types from:
 ---
 
 ## Installation
+### Docker
 
-### 🐋 Docker
 
 Due to the [Publish.yml](.github/workflows/publish.yml) workflow, the newest build will automatically be pushed to DockerHub.
+
+Using a tool like [Ouroboros](https://github.com/pyouroboros/ouroboros), you can automatically update containers without the need for restarts.
 
 ```docker
 docker run -d \
@@ -41,7 +43,20 @@ docker run -d \
 kieranr27/clarence:latest
 ```
 
-Using a tool like [Ouroboros](https://github.com/pyouroboros/ouroboros), you can automatically update containers without the need for restarts.
+## Development
+
+### Docker
+
+- See the [tutorial](https://www.writebots.com/discord-bot-token/), after going through it you are expected to:
+  - Create a new application & make it a bot, from [here](https://discord.com/developers/applications/).
+  - Don't forget to give it the `Privileged Gateway Intents`
+  - Invite your bot to your discord server.
+  - Get your token & paste in in `.env` (rename `.env.template` to `.env`)
+  - Default URL of MongoDB is `mongodb://root:sekret@mongo-discord-cont:27017/`
+- After that in root folder type in `powershell`: `docker-compose -f docker-compose-dev.yml up`
+- You will see the bot online in your server.
+- Verify that it works by trying the command `/ping`.
+- Happy coding!
 
 ### 👷 Manual
 
@@ -53,24 +68,9 @@ Using a tool like [Ouroboros](https://github.com/pyouroboros/ouroboros), you can
 
 ---
 
-### Setting development environment using Docker:
-
-- See the [tutorial](https://www.writebots.com/discord-bot-token/), after going through it you are expected to:
-  - Create a new applicaiton & make it a bot, from [here](https://discord.com/developers/applications/).
-  - Don't forget to give it the `Privileaged Gateway Intents`
-  - Invite your bot to your discord server.
-  - Get your token & paste in in `.env` (rename `.env.template` to `.env`)
-  - Default URL of MongoDB is `mongodb://root:sekret@mongo-discord-cont:27017/`
-- After that in root folder type in `powershell`: `docker-compose -f docker-compose-dev.yml up`
-- You will see the bot online in your server.
-- Verify that it works by trying the command `/ping`.
-- Happy coding!
-
----
-
 ## Contributions
 
-While this bot is maintained by [Kieran](https://github.com/KieranRobson), contributors are welcome!
+While this bot is maintained by [Kieran](https://github.com/KieranRobson), contributors are welcome! See [Contributing.md](/.github/CONTRIBUTING.md).
 
 ## Invite
 
