@@ -10,6 +10,14 @@ client.on('guildMemberAdd', async (guildmember) => {
 		data.welcomeChannelId
 	);
 
+	const membercountChannel = guildmember.guild.channels.cache.get(
+		data.membercountChannelId
+	);
+
+	membercountChannel.setName(
+		`Discord Members: ${guildmember.guild.memberCount}`
+	);
+
 	const welcomeCanvas = {};
 	welcomeCanvas.create = Canvas.createCanvas(1024, 500);
 	welcomeCanvas.context = welcomeCanvas.create.getContext('2d');
