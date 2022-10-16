@@ -11,8 +11,8 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 	run: async (client, message) => {
-		let number = Math.round(Math.random() * 101);
-		let url = `http://numbersapi.com/${number}`;
+		const number = Math.round(Math.random() * 101);
+		const url = `http://numbersapi.com/${number}`;
 		await axios({
 			method: 'get',
 			url: url,

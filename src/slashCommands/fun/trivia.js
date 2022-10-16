@@ -13,7 +13,7 @@ module.exports = {
 	 */
 	run: async (client, interaction) => {
 		// Call the Trivia API
-		let url = `https://opentdb.com/api.php?amount=1&type=boolean`;
+		const url = `https://opentdb.com/api.php?amount=1&type=boolean`;
 		await interaction.deferReply();
 		await axios({
 			method: 'get',

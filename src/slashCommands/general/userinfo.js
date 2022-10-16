@@ -26,19 +26,19 @@ module.exports = {
 		const joinedTime = Date.now() - user.joinedAt;
 
 		cookie.find().exec(function (err, results) {
-			let globalGotCookies = results.filter((cookie) => {
+			const globalGotCookies = results.filter((cookie) => {
 				return cookie.receiverId === interaction.user.id;
 			});
 
-			let globalSentCookies = results.filter((cookie) => {
+			const globalSentCookies = results.filter((cookie) => {
 				return cookie.giverId === interaction.user.id;
 			});
 
-			let localGotCookies = globalGotCookies.filter((cookie) => {
+			const localGotCookies = globalGotCookies.filter((cookie) => {
 				return cookie.guildId === interaction.guild.id;
 			});
 
-			let localSentCookies = globalSentCookies.filter((cookie) => {
+			const localSentCookies = globalSentCookies.filter((cookie) => {
 				return cookie.guildId === interaction.guild.id;
 			});
 

@@ -34,14 +34,14 @@ module.exports = {
 		});
 
 		cookie.find().exec(function (err, results) {
-			let receiverGotCookies = results.filter((cookie) => {
+			const receiverGotCookies = results.filter((cookie) => {
 				return (
 					cookie.receiverId === receiver.id &&
 					cookie.guildId === interaction.guild.id
 				);
 			}).length;
 
-			let senderSentCookies = results.filter((cookie) => {
+			const senderSentCookies = results.filter((cookie) => {
 				return (
 					cookie.giverId === interaction.user.id &&
 					cookie.guildId === interaction.guild.id

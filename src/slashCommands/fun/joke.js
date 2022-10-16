@@ -13,7 +13,7 @@ module.exports = {
 	 */
 	run: async (client, interaction) => {
 		// Call the Joke API and get a random joke excluding the NSFW ones and other categories
-		let url = `https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,racist,sexist,explicit`;
+		const url = `https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,racist,sexist,explicit`;
 		await interaction.deferReply();
 		await axios({
 			method: 'get',
