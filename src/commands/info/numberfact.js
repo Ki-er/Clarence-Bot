@@ -1,5 +1,5 @@
-const { MessageEmbed } = require('discord.js');
 const axios = require(`axios`);
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
 	name: 'numberfact',

@@ -1,5 +1,5 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
 const blame = require('../../schemas/blamestitch-schema');
+const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
 	...new SlashCommandBuilder()

@@ -1,6 +1,6 @@
+const guild = require('../../schemas/guild-schema');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { PermissionFlagsBits, ChannelType } = require('discord-api-types/v10');
-const guild = require('../../schemas/guild-schema');
 
 module.exports = {
 	...new SlashCommandBuilder()

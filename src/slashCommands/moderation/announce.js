@@ -1,6 +1,6 @@
-const { Permissions } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { PermissionFlagsBits } = require('discord-api-types/v10');
+const { Permissions } = require('discord.js');
 
 module.exports = {
 	...new SlashCommandBuilder()

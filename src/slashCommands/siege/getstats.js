@@ -1,5 +1,5 @@
-const { MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { MessageEmbed } = require('discord.js');
 const R6 = require('r6s-stats-api');
 
 module.exports = {
