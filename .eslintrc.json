@@ -6,7 +6,7 @@
 	},
 	"extends": ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
 	"plugins": ["sort-requires-by-path"],
-	"parserOptions": { 
+	"parserOptions": {
 		"ecmaVersion": "latest"
 	},
 	"rules": {
