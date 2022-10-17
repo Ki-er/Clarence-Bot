@@ -23,7 +23,7 @@ module.exports = {
 		const channel = interaction.options.getChannel('channel');
 		if (channel.type !== `GUILD_TEXT`)
 			return interaction.reply({
-				content: `Could ot parse channel`,
+				content: `Could not parse channel`,
 				ephemeral: true,
 			});
 
