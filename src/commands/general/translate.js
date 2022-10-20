@@ -1,5 +1,5 @@
-const { MessageEmbed } = require('discord.js');
 const translate = require('@iamtraction/google-translate');
+const { MessageEmbed } = require('discord.js');
 const ISO6391 = require('iso-639-1');
 
 module.exports = {

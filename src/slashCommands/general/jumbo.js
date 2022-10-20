@@ -1,5 +1,5 @@
-const { Util } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { Util } = require('discord.js');
 const { parse } = require('twemoji-parser');
 
 module.exports = {

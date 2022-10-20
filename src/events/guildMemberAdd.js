@@ -1,7 +1,7 @@
-const { MessageAttachment } = require('discord.js');
-const Canvas = require('canvas');
 const client = require('../index');
 const guildSchema = require('../schemas/guild-schema');
+const Canvas = require('canvas');
+const { MessageAttachment } = require('discord.js');
 
 client.on('guildMemberAdd', async (guildmember) => {
 	const data = await guildSchema.findById(guildmember.guild.id);

@@ -5,18 +5,23 @@
 		"es2021": true
 	},
 	"extends": ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
+	"plugins": ["sort-requires-by-path"],
 	"parserOptions": {
 		"ecmaVersion": "latest"
 	},
 	"rules": {
+		// Error
 		"prettier/prettier": "error",
+		// Warn
+		"prefer-const": "warn",
 		"no-unused-vars": "warn",
+		"sort-requires-by-path/sort-requires-by-path": "warn",
+		//Off
 		"no-console": "off",
 		"func-names": "off",
 		"no-process-exit": "off",
 		"object-shorthand": "off",
 		"class-methods-use-this": "off",
-		"prefer-const": "warn",
 		"eqeqeq": "off",
 		"node/no-unsupported-features/es-syntax": "off",
 		"consistent-return": "off",

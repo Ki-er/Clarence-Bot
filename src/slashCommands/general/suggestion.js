@@ -1,6 +1,6 @@
-const { MessageEmbed } = require('discord.js');
-const { SlashCommandBuilder } = require('@discordjs/builders');
 const guildSchema = require('../../schemas/guild-schema');
+const { SlashCommandBuilder } = require('@discordjs/builders');
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
 	...new SlashCommandBuilder()
