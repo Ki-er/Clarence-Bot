@@ -6,7 +6,7 @@ module.exports = {
 		.setName('blame')
 		.setDescription('Blame Stitch')
 		.addStringOption((option) =>
-			option.setName('reason').setDescription('Your reason').setRequired(true)
+			option.setName('string').setDescription('Your reason').setRequired(true)
 		),
 
 	/**
@@ -16,14 +16,14 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 
-	run: async (interaction) => {
-		const reasonToSend = interaction.options.getString('reason');
+	run: async (client, interaction) => {
+		const reason = interaction.options.getString('string');
 
 		await blame.create({
-			reason: reasonToSend,
+			reason: reason,
 			userId: interaction.user.id,
 			date: new Date(),
 		});
-		interaction.reply({ content: `Blame Added: ${reasonToSend}` });
+		interaction.reply({ content: `Blame Added: ${reason}` });
 	},
 };
