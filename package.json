@@ -9,6 +9,7 @@
 		"spell-code": "cspell src/**/",
 		"lint": "npx eslint src",
 		"lint:fix": "npm run lint -- --fix",
+		"lint-language": "alex src/**/",
 		"prettier": "npx prettier src --check",
 		"prettier:fix": "npm run prettier -- --write",
 		"format": "npm run prettier:fix && npm run lint:fix"
@@ -35,6 +36,7 @@
 		"twemoji-parser": "^14.0.0"
 	},
 	"devDependencies": {
+		"alex": "^10.0.0",
 		"cspell": "^6.12.0",
 		"eslint": "^8.25.0",
 		"eslint-config-prettier": "^8.5.0",
