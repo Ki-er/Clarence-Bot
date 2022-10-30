@@ -6,12 +6,13 @@
 	"scripts": {
 		"dev": "nodemon -L src/index.js",
 		"spell": "cspell /**/",
-		"spell-code": "cspell src/**/",
+		"spell:code": "cspell src/**/",
 		"lint": "npx eslint src",
 		"lint:fix": "npm run lint -- --fix",
-		"lint-language": "alex src/**/",
-		"prettier": "npx prettier src --check",
-		"prettier:fix": "npm run prettier -- --write",
+		"lint:language": "alex src/**/",
+		"prettier:code": "npx prettier src --check",
+		"prettier:code:fix": "npm run prettier -- --write",
+		"prettier:all:fix": "prettier . --write",
 		"format": "npm run prettier:fix && npm run lint:fix"
 	},
 	"keywords": [

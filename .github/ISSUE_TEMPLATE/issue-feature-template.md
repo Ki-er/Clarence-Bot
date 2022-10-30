@@ -4,7 +4,6 @@ about: Issue/Feature template
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 **Issue/Feature Description:**
@@ -13,4 +12,4 @@ assignees: ''
 
 **How to reproduce, in case of a bug:**
 
-**Other Notes /  Environment Information: (Please give the env information, log link or any useful information for this issue)**
+**Other Notes / Environment Information: (Please give the env information, log link or any useful information for this issue)**
