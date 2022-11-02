@@ -1,6 +1,7 @@
-const cookie = require('../../schemas/cookie-schema');
-const { SlashCommandBuilder, time } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
+const { SlashCommandBuilder, time } = require('@discordjs/builders');
+const cookie = require('../../schemas/cookie-schema');
+const userObj = require('../../schemas/user-schema');
 
 module.exports = {
 	...new SlashCommandBuilder()
@@ -23,22 +24,28 @@ module.exports = {
 	run: async (client, interaction) => {
 		const user = interaction.options.getUser('user');
 
-		const joinedTime = Date.now() - user.joinedAt;
+		let joinedTime;
+		joinedTime = await userObj.findById(user.id);
+		if(joinedTime != null){
+			joinedTime = joinedTime.date
+		}
+		
+
 
 		cookie.find().exec(function (err, results) {
-			const globalGotCookies = results.filter((cookie) => {
-				return cookie.receiverId === interaction.user.id;
+			let globalGotCookies = results.filter((cookie) => {
+				return cookie.receiverId === user.id;
 			});
 
-			const globalSentCookies = results.filter((cookie) => {
-				return cookie.giverId === interaction.user.id;
+			let globalSentCookies = results.filter((cookie) => {
+				return cookie.giverId === user.id;
 			});
 
-			const localGotCookies = globalGotCookies.filter((cookie) => {
+			let localGotCookies = globalGotCookies.filter((cookie) => {
 				return cookie.guildId === interaction.guild.id;
 			});
 
-			const localSentCookies = globalSentCookies.filter((cookie) => {
+			let localSentCookies = globalSentCookies.filter((cookie) => {
 				return cookie.guildId === interaction.guild.id;
 			});
 
