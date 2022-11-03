@@ -32,7 +32,7 @@
 		"dotenv": "^16.0.3",
 		"glob": "^7.2.3",
 		"iso-639-1": "^2.1.15",
-		"mongoose": "^6.7.0",
+		"mongoose": "^6.7.1",
 		"r6s-stats-api": "^1.2.0",
 		"twemoji-parser": "^14.0.0"
 	},
