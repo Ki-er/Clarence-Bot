@@ -38,8 +38,8 @@
 		"twemoji-parser": "^14.0.0"
 	},
 	"devDependencies": {
-		"alex": "^10.0.0",
-		"cspell": "^6.13.3",
+		"alex": "^11.0.0",
+		"cspell": "^6.14.0",
 		"eslint": "^8.26.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.26.0",
