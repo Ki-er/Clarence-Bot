@@ -22,13 +22,18 @@ module.exports = {
 	 */
 	run: async (client, interaction) => {
 
+		//load movie name from options
 		const movieName = interaction.options.getString('name');
+		
+		//create and show epmpty embed
 		await interaction.deferReply();
 
+		//get movie via node-movie module
 		movie(movieName, data => {
 
 			if (data.Response == 'True'){
 
+				//response is True so data are OK!
 				const embed = new MessageEmbed()
 					.setColor('GREEN')
 					.setTitle(`${data.Title} (${data.Type})`)
@@ -45,12 +50,15 @@ module.exports = {
 					.setFooter({ text: `Called By: ${interaction.user.tag}` })
 					.setTimestamp();
 				
+					//add film poster if exists
 					if (data.Poster != 'N/A')
 						embed.setImage(data.Poster);
 				
+				//edit embed with info about move
 				interaction.editReply({ embeds: [embed] });
 			} else if (data.Response == 'False') {
 
+				//if response is false, film was not found
 				const embed = new MessageEmbed()
 					.setColor('ORANGE')
 					.setTitle(`${data.Error}`)
@@ -58,15 +66,18 @@ module.exports = {
 					.setFooter({ text: `Called By: ${interaction.user.tag}` })
 					.setTimestamp();
 				
+				//edit embed with error message
 				interaction.editReply({ embeds: [embed] });
 			} else {
 
+				//if data are corrupted, notify about failiure
 				const embed = new MessageEmbed()
 					.setColor('RED')
 					.setTitle(`Something went wrong :(`)
 					.setFooter({ text: `Called By: ${interaction.user.tag}` })
 					.setTimestamp();
 				
+				//update embed
 				interaction.editReply({ embeds: [embed] });
 			}
 		});
