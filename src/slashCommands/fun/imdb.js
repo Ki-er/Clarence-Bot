@@ -31,16 +31,17 @@ module.exports = {
 
 				const embed = new MessageEmbed()
 					.setColor('GREEN')
-					.setTitle(`${data.Title} (${data.Type})\nYear: ${data.Year}`)
-					.setDescription(`
-						Id: ${data.imdbID}\n
-						Genre: ${data.Genre}\n
-						Country: ${data.Country}\n
-						Runtime: ${data.Runtime}\n
-						Description: ${data.Plot}\n
-						Actors: ${data.Actors}\n
-						Awards: ${data.Awards}\n
-						Rating: ${data.imdbRating}`)
+					.setTitle(`${data.Title} (${data.Type})`)
+					.setDescription(data.Country)
+					.setFields(
+						{name: 'Year', value: data.Year, inline: true},
+						{name: 'Genre', value: data.Genre, inline: true},
+						{name: 'Runtime', value: data.Runtime, inline: true},
+						{name: 'Rating (imDb)', value: data.imdbRating},
+						{name: 'Description', value: data.Plot},
+						{name: 'Actors', value: data.Actors},
+						{name: 'Awards', value: data.Awards}
+					)
 					.setFooter({ text: `Called By: ${interaction.user.tag}` })
 					.setTimestamp();
 				
@@ -51,7 +52,7 @@ module.exports = {
 			} else if (data.Response == 'False') {
 
 				const embed = new MessageEmbed()
-					.setColor('RED')
+					.setColor('ORANGE')
 					.setTitle(`${data.Error}`)
 					.setDescription(`selected name: ${movieName}`)
 					.setFooter({ text: `Called By: ${interaction.user.tag}` })
@@ -61,7 +62,7 @@ module.exports = {
 			} else {
 
 				const embed = new MessageEmbed()
-					.setColor('ORANGE')
+					.setColor('RED')
 					.setTitle(`Something went wrong :(`)
 					.setFooter({ text: `Called By: ${interaction.user.tag}` })
 					.setTimestamp();
