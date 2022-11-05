@@ -49,7 +49,7 @@ module.exports = {
 			});
 
 			topics.push({
-				name: enchancedTopic(dir), //NOTE Enchant topic name
+				name: enhancedTopic(dir), //NOTE Enchant topic name
 				value: `${text}`,
 				inline: true,
 			});
@@ -77,12 +77,12 @@ module.exports = {
 };
 
 //NOTE Enchant topic name
-function enchancedTopic(name) {
+function enhancedTopic(name) {
 	switch (name) {
 		case 'moderation':
 			return 'Admin ⚒️';
 		case 'general':
-			return 'Deneral 📖';
+			return 'General 📖';
 		case 'debugging':
 			return 'Debugging ℹ';
 		case 'siege':

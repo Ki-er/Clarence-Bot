@@ -24,7 +24,7 @@ module.exports = {
 		//load movie name from options
 		const movieName = interaction.options.getString('name');
 
-		//create and show epmpty embed
+		//create and show empty embed
 		await interaction.deferReply();
 
 		//get movie via node-movie module
@@ -64,7 +64,7 @@ module.exports = {
 				//edit embed with error message
 				interaction.editReply({ embeds: [embed] });
 			} else {
-				//if data are corrupted, notify about failiure
+				//if data are corrupted, notify about failure
 				const embed = new MessageEmbed()
 					.setColor('RED')
 					.setTitle(`Something went wrong :(`)
