@@ -13,7 +13,7 @@
 		"prettier:code": "npx prettier src --check",
 		"prettier:code:fix": "npm run prettier -- --write",
 		"prettier:all:fix": "prettier . --write",
-		"format": "npm run prettier:fix && npm run lint:fix"
+		"format": "npm run prettier:all:fix && npm run lint:fix"
 	},
 	"keywords": [
 		"multipurpose",
