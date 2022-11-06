@@ -25,7 +25,9 @@ module.exports = {
         const quote = await getQuote(quote_type)
         if(quote === null){
             await interaction.editReply('Quote does not exist.')
+        }else {
+            await interaction.editReply(`> ${quote.text}  \n -${quote.author ?? 'unknown'}`)
         }
-        await interaction.editReply(`> ${quote.text}  \n -${quote.author ?? 'unknown'}`)
+       
     },
 };
