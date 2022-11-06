@@ -2,6 +2,8 @@ const { glob } = require('glob');
 const { promisify } = require('util');
 
 const globPromise = promisify(glob);
+const user = require('../schemas/user-schema');
+
 
 /**
  * @param {Client} client
@@ -44,4 +46,11 @@ module.exports = async (client) => {
 		// Register for all the guilds the bot is in
 		await client.application.commands.set(arrayOfSlashCommands);
 	});
+
+	client.on('guildMemberAdd', async (guildMember) => {
+		await user.create({
+			_id: guildMember.user.id,
+			date: new Date(),
+		});
+	})
 };
