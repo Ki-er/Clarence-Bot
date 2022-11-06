@@ -23,15 +23,16 @@ module.exports = {
 	run: async (client, interaction) => {
 		const user = interaction.options.getUser('user');
 
-		const joinedTime = Date.now() - user.joinedAt;
+		const member = await interaction.guild.members.fetch(user);
+		const joinedTime = member.joinedAt;
 
 		cookie.find().exec(function (err, results) {
 			const globalGotCookies = results.filter((cookie) => {
-				return cookie.receiverId === interaction.user.id;
+				return cookie.receiverId === user.id;
 			});
 
 			const globalSentCookies = results.filter((cookie) => {
-				return cookie.giverId === interaction.user.id;
+				return cookie.giverId === user.id;
 			});
 
 			const localGotCookies = globalGotCookies.filter((cookie) => {
