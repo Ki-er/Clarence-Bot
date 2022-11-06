@@ -28,6 +28,6 @@ module.exports = {
         }else {
             await interaction.editReply(`> ${quote.text}  \n -${quote.author ?? 'unknown'}`)
         }
-       
+
     },
 };
