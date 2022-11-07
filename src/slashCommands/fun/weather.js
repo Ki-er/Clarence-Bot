@@ -18,10 +18,10 @@ module.exports = {
 	 */
 	run: async (client, interaction) => {
 		const APIKey = process.env.OPEN_WEATHERS_API;
-		const city = interaction.options.getString('string');
+		const cityInputted = interaction.options.getString('city');
 
 		weather.setLang('en');
-		weather.setCity(city);
+		weather.setCity(cityInputted);
 		weather.setUnits('metric');
 		weather.setAPPID(APIKey);
 
@@ -39,7 +39,7 @@ module.exports = {
 							JSONObj.main.pressure
 						}hPa `,
 					})
-					.setTitle(`Weather of ${city}`)
+					.setTitle(`Weather of ${cityInputted}`)
 					.setDescription(
 						`${parseInt(JSONObj.main.temp)} °C ${ChangeFirstLetterToUpperCase(
 							JSONObj.weather[0].description
