@@ -38,6 +38,7 @@ docker run -d \
 -p 6002:6002 \
 -e DISCORD_TOKEN='INSERT DISCORD TOKEN' \
 -e MONGOOSE='INSERT MONGODB URL' \
+-e OPEN_WEATHERS_API='INSERT OPENWEATHERS API KEY' \
 -e PREFIX='-' \
 --restart unless-stopped \
 kieranr27/clarence:latest
