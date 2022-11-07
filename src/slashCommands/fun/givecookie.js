@@ -58,7 +58,7 @@ module.exports = {
 				.setDescription(
 					`${interaction.user.toString()} has given a cookie to ${receiver.toString()}
 					
-					<@${receiver.id}> now ${receiverGotCookies} has cookies!
+					<@${receiver.id}> now has ${receiverGotCookies} cookies!
 					<@${interaction.user.id}> has sent ${senderSentCookies} cookies`
 				)
 				.setImage('https://i.imgur.com/ioaWGdf.png');
