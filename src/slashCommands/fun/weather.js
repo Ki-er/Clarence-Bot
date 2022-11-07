@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 
 // Generate one via : https://openweathermap.org/appid
-const APIKey = '8ae74a87bb028c46b1f1f255f33a3737';
+const APIKey = '';
 
 module.exports = {
 	...new SlashCommandBuilder()
