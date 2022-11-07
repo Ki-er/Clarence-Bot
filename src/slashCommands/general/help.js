@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
-const { readdirSync, statSync } = require('node:fs');
 const { glob } = require('glob');
+const { readdirSync, statSync } = require('node:fs');
 const { promisify } = require('util');
 
 module.exports = {
