@@ -1,6 +1,7 @@
 const { ChangeFirstLetterToUpperCase } = require('../../utils/Weather');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
+const weather = require('openweather-apis');
 
 // Generate one via : https://openweathermap.org/appid
 const APIKey = process.env.OPEN_WEATHERS_API;
@@ -20,7 +21,6 @@ module.exports = {
 	 */
 	run: async (client, interaction) => {
 		const city = interaction.options.getString('string');
-		const weather = require('openweather-apis');
 
 		weather.setLang('en');
 		weather.setCity(city);
