@@ -3,15 +3,12 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const weather = require('openweather-apis');
 
-// Generate one via : https://openweathermap.org/appid
-const APIKey = process.env.OPEN_WEATHERS_API;
-
 module.exports = {
 	...new SlashCommandBuilder()
 		.setName('weather')
 		.setDescription('Show current weather of city')
 		.addStringOption((option) =>
-			option.setName('string').setDescription('Name of City').setRequired(true)
+			option.setName('city').setDescription('Name of City').setRequired(true)
 		),
 	/**
 	 *
@@ -20,6 +17,7 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 	run: async (client, interaction) => {
+		const APIKey = process.env.OPEN_WEATHERS_API;
 		const city = interaction.options.getString('string');
 
 		weather.setLang('en');
