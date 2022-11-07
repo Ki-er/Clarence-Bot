@@ -36,6 +36,7 @@
 		"minecraft-data": "^3.17.0",
 		"mongoose": "^6.7.1",
 		"node-movie": "^3.0.0",
+		"openweather-apis": "^4.4.2",
 		"r6s-stats-api": "^1.2.0",
 		"twemoji-parser": "^14.0.0"
 	},
