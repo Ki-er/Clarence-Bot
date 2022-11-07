@@ -53,7 +53,7 @@ kieranr27/clarence:latest
   - Don't forget to give it the `Privileged Gateway Intents`
   - Invite your bot to your discord server.
   - Get your token & paste in in `.env` (rename `.env.template` to `.env`)
-  - Default URL of MongoDB is `mongodb://root:sekret@mongo-discord-cont:27017/`
+  - Default URL of MongoDB is `mongodb://root:secret@mongo-discord-cont:27017/`
 - After that in root folder type in `powershell`: `docker-compose -f docker-compose-dev.yml up`
 - You will see the bot online in your server.
 - Verify that it works by trying the command `/ping`.
