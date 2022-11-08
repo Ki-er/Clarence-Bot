@@ -3,8 +3,6 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const Levels = require('discord-xp');
 
-
-
 const client = new Client({
 	intents: 98819,
 });
