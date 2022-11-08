@@ -23,7 +23,8 @@ module.exports = {
 	run: async (client, interaction) => {
 		const user = interaction.options.getUser('user');
 
-		const member = await interaction.guild.members.fetch(user);
+		//const member = await interaction.guild.members.fetch(user);
+		const member = interaction.guild.members.cache.get(user.id);
 		const joinedTime = member.joinedAt;
 
 		cookie.find().exec(function (err, results) {
@@ -45,28 +46,22 @@ module.exports = {
 
 			const embed = new MessageEmbed()
 				.setTitle(`${user.tag}`)
-				//.setURL(`${user.avatarURL({ dynamic: true })}`)
 				.setColor('ORANGE')
 				.setFooter({ text: `Called By: ${interaction.user.tag}` })
-				//.setThumbnail(user.avatarURL({ dynamic: true }))
-				.setURL(`${user.displayAvatarURL()}`)
-				.setThumbnail(user.displayAvatarURL())
+				.setURL(`${user.displayAvatarURL({ dynamic: true })}`)
+				.setThumbnail(user.displayAvatarURL({ dynamic: true }))
 				.setTimestamp()
 				.setDescription(
 				`- Known as: ${user}
 				- Is user bot: ${user.bot ? 'Yes' : 'No'}`)
-				// - Joined: ${joinedTime ? time(joinedTime, 'R') : 'Unknown'}
-				// - Created: ${user.createdAt ? time(user.createdAt, 'R') : 'Unknown'}
 				
 				.addFields(
-					//{ name: 'Known as', value: `${user}`},
-					//{ name: 'Is user bot', value: user.bot ? 'Yes' : 'No' },
+					{ name: 'Roles', value: `${member.roles.cache.map(r => r).join(' ').replace("@everyone", " ")}`},
 					{ name: 'Joined', value: joinedTime ? time(joinedTime, 'R') : 'Unknown', inline: true },
-					{ name: 'Created', value: user.createdAt ? time(user.createdAt, 'R') : 'Unknown', inline: true }
+					{ name: 'Created', value: user.createdAt ? time(user.createdAt, 'R')  : 'Unknown ', inline: true }
 				)
-				.setImage(user.displayAvatarURL())
-				.addField('** **', '** **')
-				//.addField('\u200b', '\u200b')
+				.setImage(user.displayAvatarURL({ dynamic: true }))
+				.addField('\u200b', '\u200b')
 				.addFields(
 					{
 						name: 'Sent cookies',
@@ -79,14 +74,6 @@ module.exports = {
 						inline: true,
 					}
 				);
-			// if(user.avatarURL == null){
-			// 	embed.setURL(`${user.displayAvatarURL()}`)
-			// 	embed.setThumbnail(user.displayAvatarURL())
-			// }
-			// else{
-			// 	//embed.setURL(`${user.avatarURL()}`)
-			// 	//embed.setThumbnail(user.avatarURL())
-			// }
 			interaction.reply({ embeds: [embed] });
 		});
 	},
