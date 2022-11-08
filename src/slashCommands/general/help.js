@@ -1,8 +1,8 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
 const { glob } = require('glob');
+const { readdirSync, statSync } = require('node:fs');
 const { promisify } = require('util');
-const { readdirSync, statSync } = require('fs');
 
 module.exports = {
 	...new SlashCommandBuilder()
@@ -24,7 +24,7 @@ module.exports = {
 		});
 
 		var topics = [];
-		for (let dir of arrayOfDirs) {
+		for (const dir of arrayOfDirs) {
 			//NOTE For every topic do..
 
 			let text = '';
@@ -49,7 +49,7 @@ module.exports = {
 			});
 
 			topics.push({
-				name: enchancedTopic(dir), //NOTE Enchant topic name
+				name: enhancedTopic(dir), //NOTE Enchant topic name
 				value: `${text}`,
 				inline: true,
 			});
@@ -76,13 +76,13 @@ module.exports = {
 	},
 };
 
-//NOTE Enchant topic name
-function enchancedTopic(name) {
+//NOTE enhancedTopic name
+function enhancedTopic(name) {
 	switch (name) {
 		case 'moderation':
 			return 'Admin ⚒️';
 		case 'general':
-			return 'Deneral 📖';
+			return 'General 📖';
 		case 'debugging':
 			return 'Debugging ℹ';
 		case 'siege':

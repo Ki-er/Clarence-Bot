@@ -23,15 +23,17 @@ module.exports = {
 	run: async (client, interaction) => {
 		const user = interaction.options.getUser('user');
 
-		const joinedTime = Date.now() - user.joinedAt;
+		//const member = await interaction.guild.members.fetch(user);
+		const member = interaction.guild.members.cache.get(user.id);
+		const joinedTime = member.joinedAt;
 
 		cookie.find().exec(function (err, results) {
 			const globalGotCookies = results.filter((cookie) => {
-				return cookie.receiverId === interaction.user.id;
+				return cookie.receiverId === user.id;
 			});
 
 			const globalSentCookies = results.filter((cookie) => {
-				return cookie.giverId === interaction.user.id;
+				return cookie.giverId === user.id;
 			});
 
 			const localGotCookies = globalGotCookies.filter((cookie) => {
@@ -44,16 +46,37 @@ module.exports = {
 
 			const embed = new MessageEmbed()
 				.setTitle(`${user.tag}`)
-				.setURL(`${user.avatarURL({ dynamic: true })}`)
 				.setColor('ORANGE')
 				.setFooter({ text: `Called By: ${interaction.user.tag}` })
-				.setThumbnail(user.avatarURL({ dynamic: true }))
+				.setURL(`${user.displayAvatarURL({ dynamic: true })}`)
+				.setThumbnail(user.displayAvatarURL({ dynamic: true }))
 				.setTimestamp()
 				.setDescription(
 					`- Known as: ${user}
-				- Joined: ${joinedTime ? time(joinedTime, 'R') : 'Unknown'}
-				- Created: ${user.createdAt ? time(user.createdAt, 'R') : 'Unknown'}`
+				- Is user bot: ${user.bot ? 'Yes' : 'No'}`
 				)
+
+				.addFields(
+					{
+						name: 'Roles',
+						value: `${member.roles.cache
+							.map((r) => r)
+							.join(' ')
+							.replace('@everyone', ' ')}`,
+					},
+					{
+						name: 'Joined',
+						value: joinedTime ? time(joinedTime, 'R') : 'Unknown',
+						inline: true,
+					},
+					{
+						name: 'Created',
+						value: user.createdAt ? time(user.createdAt, 'R') : 'Unknown ',
+						inline: true,
+					}
+				)
+				.setImage(user.displayAvatarURL({ dynamic: true }))
+				.addField('\u200b', '\u200b')
 				.addFields(
 					{
 						name: 'Sent cookies',

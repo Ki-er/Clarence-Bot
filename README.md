@@ -30,7 +30,7 @@ This bot features multiple command types from:
 
 Due to the [Publish.yml](.github/workflows/publish.yml) workflow, the newest build will automatically be pushed to DockerHub.
 
-Using a tool like [Ouroboros](https://github.com/gmt2001/ouroboros), you can automatically update containers without the need for restarts.
+Using a tool like [Ourobros](https://github.com/gmt2001/ouroboros), you can automatically update containers without the need for restarts.
 
 ```docker
 docker run -d \
@@ -38,6 +38,7 @@ docker run -d \
 -p 6002:6002 \
 -e DISCORD_TOKEN='INSERT DISCORD TOKEN' \
 -e MONGOOSE='INSERT MONGODB URL' \
+-e OPEN_WEATHERS_API='INSERT OPENWEATHERS API KEY' \
 -e PREFIX='-' \
 --restart unless-stopped \
 kieranr27/clarence:latest
@@ -52,7 +53,7 @@ kieranr27/clarence:latest
   - Don't forget to give it the `Privileged Gateway Intents`
   - Invite your bot to your discord server.
   - Get your token & paste in in `.env` (rename `.env.template` to `.env`)
-  - Default URL of MongoDB is `mongodb://root:sekret@mongo-discord-cont:27017/`
+  - Default URL of MongoDB is `mongodb://root:secret@mongo-discord-cont:27017/`
 - After that in root folder type in `powershell`: `docker-compose -f docker-compose-dev.yml up`
 - You will see the bot online in your server.
 - Verify that it works by trying the command `/ping`.
