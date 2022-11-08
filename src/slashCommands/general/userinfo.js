@@ -52,13 +52,28 @@ module.exports = {
 				.setThumbnail(user.displayAvatarURL({ dynamic: true }))
 				.setTimestamp()
 				.setDescription(
-				`- Known as: ${user}
-				- Is user bot: ${user.bot ? 'Yes' : 'No'}`)
-				
+					`- Known as: ${user}
+				- Is user bot: ${user.bot ? 'Yes' : 'No'}`
+				)
+
 				.addFields(
-					{ name: 'Roles', value: `${member.roles.cache.map(r => r).join(' ').replace("@everyone", " ")}`},
-					{ name: 'Joined', value: joinedTime ? time(joinedTime, 'R') : 'Unknown', inline: true },
-					{ name: 'Created', value: user.createdAt ? time(user.createdAt, 'R')  : 'Unknown ', inline: true }
+					{
+						name: 'Roles',
+						value: `${member.roles.cache
+							.map((r) => r)
+							.join(' ')
+							.replace('@everyone', ' ')}`,
+					},
+					{
+						name: 'Joined',
+						value: joinedTime ? time(joinedTime, 'R') : 'Unknown',
+						inline: true,
+					},
+					{
+						name: 'Created',
+						value: user.createdAt ? time(user.createdAt, 'R') : 'Unknown ',
+						inline: true,
+					}
 				)
 				.setImage(user.displayAvatarURL({ dynamic: true }))
 				.addField('\u200b', '\u200b')
@@ -78,4 +93,3 @@ module.exports = {
 		});
 	},
 };
-
