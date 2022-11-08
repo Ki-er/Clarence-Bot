@@ -19,27 +19,24 @@ module.exports = {
 	 * @param {String[]} args
 	 */
 	run: async (client, interaction) => {
+		const isOn = interaction.options.getBoolean('on');
 
-        const isOn = interaction.options.getBoolean('on');
+		interaction.client.emit('onToggleXp', isOn);
 
-		interaction.client.emit("onToggleXp", isOn);
-
-        if (isOn){
-            let embed = new MessageEmbed()
-                        .setColor('GREEN')
-                        .setFooter({ text: `Called By: ${interaction.user.tag}` })
-                        .setTimestamp()
-                        .setTitle(`XP System is ON!`);
-            interaction.reply({ embeds: [embed] });
-        } 
-        
-        else {
-            let embed = new MessageEmbed()
-                        .setColor('ORANGE')
-                        .setFooter({ text: `Called By: ${interaction.user.tag}` })
-                        .setTimestamp()
-                        .setTitle(`XP System is OFF!`);
-            interaction.reply({ embeds: [embed] });
-        }
-    },
+		if (isOn) {
+			const embed = new MessageEmbed()
+				.setColor('GREEN')
+				.setFooter({ text: `Called By: ${interaction.user.tag}` })
+				.setTimestamp()
+				.setTitle(`XP System is ON!`);
+			interaction.reply({ embeds: [embed] });
+		} else {
+			const embed = new MessageEmbed()
+				.setColor('ORANGE')
+				.setFooter({ text: `Called By: ${interaction.user.tag}` })
+				.setTimestamp()
+				.setTitle(`XP System is OFF!`);
+			interaction.reply({ embeds: [embed] });
+		}
+	},
 };

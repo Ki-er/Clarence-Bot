@@ -1,7 +1,7 @@
 const { Client, Collection } = require('discord.js');
 require('dotenv').config();
-const mongoose = require('mongoose');
 const Levels = require('discord-xp');
+const mongoose = require('mongoose');
 
 const client = new Client({
 	intents: 98819,
@@ -37,22 +37,27 @@ mongoose
 
 client.login(process.env.DISCORD_TOKEN);
 
-client.on("messageCreate", async(message) => {
-    if(message.author.bot) return;
-    if(!message.guild) return;
+client.on('messageCreate', async (message) => {
+	if (message.author.bot) return;
+	if (!message.guild) return;
 
-	if (isXpSystemOn == true){
+	if (isXpSystemOn == true) {
 		const randomXP = Math.floor(Math.random() * 10) + 1;
-		const hasLevelUp = await Levels.appendXp(message.author.id, message.guild.id, randomXP);
+		const hasLevelUp = await Levels.appendXp(
+			message.author.id,
+			message.guild.id,
+			randomXP
+		);
 		console.log(`${message.author.id} recieved ${randomXP} xp!\n`);
-		if(hasLevelUp){
+		if (hasLevelUp) {
 			const user = await Levels.fetch(message.author.id, message.guild.id);
-			message.channel.send(`You have reached new level! Congratulations! ${user.level}`); 
+			message.channel.send(
+				`You have reached new level! Congratulations! ${user.level}`
+			);
 		}
 	}
-
 });
 
-client.on("onToggleXp", isOn => {
+client.on('onToggleXp', (isOn) => {
 	isXpSystemOn = isOn;
 });
