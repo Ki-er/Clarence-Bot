@@ -1,15 +1,21 @@
-name: Lint
-
-on: [push, pull_request]
+name: CI
+on:
+  - push
+  - pull_request
 
 jobs:
-  lint:
+  test:
+    name: Node.js ${{ matrix.node-version }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          - 16
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          cache: npm
-
-      - run: npm
-      - run: npm run lint
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm format
