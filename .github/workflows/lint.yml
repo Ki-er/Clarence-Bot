@@ -1,15 +1,37 @@
-name: ESLint PR review
-
+name: Lint
 on:
+  pull_request:
+    paths:
+      - ".eslint*"
+      - .prettier*"
+      - "**/*.js"
+      - "**/*.md"
+      - "**/*.json"
+      - "**/*.yml"
+      - "**/*.yaml"
   push:
+    paths:
+      - ".eslint*"
+      - .prettier*"
+      - "**/*.js"
+      - "**/*.md"
+      - "**/*.json"
+      - "**/*.yml"
+      - "**/*.yaml"
+    branches:
+      - main
+
+permissions:
+  contents: read
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: rpkak/ESLint-PR-review@latest
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          src: src
-          eslint-format: table
+          cache: npm
+
+      - run: npm
+      - run: npm run lint
