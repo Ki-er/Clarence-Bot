@@ -17,7 +17,7 @@ module.exports = {
 		const rawLeaderboard = await Levels.fetchLeaderboard(
 			interaction.guild.id,
 			5
-		); 
+		);
 		const leaderboard = await Levels.computeLeaderboard(
 			client,
 			rawLeaderboard,
