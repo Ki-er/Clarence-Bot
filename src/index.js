@@ -48,11 +48,11 @@ client.on('messageCreate', async (message) => {
 			message.guild.id,
 			randomXP
 		);
-		console.log(`${message.author.id} recieved ${randomXP} xp!\n`);
+		console.log(`${message.author.id} received ${randomXP} xp!\n`);
 		if (hasLevelUp) {
 			const user = await Levels.fetch(message.author.id, message.guild.id);
 			message.channel.send(
-				`You have reached new level! Congratulations! ${user.level}`
+				`You have reached level ${user.level}! Congratulations!`
 			);
 		}
 	}

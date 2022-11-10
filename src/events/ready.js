@@ -3,6 +3,11 @@ const guild = require('../schemas/guild-schema');
 
 client.on('ready', () => {
 	console.log('Clarence is online');
+
+	client.guilds.cache.forEach((guild) => {
+		let serverTotal = serverTotal + 1
+	});
+
 	client.user.setActivity(`Slash Commands`, { type: 'WATCHING' });
 
 	setInterval(() => {
