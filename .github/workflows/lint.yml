@@ -1,25 +1,6 @@
 name: Lint
-on:
-  pull_request:
-    paths:
-      - ".eslint*"
-      - .prettier*"
-      - "**/*.js"
-      - "**/*.md"
-      - "**/*.json"
-      - "**/*.yml"
-      - "**/*.yaml"
-  push:
-    paths:
-      - ".eslint*"
-      - .prettier*"
-      - "**/*.js"
-      - "**/*.md"
-      - "**/*.json"
-      - "**/*.yml"
-      - "**/*.yaml"
-    branches:
-      - main
+
+on: [push, pull_request]
 
 jobs:
   lint:
