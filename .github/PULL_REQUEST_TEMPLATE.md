@@ -25,5 +25,5 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] I have made corresponding changes to the documentation
 - [ ] My changes generate no new warnings
-- [ ] New and existing unit tests pass locally with my changes - Run `npm run format`
+- [ ] New and existing unit tests pass locally with my changes - Run `yarn run format`
 - [ ] Any dependent changes have been merged and published in downstream modules

@@ -1,21 +1,37 @@
-name: CI
+name: Lint
 on:
-  - push
-  - pull_request
+  pull_request:
+    paths:
+      - '.eslint*'
+      - .prettier*"
+      - '**/*.js'
+      - '**/*.md'
+      - '**/*.json'
+      - '**/*.yml'
+      - '**/*.yaml'
+  push:
+    paths:
+      - '.eslint*'
+      - .prettier*"
+      - '**/*.js'
+      - '**/*.md'
+      - '**/*.json'
+      - '**/*.yml'
+      - '**/*.yaml'
+    branches:
+      - main
+
+permissions:
+  contents: read
 
 jobs:
-  test:
-    name: Node.js ${{ matrix.node-version }}
+  lint:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version:
-          - 16
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm format
+          cache: yarn
+
+      - run: yarn
+      - run: yarn run lint-ci

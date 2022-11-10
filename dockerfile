@@ -4,7 +4,7 @@ WORKDIR /usr/clarence/
 
 COPY --chown=node:node . .
 
-RUN npm --verbose install
+RUN yarn --verbose install
 
 RUN apt-get update -y && apt-get install --no-install-recommends -y curl
 

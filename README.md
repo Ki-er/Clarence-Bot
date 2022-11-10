@@ -64,7 +64,7 @@ kieranr27/clarence:latest
 - Clone the repo
 - Remove the `.template` from `.env.template` - If contributing, please revert this change!
 - Add required variables to `.env`
-- Run `npm i`
+- Run `yarn install`
 - Run `node .`
 
 ---

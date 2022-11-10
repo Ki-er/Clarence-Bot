@@ -1,4 +1,4 @@
-name: "test-pull-request-name"
+name: 'test-pull-request-name'
 on:
   pull_request:
     types: ['opened', 'edited', 'reopened', 'synchronize']
@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install Dependencies
-        run: npm install @commitlint/config-conventional
+        run: yarn install @commitlint/config-conventional
       - uses: JulienKode/pull-request-name-linter-action@v0.5.0
