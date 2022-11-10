@@ -48,10 +48,13 @@
 		"Innercube",
 		"Kieran",
 		"kieranr",
+		"leaderboard",
 		"membercountchannel",
 		"minecraft",
 		"minecraftinfo",
 		"numberfact",
+		"openweather",
+		"OPENWEATHERS",
 		"Ourobros",
 		"pingables",
 		"roleinfo",
@@ -67,6 +70,7 @@
 		"unban",
 		"Unranked",
 		"untimeout",
-		"welcomechannel"
+		"welcomechannel",
+		"xpsystem"
 	]
 }
