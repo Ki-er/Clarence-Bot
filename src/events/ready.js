@@ -6,8 +6,8 @@ client.on('ready', () => {
 
 	let serverTotal = 0;
 
-	client.guilds.cache.forEach((guild) => {
-		let serverTotal = serverTotal + 1
+	client.guilds.cache.forEach(() => {
+		const serverTotal = serverTotal + 1;
 	});
 
 	client.guilds.cache.forEach(() => {
