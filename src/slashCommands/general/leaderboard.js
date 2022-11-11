@@ -17,7 +17,7 @@ module.exports = {
 		const rawLeaderboard = await Levels.fetchLeaderboard(
 			interaction.guild.id,
 			5
-		); //prvych 5 ludi
+		);
 		const leaderboard = await Levels.computeLeaderboard(
 			client,
 			rawLeaderboard,

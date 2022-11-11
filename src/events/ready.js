@@ -4,11 +4,24 @@ const guild = require('../schemas/guild-schema');
 client.on('ready', () => {
 	console.log('Clarence is online');
 
+	let serverTotal = 0;
+
 	client.guilds.cache.forEach((guild) => {
 		let serverTotal = serverTotal + 1
 	});
 
-	client.user.setActivity(`Slash Commands`, { type: 'WATCHING' });
+	client.guilds.cache.forEach(() => {
+		serverTotal = serverTotal + 1;
+	});
+
+	const Activities = [`${serverTotal} servers`, 'Slash Commands'];
+
+	setInterval(() => {
+		client.user.setActivity(
+			Activities[Math.floor(Math.random() * Activities.length)],
+			{ type: 'WATCHING' }
+		);
+	}, 180000);
 
 	setInterval(() => {
 		guild.find().then((data) => {
