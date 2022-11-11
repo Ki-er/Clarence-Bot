@@ -6,17 +6,13 @@ client.on('ready', () => {
 
 	let serverTotal = 0;
 
-	client.guilds.cache.forEach(() => {
-		const serverTotal = serverTotal + 1;
-	});
-
-	client.guilds.cache.forEach(() => {
-		serverTotal = serverTotal + 1;
-	});
-
-	const Activities = [`${serverTotal} servers`, 'Slash Commands'];
-
 	setInterval(() => {
+		client.guilds.cache.forEach(() => {
+			serverTotal = serverTotal + 1;
+		});
+	
+		const Activities = [`${serverTotal} servers`, 'Slash Commands'];
+
 		client.user.setActivity(
 			Activities[Math.floor(Math.random() * Activities.length)],
 			{ type: 'WATCHING' }
