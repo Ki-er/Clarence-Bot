@@ -36,7 +36,7 @@
 		"iso-639-1": "^2.1.15",
 		"jsdom": "^20.0.2",
 		"minecraft-assets": "^1.9.0",
-		"minecraft-data": "^3.17.0",
+		"minecraft-data": "^3.18.0",
 		"mongoose": "^6.7.2",
 		"node-movie": "^3.0.0",
 		"openweather-apis": "^4.4.2",
