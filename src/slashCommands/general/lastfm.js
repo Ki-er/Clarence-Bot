@@ -1,3 +1,4 @@
+/*
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -22,6 +23,3 @@ module.exports = {
 	 * @param {CommandInteraction} interaction
 	 * @param {String[]} args
 	 */
-
-	run: async (client, interaction) => {},
-};
