@@ -10,7 +10,7 @@ client.on('ready', () => {
 		client.guilds.cache.forEach(() => {
 			serverTotal = serverTotal + 1;
 		});
-	
+
 		const Activities = [`${serverTotal} servers`, 'Slash Commands'];
 
 		client.user.setActivity(
