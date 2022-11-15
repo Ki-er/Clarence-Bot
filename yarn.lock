@@ -1069,12 +1069,12 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@iamtraction/google-translate@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@iamtraction/google-translate/-/google-translate-2.0.0.tgz#3b806b37f41822821669fe67a44fca44947a0b8d"
-  integrity sha512-NdGO7FOVZR5X8mhhBmpDWurAGbPSc5RTTszPC7cBElu7pDafz4dzQA6Me3TaPcOLb2YW2YNk+vuZRV04XGG8Iw==
+"@iamtraction/google-translate@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@iamtraction/google-translate/-/google-translate-2.0.1.tgz#f6c0aa7f15030fc2014c13db8eb282f5ab85ed10"
+  integrity sha512-kOTkt23zflxpgxLIe9tLvDU8IvNscXYbgMSXydNkZGWDtJ75YJiU3v7EBz+t7h/gSiY7sT5r4dlFkMrHCl+N6A==
   dependencies:
-    undici "^5.11.0"
+    undici "^5.12.0"
 
 "@mapbox/node-pre-gyp@^1.0.0":
   version "1.0.10"
@@ -5973,7 +5973,7 @@ undefsafe@^2.0.5:
   resolved "https://registry.yarnpkg.com/undefsafe/-/undefsafe-2.0.5.tgz#38733b9327bdcd226db889fb723a6efd162e6e2c"
   integrity sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==
 
-undici@^5.11.0:
+undici@^5.12.0:
   version "5.12.0"
   resolved "https://registry.yarnpkg.com/undici/-/undici-5.12.0.tgz#c758ffa704fbcd40d506e4948860ccaf4099f531"
   integrity sha512-zMLamCG62PGjd9HHMpo05bSLvvwWOZgGeiWlN/vlqu3+lRo3elxktVGEyLMX+IO7c2eflLjcW74AlkhEZm15mg==
