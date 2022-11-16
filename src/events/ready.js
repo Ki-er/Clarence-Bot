@@ -4,7 +4,6 @@ const guild = require('../schemas/guild-schema');
 client.on('ready', () => {
 	console.log('Clarence is online');
 
-
 	setInterval(() => {
 		let serverTotal = 0;
 
