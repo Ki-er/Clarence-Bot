@@ -1,4 +1,4 @@
-name: 'File existence check'
+name: File Check
 
 on: [push, pull_request]
 
