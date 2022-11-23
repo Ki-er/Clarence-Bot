@@ -1,9 +1,5 @@
 name: pr-name-linter
-on:
-  pull_request:
-    types: ['opened', 'edited', 'reopened', 'synchronize']
 
-name: pr-name-linter
 on:
   pull_request:
     types: ['opened', 'edited', 'reopened', 'synchronize']
