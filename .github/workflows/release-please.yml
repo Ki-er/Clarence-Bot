@@ -1,22 +1,16 @@
 name: release-please
 
 on:
-  workflow_dispatch:
   push:
     branches:
-      - master
-
-permissions:
-  contents: write
-  pull-requests: write
+      - master 
 
 jobs:
   release-please:
     runs-on: ubuntu-latest
-    outputs:
-      release_created: ${{ steps.release.outputs.release_created }}
     steps:
       - uses: google-github-actions/release-please-action@v3
-        id: release
         with:
-          command: manifest
+          release-type: node
+          package-name: release-please-action
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false}]'
