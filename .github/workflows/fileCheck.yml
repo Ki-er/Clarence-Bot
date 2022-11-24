@@ -1,6 +1,6 @@
 name: File Check
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   file_existence:
