@@ -1,4 +1,4 @@
-FROM node:v18.12.0
+FROM node:16.17.1
 
 WORKDIR /usr/clarence/
 
