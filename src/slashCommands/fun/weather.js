@@ -10,12 +10,14 @@ module.exports = {
 		.addStringOption((option) =>
 			option.setName('city').setDescription('Name of City').setRequired(true)
 		),
+
 	/**
 	 *
 	 * @param {Client} client
 	 * @param {CommandInteraction} interaction
 	 * @param {String[]} args
 	 */
+
 	run: async (client, interaction) => {
 		const APIKey = process.env.OPEN_WEATHERS_API;
 		const cityInputted = interaction.options.getString('city');
@@ -30,20 +32,19 @@ module.exports = {
 			if (err != null) {
 				interaction.reply({ content: `${err}` });
 			} else {
+				const ISO = JSONObj.sys.country;
+
 				const embed = new MessageEmbed()
 					.setColor('ORANGE')
-					.setFooter({
-						text: `Speed of Wind : ${parseInt(
-							JSONObj.wind.speed
-						)} m/s · Humidity: ${JSONObj.main.humidity}% · Pressure: ${
-							JSONObj.main.pressure
-						}hPa `,
-					})
-					.setTitle(`Weather of ${cityInputted}`)
+					.setTitle(`Weather of ${cityInputted}, ${ISO}`)
 					.setDescription(
 						`${parseInt(JSONObj.main.temp)} °C ${ChangeFirstLetterToUpperCase(
 							JSONObj.weather[0].description
-						)}`
+						)}
+						\r\n
+						Speed of Wind : ${parseInt(JSONObj.wind.speed)} m/s 
+						Humidity: ${JSONObj.main.humidity}% 
+						Pressure: ${JSONObj.main.pressure}hPa`
 					)
 					.setThumbnail(
 						`http://openweathermap.org/img/wn/${JSONObj.weather[0].icon}@2x.png`
