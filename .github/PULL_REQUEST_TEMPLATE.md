@@ -22,8 +22,4 @@ Please describe the tests that you ran to verify your changes. Provide instructi
 - [ ] My code follows the style guidelines of this project
 - [ ] I have restored `.env.template`
 - [ ] I have performed a self-review of my code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] New and existing unit tests pass locally with my changes - Run `yarn run format`
-- [ ] Any dependent changes have been merged and published in downstream modules
+- [ ] New and existing code pass locally with my changes - Run `yarn run format`
