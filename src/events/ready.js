@@ -24,14 +24,13 @@ client.on('ready', () => {
 			if (!data) return;
 
 			data.forEach((record) => {
-				const guild = client.guilds.cache.get(record.id);
-
 				if (record.membercountChannelId == null) return;
 
+				const memberCount = client.guilds.cache.get(record.id).memberCount;
 				const channel = client.channels.cache.get(record.membercountChannelId);
-				const memberCount = guild.memberCount;
 				channel.setName(`Discord Members: ${memberCount.toLocaleString()}`);
+				console.log(`[MEMBER COUNT] - Updated ${client.guilds.cache.get(record.id).name} member count to ${memberCount}`)
 			});
 		});
-	}, 3600000);
-});
+	}, 600000);}
+);
