@@ -30,8 +30,12 @@ client.on('ready', () => {
 				const memberCount = client.guilds.cache.get(record.id).memberCount;
 				const channel = client.channels.cache.get(record.membercountChannelId);
 				channel.setName(`Discord Members: ${memberCount.toLocaleString()}`);
-				console.log(`[MEMBER COUNT] - Updated ${client.guilds.cache.get(record.id).name} member count to ${memberCount}`)
+				console.log(
+					`[MEMBER COUNT] - Updated ${
+						client.guilds.cache.get(record.id).name
+					} member count to ${memberCount}`
+				);
 			});
 		});
-	}, 600000);}
-);
+	}, 600000);
+});
