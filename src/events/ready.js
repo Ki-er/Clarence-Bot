@@ -33,5 +33,5 @@ client.on('ready', () => {
 				channel.setName(`Discord Members: ${memberCount.toLocaleString()}`);
 			});
 		});
-	}, 600000);
+	}, 3600000);
 });
