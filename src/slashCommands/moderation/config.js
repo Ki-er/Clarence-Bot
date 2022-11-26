@@ -55,7 +55,6 @@ module.exports = {
 			}
 		);
 
-
 		interaction.reply({ content: `Configuration added`, ephemeral: true });
 	},
 };
