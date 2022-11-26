@@ -5,6 +5,7 @@
 		".github/**",
 		".yarn/**",
 		"dist/**",
+		"CHANGELOG.md",
 		"node_modules/**"
 	],
 	"dictionaries": [
@@ -48,6 +49,7 @@
 		"Innercube",
 		"Kieran",
 		"kieranr",
+		"lastfm",
 		"leaderboard",
 		"membercountchannel",
 		"minecraft",
