@@ -47,6 +47,15 @@ module.exports = {
 			suggestionChannelId: suggestionChannel.id,
 			membercountChannelId: membercountChannel.id,
 		});
+
+		membercountChannel.permissionOverwrites.edit(
+			interaction.guild.roles.everyone.id,
+			{
+				CONNECT: false,
+			}
+		);
+
+
 		interaction.reply({ content: `Configuration added`, ephemeral: true });
 	},
 };
