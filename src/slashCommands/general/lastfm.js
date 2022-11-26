@@ -4,15 +4,15 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 module.exports = {
 	...new SlashCommandBuilder()
 		.setName('lastfm')
-		.setDescription('Output lastfm information')
+		.setDescription('Output LastFM information')
 		.addSubcommand((subcommand) =>
 			subcommand
 				.setName('user')
-				.setDescription('Output information about a user on lastfm')
+				.setDescription('Output information about a user on LastFM')
 				.addStringOption((option) =>
 					option
 						.setName('username')
-						.setDescxription('The user from lastfm')
+						.setDescription('The user from LastFM')
 						.setRequired(true)
 				)
 		),
