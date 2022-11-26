@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.3.0](https://github.com/KieranRobson/Clarence-Bot/compare/v3.2.0...v3.3.0) (2022-11-26)
+
+
+### Features
+
+* Add Alex Workflow ([#119](https://github.com/KieranRobson/Clarence-Bot/issues/119)) ([091fb2f](https://github.com/KieranRobson/Clarence-Bot/commit/091fb2f109a12cf72347008369032fdf96cf2677))
+* Add invite link to guildCreate event ([f1acb69](https://github.com/KieranRobson/Clarence-Bot/commit/f1acb69bac186ec9e4ca9291b125cc22fe4f583b))
+* Create guilddelete event, remove data if clarence leaves a server ([#121](https://github.com/KieranRobson/Clarence-Bot/issues/121)) ([e693af3](https://github.com/KieranRobson/Clarence-Bot/commit/e693af3024feb2e1fc0053d93a2b609465a48c30))
+* Lock membercount channel from everyone ([6371fb8](https://github.com/KieranRobson/Clarence-Bot/commit/6371fb87663f755f5b23e66310b8f0c511ae8c66))
+
 ## [3.2.0](https://github.com/KieranRobson/Clarence-Bot/compare/v3.1.0...v3.2.0) (2022-11-26)
 
 
