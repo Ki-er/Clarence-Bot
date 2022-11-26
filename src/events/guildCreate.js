@@ -18,6 +18,10 @@ client.on('guildCreate', (g) => {
 			'Get Started',
 			'To get started run `/config`to configure your welcome and suggestion commands!'
 		)
+		.addField(
+			'Invite',
+			'You can invite me [here](https://discord.com/api/oauth2/authorize?client_id=875491402497294447&permissions=8&scope=bot)'
+		)
 		.setFooter({ text: 'Created By Kieran#891' });
 
 	channel.send({ embeds: [embed] });
