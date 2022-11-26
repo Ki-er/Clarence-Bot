@@ -1,4 +1,5 @@
-name: 'Check Spelling'
+name: Check Language
+
 on: # rebuild any PRs and main branch changes
   pull_request:
   push:
@@ -8,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: streetsidesoftware/cspell-action@v2
+      - uses: theashraf/alex-action@master
