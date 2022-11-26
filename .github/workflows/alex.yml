@@ -1,12 +1,23 @@
-name: Check Language
+name: Alex Recommends
 
-on: # rebuild any PRs and main branch changes
-  pull_request:
-  push:
+on: pull_request_target
 
 jobs:
-  spellcheck: # run the action
+  alex:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: theashraf/alex-action@master
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Comment on new PR
+      uses: brown-ccv/alex-recommends@v1.2.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        message_id: 'alex'
+        no_binary: false
+        profanity_sureness: 2
+        pr_only: false
+        glob_pattern: "services/**"
