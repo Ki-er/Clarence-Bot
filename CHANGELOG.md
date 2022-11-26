@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.2.0](https://github.com/KieranRobson/Clarence-Bot/compare/v3.1.0...v3.2.0) (2022-11-26)
+
+
+### Features
+
+* Add CSpell workflow ([#116](https://github.com/KieranRobson/Clarence-Bot/issues/116)) ([06a1861](https://github.com/KieranRobson/Clarence-Bot/commit/06a186185c5d0a4c7cc6a6c76b50a088c235fa64))
+
+
+### Bug Fixes
+
+* Make PR name linter action quicker? ([6a064fa](https://github.com/KieranRobson/Clarence-Bot/commit/6a064faab12281ac0c1f80c4c4f03f982eddf31e))
+
 ## [3.1.0](https://github.com/KieranRobson/Clarence-Bot/compare/v3.0.0...v3.1.0) (2022-11-25)
 
 
