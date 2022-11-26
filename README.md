@@ -22,7 +22,7 @@ This bot features multiple command types from:
 - Info
 - Rainbow Six Siege
 
-- Pikles
+- Pickles
 
 ---
 
