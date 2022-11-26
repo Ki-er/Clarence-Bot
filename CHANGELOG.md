@@ -1,5 +1,26 @@
 # Changelog
 
+## [3.1.0](https://github.com/KieranRobson/Clarence-Bot/compare/v3.0.0...v3.1.0) (2022-11-25)
+
+
+### Features
+
+* Add backup activity status | shorten timer ([d82e58b](https://github.com/KieranRobson/Clarence-Bot/commit/d82e58b1e379bb20eba2b736062152bc681d40a3))
+* Add ISO code to weather command ([#111](https://github.com/KieranRobson/Clarence-Bot/issues/111)) ([68daaf5](https://github.com/KieranRobson/Clarence-Bot/commit/68daaf5d4183fedd3ce5d0c5f8b7fc2ed4198283))
+
+
+### Bug Fixes
+
+* Change checking membercount to hour ([0f7f808](https://github.com/KieranRobson/Clarence-Bot/commit/0f7f80817682bd48abcce0530f28e9e14f9f435d))
+* Commit lint ([9bf9037](https://github.com/KieranRobson/Clarence-Bot/commit/9bf9037130536ac8187076494cd602b08e3db175))
+* Remove typos from commitLint ([bca7143](https://github.com/KieranRobson/Clarence-Bot/commit/bca7143278ad147bc2c7e2982222fd7f0f0354db))
+* Stop membercount from crashing ([c41dd5a](https://github.com/KieranRobson/Clarence-Bot/commit/c41dd5a83dbac3ee9b24308cebfbf71c978d5dd3))
+
+
+### Reverts
+
+* Change node back to 16.17.1 ([336daae](https://github.com/KieranRobson/Clarence-Bot/commit/336daae9aabceab33cd48232720ecbacec982e73))
+
 ## [3.0.0](https://github.com/KieranRobson/Clarence-Bot/compare/v2.6.1...v3.0.0) (2022-11-23)
 
 ### ⚠ BREAKING CHANGES
