@@ -37,7 +37,7 @@
 		"jsdom": "^20.0.3",
 		"minecraft-assets": "^1.9.0",
 		"minecraft-data": "^3.19.0",
-		"mongoose": "^6.7.3",
+		"mongoose": "^6.7.4",
 		"node-movie": "^3.0.0",
 		"openweather-apis": "^4.4.2",
 		"r6s-stats-api": "^1.2.0",
