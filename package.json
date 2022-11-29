@@ -24,7 +24,7 @@
 	"author": "Kieran Robson",
 	"license": "MIT",
 	"dependencies": {
-		"@discordjs/builders": "^1.3.0",
+		"@discordjs/builders": "^1.4.0",
 		"@iamtraction/google-translate": "^2.0.1",
 		"axios": "^1.2.0",
 		"canvas": "^2.10.2",
