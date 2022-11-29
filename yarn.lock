@@ -4371,10 +4371,10 @@ minecraft-assets@^1.9.0:
   resolved "https://registry.yarnpkg.com/minecraft-assets/-/minecraft-assets-1.9.0.tgz#5139dcdcb9ce4c5ac5cda8d6ecd873d7bba8ccc2"
   integrity sha512-KtvIRd9gcKlxbvrswGv1Ap9k7tVs//QW2ukp+8vJ28miYwkhUmYfjTZyElIG8KUXV/46wL2kDzLH8SJbXQ56Mg==
 
-minecraft-data@^3.18.0:
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.18.0.tgz#2e4d89879a80c4f766c99e708dad6c53159b671f"
-  integrity sha512-jxtkk8/54mI+mCKXso7hcpjuBC2MkwUiBzzDEwWJTmXtK0gylx51iJg2Frg1jkkScPLhVCjOhx1i+A7G1EFZHg==
+minecraft-data@^3.19.0:
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.19.0.tgz#3e58cdf472798e68aaf37d7b1aceb7ae84e734dd"
+  integrity sha512-qOrgBMIekOblZ6YJGnxzWIDSGJkdLIlrZlRdi3/9MVMV2r80t4Ccq/Tf5azOPmpCetJ2tqbq96oeIG90tV+s6A==
 
 minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
