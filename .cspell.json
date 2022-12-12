@@ -5,6 +5,14 @@
 	"id": "cspell-default-json",
 	"readonly": true,
 	"import": ["./cspell-default.config.js"],
+	"ignorePaths": [
+		".firebase/**",
+		".github/**",
+		".yarn/**",
+		"dist/**",
+		"node_modules/**",
+		"CHANGELOG.md"
+	],
 	"words": [
 		"addemoji",
 		"blamescan",
