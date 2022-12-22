@@ -27,6 +27,7 @@
 		"misc",
 		"node",
 		"npm",
+		"npm",
 		"rust",
 		"softwareTerms",
 		"typescript"
@@ -36,13 +37,10 @@
 		"blamescan",
 		"blamestitch",
 		"channelinfo",
-		"Deathmatch",
 		"delconfig",
 		"diggable",
 		"goodest",
 		"guildmember",
-		"Headshot",
-		"Headshots",
 		"icarly",
 		"imdb",
 		"INITDB",
@@ -69,9 +67,6 @@
 		"simulateleave",
 		"suggestionchannel",
 		"TLDR",
-		"unban",
-		"Unranked",
-		"untimeout",
 		"welcomechannel",
 		"xpsystem"
 	]
