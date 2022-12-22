@@ -45,7 +45,7 @@
 	},
 	"devDependencies": {
 		"alex": "^11.0.0",
-		"cspell": "^6.17.0",
+		"cspell": "^6.18.0",
 		"eslint": "^8.30.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.26.0",
