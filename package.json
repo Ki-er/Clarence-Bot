@@ -27,7 +27,7 @@
 		"@discordjs/builders": "^1.4.0",
 		"@iamtraction/google-translate": "^2.0.1",
 		"axios": "^1.2.1",
-		"canvas": "^2.10.2",
+		"canvas": "^2.11.0",
 		"discord-api-types": "^0.37.24",
 		"discord-xp": "^1.1.16",
 		"discord.js": "^13.12.0",
