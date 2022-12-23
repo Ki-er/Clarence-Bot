@@ -49,7 +49,9 @@ module.exports = {
 					.setThumbnail(
 						`https://github.com/gosquared/flags/blob/master/flags/flags-iso/flat/64/${ISO}.png?raw=true`
 					)
-					.setImage(`http://openweathermap.org/img/wn/${JSONObj.weather[0].icon}@2x.png`);
+					.setImage(
+						`http://openweathermap.org/img/wn/${JSONObj.weather[0].icon}@2x.png`
+					);
 
 				interaction.reply({ embeds: [embed] });
 			}
