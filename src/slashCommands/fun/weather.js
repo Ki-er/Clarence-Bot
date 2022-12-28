@@ -41,10 +41,10 @@ module.exports = {
 						`${parseInt(JSONObj.main.temp)} °C ${ChangeFirstLetterToUpperCase(
 							JSONObj.weather[0].description
 						)}
-						\r\n
-						Speed of Wind : ${parseInt(JSONObj.wind.speed)} m/s 
-						Humidity: ${JSONObj.main.humidity}% 
-						Pressure: ${JSONObj.main.pressure}hPa`
+					\r\n
+					Speed of Wind : ${parseInt(JSONObj.wind.speed)} m/s 
+					Humidity: ${JSONObj.main.humidity}% 
+					Pressure: ${JSONObj.main.pressure}hPa`
 					)
 					.setThumbnail(
 						`https://github.com/gosquared/flags/blob/master/flags/flags-iso/flat/64/${ISO}.png?raw=true`
