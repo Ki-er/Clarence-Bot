@@ -724,7 +724,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@cspell/cspell-bundled-dicts@6.18.1":
+"@cspell/cspell-bundled-dicts@6.18.1", "@cspell/cspell-bundled-dicts@^6.18.1":
   version "6.18.1"
   resolved "https://registry.yarnpkg.com/@cspell/cspell-bundled-dicts/-/cspell-bundled-dicts-6.18.1.tgz#c332852f67f72e2710ad2abe200367384db92e61"
   integrity sha512-3rGSZ5brzt9KFCoa1QVna8SiYnYzB8hqQyrWjtoJhV5SWjD4MpBtNt2xm5JtfNONWHeiHvkpPHasXjJvYXwDNg==
@@ -859,11 +859,6 @@
   version "1.1.33"
   resolved "https://registry.yarnpkg.com/@cspell/dict-en-gb/-/dict-en-gb-1.1.33.tgz#7f1fd90fc364a5cb77111b5438fc9fcf9cc6da0e"
   integrity sha512-tKSSUf9BJEV+GJQAYGw5e+ouhEe2ZXE620S7BLKe3ZmpnjlNG9JqlnaBhkIMxKnNFkLY2BP/EARzw31AZnOv4g==
-
-"@cspell/dict-en-gb@4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-en-gb/-/dict-en-gb-4.1.3.tgz#d8a084f3dc71a223902fdd8fbb408893728c43bb"
-  integrity sha512-8iYtEdlaENgnEqCUCZHTZcZKu4hqJ7WgTQZdCX/RtDSKDW8ZQS9AejUDcSdwvnxaAzQWWBJrwyalLNj13UY/Gg==
 
 "@cspell/dict-en_us@^4.1.2":
   version "4.1.2"
