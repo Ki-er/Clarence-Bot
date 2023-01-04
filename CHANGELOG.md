@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.4.0](https://github.com/KieranRobson/Clarence-Bot/compare/v3.3.0...v3.4.0) (2023-01-04)
+
+
+### Features
+
+* Add flag icon to weather command ([50bc36a](https://github.com/KieranRobson/Clarence-Bot/commit/50bc36a5cff1d66d0d2bfa621634606ac0e9405a))
+
+
+### Bug Fixes
+
+* Add CSpell Ignore ([eae78ab](https://github.com/KieranRobson/Clarence-Bot/commit/eae78ab31ced680ed5f91c5972c2d4eaa0945776))
+* Change quote prompt from string to type ([a55cdcc](https://github.com/KieranRobson/Clarence-Bot/commit/a55cdccc2e18b1a23d606f1e0c90fc3f23c881e4))
+* Clean up CSpell ([34c6757](https://github.com/KieranRobson/Clarence-Bot/commit/34c6757f1fe98bd1ec2c26ebd9cfe9990d5fbc60))
+
 ## [3.3.0](https://github.com/KieranRobson/Clarence-Bot/compare/v3.2.0...v3.3.0) (2022-11-26)
 
 
