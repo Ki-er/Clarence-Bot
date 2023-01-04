@@ -6,7 +6,7 @@ module.exports = {
 		.setName('quote')
 		.setDescription('Get a Quote')
 		.addStringOption((option) =>
-			option.setName('string').setDescription('Type of quote').setRequired(true)
+			option.setName('type').setDescription('Type of quote').setRequired(true)
 		),
 	/**
 	 *
