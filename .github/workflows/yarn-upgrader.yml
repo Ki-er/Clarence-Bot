@@ -12,23 +12,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3.2.0
   
-    # Read node version from `.nvmrc` file
-    - id: nvmrc
-      uses: browniebroke/read-nvmrc-action@v1
-
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3.5.1
       with:
-        # use the output from the action
-        node-version: '${{ steps.nvmrc.outputs.node_version }}'
+        node-version: 16.x
 
     # Run `yarn upgrade`
-    - uses: browniebroke/yarn-upgrade-action@v1
+    - uses: browniebroke/yarn-upgrade-action@v1.1
 
     # Open a pull request if there are any changes
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v2
+      uses: peter-evans/create-pull-request@v4.2.3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         branch: update/yarn-upgrade
