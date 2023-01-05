@@ -1,9 +1,6 @@
 name: Run Yarn Upgrader
 
 on:
-  push:
-    branches:
-      - 'master'
   workflow_dispatch:
   schedule:
     - cron: '0 12 * * 0'
