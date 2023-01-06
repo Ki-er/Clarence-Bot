@@ -3204,10 +3204,11 @@ hast-util-parse-selector@^3.0.0:
     "@types/hast" "^2.0.0"
 
 hast-util-phrasing@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/hast-util-phrasing/-/hast-util-phrasing-2.0.1.tgz#48a63391688d242500f1b435665f29b9d81cc6b2"
-  integrity sha512-Lw+gVihgE0Ye1TsToZqui0puQnHbZ0dFQe0c/Z2QJWGYRIc72DpH3UHLV8zU48sjIPord88MTSeYEbLQMp5A9g==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/hast-util-phrasing/-/hast-util-phrasing-2.0.2.tgz#0747ba8000a8d5598bef4000819d92fda8f8843c"
+  integrity sha512-yGkCfPkkfCyiLfK6KEl/orMDr/zgCnq/NaO9HfULx6/Zga5fso5eqQA5Ov/JZVqACygvw9shRYWgXNcG2ilo7w==
   dependencies:
+    "@types/hast" "^2.0.0"
     hast-util-embedded "^2.0.0"
     hast-util-has-property "^2.0.0"
     hast-util-is-body-ok-link "^2.0.0"
@@ -3239,9 +3240,9 @@ hast-util-to-string@^2.0.0:
     "@types/hast" "^2.0.0"
 
 hast-util-whitespace@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/hast-util-whitespace/-/hast-util-whitespace-2.0.0.tgz#4fc1086467cc1ef5ba20673cb6b03cec3a970f1c"
-  integrity sha512-Pkw+xBHuV6xFeJprJe2BBEoDV+AvQySaz3pPDRUs5PNZEMQjpXJJueqrpcHIXxnWTcAGi/UOCgVShlkY6kLoqg==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/hast-util-whitespace/-/hast-util-whitespace-2.0.1.tgz#0ec64e257e6fc216c7d14c8a1b74d27d650b4557"
+  integrity sha512-nAxA0v8+vXSBDt3AnRUNjyRIQ0rD+ntpbAp4LnPkumc5M9yUbSMa4XDU9Q6etY4f1Wp4bNgvc1yjiZtsTTrSng==
 
 hastscript@^7.0.0:
   version "7.2.0"
