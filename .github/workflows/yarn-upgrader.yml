@@ -3,17 +3,17 @@ name: Run Yarn Upgrader
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 12 * * 0'
+    - cron: '* */12 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.2.0
+      - uses: actions/checkout@v3.3.0
 
-      - uses: actions/setup-node@v3.5.1
+      - uses: actions/setup-node@v3.6.0
         with:
-          node-version: 16.x
+          node-version: 19.x
 
       # Run `yarn upgrade`
       - uses: browniebroke/yarn-upgrade-action@v1.1
@@ -24,5 +24,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: update/yarn-upgrade
-          title: Run yarn upgrade
+          title: 'chore(deps): Run yarn upgrade'
           commit-message: 'chore(deps): Run yarn upgrade'
