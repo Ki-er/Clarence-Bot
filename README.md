@@ -4,9 +4,9 @@
 
 ## Clarence Bot
 
-Clarence is a multipurpose discord bot for The Innercube Discord Server.
+Clarence is a multipurpose discord bot with admin, fun and information commands
 
-<img src="https://img.shields.io/github/workflow/status/KieranRobson/Clarence-Bot/ci?style=for-the-badge"> 
+<img src="https://img.shields.io/github/actions/workflow/status/KieranRobson/Clarence-Bot/lint.yml?style=for-the-badge"> 
 <img src="https://img.shields.io/badge/Discord.JS-13.12.0-blue?style=for-the-badge&logo=DISCORD" /> 
 <img src="https://img.shields.io/badge/Node%20Version-16.17.1-brightgreen?style=for-the-badge&logo=Node.js"> 
 <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge">
