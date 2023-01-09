@@ -32,7 +32,7 @@ Due to the [Publish.yml](.github/workflows/publish.yml) workflow, the newest bui
 
 Using a tool like [Ourobros](https://github.com/gmt2001/ouroboros), you can automatically update containers without the need for restarts.
 
-```docker
+```console
 docker run -d \
 --name=clarence \
 -p 6002:6002 \
