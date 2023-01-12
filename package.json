@@ -3,6 +3,8 @@
 	"version": "3.4.0",
 	"description": "A multipurpose bot with admin, fun and information commands",
 	"main": "src/index.js",
+	"author": "Kieran Robson",
+	"license": "MIT",
 	"scripts": {
 		"dev": "nodemon -L src/index.js",
 		"spell": "cspell /**/",
@@ -21,8 +23,6 @@
 		"discord",
 		"discord-bot"
 	],
-	"author": "Kieran Robson",
-	"license": "MIT",
 	"dependencies": {
 		"@discordjs/builders": "^1.4.0",
 		"@iamtraction/google-translate": "^2.0.1",
@@ -52,6 +52,7 @@
 		"eslint-plugin-import": "^2.26.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-sort-requires-by-path": "^1.0.2",
+		"husky": "^8.0.3",
 		"nodemon": "^2.0.20",
 		"prettier": "^2.8.2"
 	}

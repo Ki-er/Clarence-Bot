@@ -54,3 +54,8 @@ client.on('guildMemberAdd', async (guildmember) => {
 		files: [attachment],
 	});
 });
+
+
+
+
+
