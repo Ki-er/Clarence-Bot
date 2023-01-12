@@ -23,6 +23,10 @@
 		"discord",
 		"discord-bot"
 	],
+	"lint-staged": {
+		"*.{ts,tsx,js,jsx}": "eslint --fix",
+		"*.{json,md,html,css,scss,js,jsx,ts,tsx}": "prettier --write"
+	},
 	"dependencies": {
 		"@discordjs/builders": "^1.4.0",
 		"@iamtraction/google-translate": "^2.0.1",
@@ -53,6 +57,7 @@
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-sort-requires-by-path": "^1.0.2",
 		"husky": "^8.0.3",
+		"lint-staged": "^13.1.0",
 		"nodemon": "^2.0.20",
 		"prettier": "^2.8.2"
 	}
