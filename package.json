@@ -1,64 +1,64 @@
 {
-	"name": "clarence",
-	"version": "3.4.0",
-	"description": "A multipurpose bot with admin, fun and information commands",
-	"main": "src/index.js",
-	"author": "Kieran Robson",
-	"license": "MIT",
-	"scripts": {
-		"dev": "nodemon -L src/index.js",
-		"spell": "cspell /**/",
-		"spell:code": "cspell src/**/",
-		"lint": "npx eslint src",
-		"lint:fix": "yarn run lint -- --fix",
-		"lint:language": "alex src/**/",
-		"lint-ci": "eslint . && prettier -c \"**/*.{md,json,yml,yaml}\"",
-		"prettier:code": "npx prettier src --check",
-		"prettier:code:fix": "yarn run prettier -- --write",
-		"prettier:all:fix": "prettier . --write",
-		"format": "yarn run prettier:all:fix && yarn run lint:fix"
-	},
-	"keywords": [
-		"multipurpose",
-		"discord",
-		"discord-bot"
-	],
-	"lint-staged": {
-		"*.{ts,tsx,js,jsx}": "eslint --fix",
-		"*.{json,md,html,css,scss,js,jsx,ts,tsx}": "prettier --write"
-	},
-	"dependencies": {
-		"@discordjs/builders": "^1.4.0",
-		"@iamtraction/google-translate": "^2.0.1",
-		"axios": "^1.2.2",
-		"canvas": "^2.11.0",
-		"discord-api-types": "^0.37.27",
-		"discord-xp": "^1.1.16",
-		"discord.js": "^13.12.0",
-		"dotenv": "^16.0.3",
-		"glob": "^7.2.3",
-		"iso-639-1": "^2.1.15",
-		"jsdom": "^21.0.0",
-		"minecraft-assets": "^1.9.0",
-		"minecraft-data": "^3.20.0",
-		"mongoose": "6.8.3",
-		"node-movie": "^3.0.0",
-		"openweather-apis": "^4.4.2",
-		"r6s-stats-api": "^1.3.0",
-		"twemoji-parser": "^14.0.0"
-	},
-	"devDependencies": {
-		"@cspell/cspell-bundled-dicts": "^6.18.1",
-		"alex": "^11.0.0",
-		"cspell": "^6.18.1",
-		"eslint": "^8.31.0",
-		"eslint-config-prettier": "^8.6.0",
-		"eslint-plugin-import": "^2.27.4",
-		"eslint-plugin-prettier": "^4.2.1",
-		"eslint-plugin-sort-requires-by-path": "^1.0.2",
-		"husky": "^8.0.3",
-		"lint-staged": "^13.1.0",
-		"nodemon": "^2.0.20",
-		"prettier": "^2.8.2"
-	}
+  "name": "clarence",
+  "version": "3.4.0",
+  "description": "A multipurpose bot with admin, fun and information commands",
+  "main": "src/index.js",
+  "author": "Kieran Robson",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon -L src/index.js",
+    "spell": "cspell /**/",
+    "spell:code": "cspell src/**/",
+    "lint": "npx eslint src",
+    "lint:fix": "yarn run lint -- --fix",
+    "lint:language": "alex src/**/",
+    "lint-ci": "eslint . && prettier -c \"**/*.{md,json,yml,yaml}\"",
+    "prettier:code": "npx prettier src --check",
+    "prettier:code:fix": "yarn run prettier -- --write",
+    "prettier:all:fix": "prettier . --write",
+    "format": "yarn run prettier:all:fix && yarn run lint:fix"
+  },
+  "keywords": [
+    "multipurpose",
+    "discord",
+    "discord-bot"
+  ],
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": "eslint --fix",
+    "*.{json,md,html,css,scss,js,jsx,ts,tsx}": "prettier --write"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^1.4.0",
+    "@iamtraction/google-translate": "^2.0.1",
+    "axios": "^1.2.2",
+    "canvas": "^2.11.0",
+    "discord-api-types": "^0.37.28",
+    "discord-xp": "^1.1.16",
+    "discord.js": "^13.12.0",
+    "dotenv": "^16.0.3",
+    "glob": "^7.2.3",
+    "iso-639-1": "^2.1.15",
+    "jsdom": "^21.0.0",
+    "minecraft-assets": "^1.9.0",
+    "minecraft-data": "^3.20.0",
+    "mongoose": "6.8.3",
+    "node-movie": "^3.0.0",
+    "openweather-apis": "^4.4.2",
+    "r6s-stats-api": "^1.3.0",
+    "twemoji-parser": "^14.0.0"
+  },
+  "devDependencies": {
+    "@cspell/cspell-bundled-dicts": "^6.18.1",
+    "alex": "^11.0.0",
+    "cspell": "^6.18.1",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.4",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sort-requires-by-path": "^1.0.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3"
+  }
 }
