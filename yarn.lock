@@ -906,9 +906,9 @@
   integrity sha512-tKSSUf9BJEV+GJQAYGw5e+ouhEe2ZXE620S7BLKe3ZmpnjlNG9JqlnaBhkIMxKnNFkLY2BP/EARzw31AZnOv4g==
 
 "@cspell/dict-en_us@^4.1.2":
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-en_us/-/dict-en_us-4.1.4.tgz#779e1d2101f487694cf798a1355126bf9072f747"
-  integrity sha512-smRT8Rx38+z1kiNl3kBvadoPdYgxCovxw2rsuO4/XtLRlSEcGPQgYJ0CCdcXMd9bhMY5roXPCcvYkBsyUVvg4A==
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-en_us/-/dict-en_us-4.2.0.tgz#21489afca8af70533a815de0d83a2dbe85d6e6f4"
+  integrity sha512-n5hz8vQ6FAp4f+ZW/raN/f4G69V1LrhNZ7kgXM+Nirmkrz16oXmd1defTulbd7yf2T2XU8DmsrTnkuRG9mSQKw==
 
 "@cspell/dict-filetypes@^3.0.0":
   version "3.0.0"
@@ -921,9 +921,9 @@
   integrity sha512-zTZni0AbwBVG1MKA0WpwPyIJPVF+gp6neXDQzHcu4RUnuQ4uDu0PVEuZjGHCJWwwFoR5JmkqZxVSg1y3ufJODA==
 
 "@cspell/dict-fullstack@^3.0.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-fullstack/-/dict-fullstack-3.1.0.tgz#860d7272b6beaa346856df5cfabf4e55f1b7c352"
-  integrity sha512-tW7l98JmoksZc/NzB6DHZ0qeN2zcuN3CAUMutdNouRFK4q1Tug5dFRjeR2pQ9g9+MBSCUkuX9P6qEkI1DfPUtA==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-fullstack/-/dict-fullstack-3.1.1.tgz#d1d35fd104fe6e0396ee3066f1c4164ce180dad1"
+  integrity sha512-w2n3QvqEiufmvlBuNduury/pySrhfOcWFfCvvpUXTJvWbfRVGkt6ANZuTuy3/7Z2q4GYUqsd139te4Q8m0jRHQ==
 
 "@cspell/dict-gaming-terms@^1.0.3":
   version "1.0.4"
