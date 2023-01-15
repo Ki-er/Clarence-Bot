@@ -51,7 +51,7 @@
 		"@cspell/cspell-bundled-dicts": "^6.18.1",
 		"alex": "^11.0.0",
 		"cspell": "^6.18.1",
-		"eslint": "^8.31.0",
+		"eslint": "^8.32.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-import": "^2.27.4",
 		"eslint-plugin-prettier": "^4.2.1",
