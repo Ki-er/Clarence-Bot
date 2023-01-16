@@ -871,9 +871,9 @@
   integrity sha512-1JMofhLK+4p4KairF75D3A924m5ERMgd1GvzhwK2geuYgd2ZKuGW72gvXpIV7aGf52E3Uu1kDXxxGAiZ5uVG7g==
 
 "@cspell/dict-css@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-css/-/dict-css-4.0.1.tgz#f5abd92a7f961be0d893d0a89f99e86ff91ed709"
-  integrity sha512-jxsncdeiN/wkZGqU8iLtn24n3e0Fwugj6T48rjWUItn/i3C9j2W7RXOVqd7ZIeWeV8ibyq0WWiwA8Ajg6XaKpA==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-css/-/dict-css-4.0.2.tgz#0691622a931a8f3e18d94f006669ba12619f0f62"
+  integrity sha512-0NxBcB36b1Jy23Tf5YLrD8+PvBhE3FgBci3rwtw2DEqVigEX6uodecfoh9I4kcU8PZlVsDujrUfwgzYCWh/feQ==
 
 "@cspell/dict-dart@^2.0.1":
   version "2.0.1"
@@ -4673,10 +4673,10 @@ minecraft-assets@^1.9.0:
   resolved "https://registry.yarnpkg.com/minecraft-assets/-/minecraft-assets-1.9.0.tgz#5139dcdcb9ce4c5ac5cda8d6ecd873d7bba8ccc2"
   integrity sha512-KtvIRd9gcKlxbvrswGv1Ap9k7tVs//QW2ukp+8vJ28miYwkhUmYfjTZyElIG8KUXV/46wL2kDzLH8SJbXQ56Mg==
 
-minecraft-data@^3.21.0:
-  version "3.21.0"
-  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.21.0.tgz#d1cd46deb44b16686897a1fc4734dc3665e144cd"
-  integrity sha512-urG3YD07AQIM5KR37Avpp7HCLWfv6XauiSTmUP1KN8/b71x4GzepezByLG3f65GGjsiR/bNCfpRNfqMvb9m2gQ==
+minecraft-data@^3.24.0:
+  version "3.24.0"
+  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.24.0.tgz#8bb62e028aa17cf16110033125a59ca4866586e6"
+  integrity sha512-Y7iAajuoshzQcYITkHITn4Ib/XsAc4I6Bacwy0oW/wRhjaqxgdokL0q4IqM+gVsrYg25tTvN2aZnG1Pk+zQ5wA==
 
 minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
