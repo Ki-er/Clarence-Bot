@@ -30,10 +30,10 @@ jobs:
         uses: boozallen/dependency-update-action@v1
         with:
           repo_name: ${{ github.repository }}
-          directory: "/"
-          package_manager: "github_actions"
-          batch_size: "1"
-          
+          directory: '/'
+          package_manager: 'github_actions'
+          batch_size: '1'
+
       - name: Fix lint
         run: |
           yarn run format
