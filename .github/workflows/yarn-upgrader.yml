@@ -26,6 +26,8 @@ jobs:
         run: |
           yarn
 
+      - uses: saadmk11/github-actions-version-updater@v0.7.3
+
       - name: Fix lint
         run: |
           yarn run format
