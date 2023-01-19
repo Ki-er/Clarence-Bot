@@ -4883,26 +4883,26 @@ natural-compare@^1.4.0:
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
 nlcst-is-literal@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/nlcst-is-literal/-/nlcst-is-literal-2.1.0.tgz#bb149ffa40a31c0014eeea2da605381ef40f049f"
-  integrity sha512-jaEIXvIreWx4lfkRa+B3toTTxQgDxnECncbEQVSUVfRWxamQFbRHgxyfrt0aMnuoq5AMd3CQHl5SHGGruOUOdQ==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/nlcst-is-literal/-/nlcst-is-literal-2.1.1.tgz#d3f3feb5b4d2c2c60e63c805813f6373248cb30c"
+  integrity sha512-/PyEKNHN+SrcrmnZRwszzZYbvZSN2AVD506+rfMUzyFHB0PtUmqZOdUuXmQxQeZXv6o29pT5chLjQJdC9weOCQ==
   dependencies:
     "@types/nlcst" "^1.0.0"
     "@types/unist" "^2.0.0"
     nlcst-to-string "^3.0.0"
 
 nlcst-normalize@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/nlcst-normalize/-/nlcst-normalize-3.1.0.tgz#444887980df77b832ee3b898fbd9d52a49dc3098"
-  integrity sha512-kRWfUwtffmU26wPAJ25St5rec29PhV8F6dKaa7PxGhH3uytsGakfLyOEEm1mULzWOdfyDb03aE+OKp7h0OJuhA==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/nlcst-normalize/-/nlcst-normalize-3.1.1.tgz#34c36b9c351eb44f087022e472893a3aac94bc3b"
+  integrity sha512-Fz6DhC0dmsuqilkz0viOScT+u9UGjgUpSrzo6yOZlcQ24F/m2BuoVF72KUOKZ06dRUeWyPpCSMxI5ONop9Qptw==
   dependencies:
     "@types/nlcst" "^1.0.0"
     nlcst-to-string "^3.0.0"
 
 nlcst-search@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/nlcst-search/-/nlcst-search-3.1.0.tgz#4517cdbb0860282cbb3e5287953c6cd5ee43bcf1"
-  integrity sha512-d+0fXxF0d5oFAeeyuoGbIYcbiixE9Xt/lsmt491jjPyabXRoIRBE0++U+G8kbDyJFRk1bMQnGFpMCzeoMlDYfQ==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/nlcst-search/-/nlcst-search-3.1.1.tgz#e6ad57ab8fe697a2fca5ea17608b1e3f441ffb3d"
+  integrity sha512-0KsxSqFzSYWVDTo/SPde0RYf5LVmW1eAje8rbRJm+Lev1NzrWj2bIwtXfwGvfPbCi2ABsTV8bqmGAiF/EVqVWA==
   dependencies:
     "@types/nlcst" "^1.0.0"
     "@types/unist" "^2.0.0"
@@ -6395,9 +6395,9 @@ undefsafe@^2.0.5:
   integrity sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==
 
 undici@^5.12.0:
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/undici/-/undici-5.15.0.tgz#cb8437c43718673a8be59df0fdd4856ff6689283"
-  integrity sha512-wCAZJDyjw9Myv+Ay62LAoB+hZLPW9SmKbQkbHIhMw/acKSlpn7WohdMUc/Vd4j1iSMBO0hWwU8mjB7a5p5bl8g==
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-5.15.1.tgz#5292454b1441da486a80c0f3ada1e88f1765ff8d"
+  integrity sha512-XLk8g0WAngdvFqTI+VKfBtM4YWXgdxkf1WezC771Es0Dd+Pm1KmNx8t93WTC+Hh9tnghmVxkclU1HN+j+CvIUA==
   dependencies:
     busboy "^1.6.0"
 
