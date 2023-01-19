@@ -26,10 +26,14 @@ jobs:
         run: |
           yarn
 
-      - uses: saadmk11/github-actions-version-updater@v0.7.3
+      - name: Update GitHub Actions
+        uses: boozallen/dependency-update-action@v1
         with:
-          skip_pull_request: 'true'
-
+          repo_name: ${{ github.repository }}
+          directory: "/"
+          package_manager: "github_actions"
+          batch_size: "1"
+          
       - name: Fix lint
         run: |
           yarn run format
