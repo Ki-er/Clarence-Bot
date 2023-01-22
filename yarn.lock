@@ -2773,9 +2773,9 @@ estree-util-is-identifier-name@^2.0.0:
   integrity sha512-bEN9VHRyXAUOjkKVQVvArFym08BTWB0aJPppZZr0UNyAqWsLaVfAqP7hbaTJjzHifmB5ebnR8Wm7r7yGN/HonQ==
 
 estree-util-visit@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/estree-util-visit/-/estree-util-visit-1.2.0.tgz#aa0311a9c2f2aa56e9ae5e8b9d87eac14e4ec8f8"
-  integrity sha512-wdsoqhWueuJKsh5hqLw3j8lwFqNStm92VcwtAOAny8g/KS/l5Y8RISjR4k5W6skCj3Nirag/WUCMS0Nfy3sgsg==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/estree-util-visit/-/estree-util-visit-1.2.1.tgz#8bc2bc09f25b00827294703835aabee1cc9ec69d"
+  integrity sha512-xbgqcrkIVbIG+lI/gzbvd9SGTJL4zqJKBFttUl5pP27KhAjtMKbX/mQXJ7qgyXpMgVy/zvpm0xoQQaGL8OloOw==
   dependencies:
     "@types/estree-jsx" "^1.0.0"
     "@types/unist" "^2.0.0"
@@ -4694,10 +4694,10 @@ minecraft-assets@^1.9.0:
   resolved "https://registry.yarnpkg.com/minecraft-assets/-/minecraft-assets-1.9.0.tgz#5139dcdcb9ce4c5ac5cda8d6ecd873d7bba8ccc2"
   integrity sha512-KtvIRd9gcKlxbvrswGv1Ap9k7tVs//QW2ukp+8vJ28miYwkhUmYfjTZyElIG8KUXV/46wL2kDzLH8SJbXQ56Mg==
 
-minecraft-data@^3.25.1:
-  version "3.25.1"
-  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.25.1.tgz#5deaa3de3c9aea7f109f6dca6c9770bde31fed03"
-  integrity sha512-nOSGCylYWVFzROnnHxzsj3Em2plu6C8ey9I5n36mbJP/uyisWVmuBzqeuTG99UPzKsz16D9/fQPYr9KIMGQs2g==
+minecraft-data@^3.25.2:
+  version "3.25.2"
+  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.25.2.tgz#62985940726981a376e9d7dfdd20f2df50b46e12"
+  integrity sha512-5ANMkfB5bC8adJN+nJjD25ZRV6P3tLJacTmDXDNxWSYoq9A2cKIeTlCIC1txYfXxVw/4YJzDx7oL+i1MHQclzg==
 
 minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
@@ -6517,9 +6517,9 @@ unist-util-position-from-estree@^1.0.0, unist-util-position-from-estree@^1.1.0:
     "@types/unist" "^2.0.0"
 
 unist-util-position@^4.0.0:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-4.0.3.tgz#5290547b014f6222dff95c48d5c3c13a88fadd07"
-  integrity sha512-p/5EMGIa1qwbXjA+QgcBXaPWjSnZfQ2Sc3yBEEfgPwsEmJd8Qh+DSk3LGnmOM4S1bY2C0AjmMnB8RuEYxpPwXQ==
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-4.0.4.tgz#93f6d8c7d6b373d9b825844645877c127455f037"
+  integrity sha512-kUBE91efOWfIVBo8xzh/uZQ7p9ffYRtUbMRZBNFYwf0RK8koUMx6dGUfwylLOKmaT2cs4wSW96QoYUSXAyEtpg==
   dependencies:
     "@types/unist" "^2.0.0"
 
