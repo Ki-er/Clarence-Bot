@@ -75,7 +75,7 @@ While this bot is maintained by [Kieran](https://github.com/KieranRobson), contr
 
 ## Invite
 
-Invite Clarence to your discord server [here](https://discord.com/api/oauth2/authorize?client_id=875491402497294447&permissions=8&scope=bot%20applications.commands) with admoinstrator and slash command permissions.
+Invite Clarence to your discord server [here](https://discord.com/api/oauth2/authorize?client_id=875491402497294447&permissions=8&scope=bot%20applications.commands) with administrator and slash command permissions.
 
 ## License
 
