@@ -3952,9 +3952,9 @@ locate-path@^6.0.0:
     p-locate "^5.0.0"
 
 locate-path@^7.1.0:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-7.1.1.tgz#8e1e5a75c7343770cef02ff93c4bf1f0aa666374"
-  integrity sha512-vJXaRMJgRVD3+cUZs3Mncj2mxpt5mP0EmNOsxRSZRMlbqjvxzDEOIUWXGmavo0ZC9+tNZCBLQ66reA11nbpHZg==
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-7.2.0.tgz#69cb1779bd90b35ab1e771e1f2f89a202c2a8a8a"
+  integrity sha512-gvVijfZvn7R+2qyPX8mAuKcFGDf6Nc61GdvGafQsHL0sBIxfKzA+usWn4GFC/bk+QdwPUD4kWFJLhElipq+0VA==
   dependencies:
     p-locate "^6.0.0"
 
@@ -4142,13 +4142,14 @@ mdast-util-mdx-expression@^1.0.0, mdast-util-mdx-expression@^1.1.0:
     mdast-util-to-markdown "^1.0.0"
 
 mdast-util-mdx-jsx@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/mdast-util-mdx-jsx/-/mdast-util-mdx-jsx-2.1.1.tgz#3dbc13b0a13dc532dabbc3d3f682c503e3c1a86d"
-  integrity sha512-dV398twlcAKiqQfj3BkC4PWinVlG1YSL/qs71M7z8xmSksqp3lATH+qrmWUJBOIjOYcD5xuIu6k1ld2btB3EqQ==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/mdast-util-mdx-jsx/-/mdast-util-mdx-jsx-2.1.2.tgz#694a46164db10c0e9d674a3772b8748dfddd0817"
+  integrity sha512-o9vBCYQK5ZLGEj3tCGISJGjvafyHRVJlZmfJzSE7xjiogSzIeph/Z4zMY65q4WGRMezQBeAwPlrdymDYYYx0tA==
   dependencies:
     "@types/estree-jsx" "^1.0.0"
     "@types/hast" "^2.0.0"
     "@types/mdast" "^3.0.0"
+    "@types/unist" "^2.0.0"
     ccount "^2.0.0"
     mdast-util-from-markdown "^1.1.0"
     mdast-util-to-markdown "^1.3.0"
@@ -4684,10 +4685,10 @@ minecraft-assets@^1.9.0:
   resolved "https://registry.yarnpkg.com/minecraft-assets/-/minecraft-assets-1.9.0.tgz#5139dcdcb9ce4c5ac5cda8d6ecd873d7bba8ccc2"
   integrity sha512-KtvIRd9gcKlxbvrswGv1Ap9k7tVs//QW2ukp+8vJ28miYwkhUmYfjTZyElIG8KUXV/46wL2kDzLH8SJbXQ56Mg==
 
-minecraft-data@^3.26.0:
-  version "3.26.0"
-  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.26.0.tgz#201d26666922cb4187b709a6079fa65308b5297f"
-  integrity sha512-9DGMM4qI7DdOFTMbtr3Wa/W+XXq11//Lhz+O0YRce9LHyYUDw34tvJcETHR0PNuE7p84J7kV02VLAOV+B1094Q==
+minecraft-data@^3.27.0:
+  version "3.27.0"
+  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.27.0.tgz#4cd90ebc121b30d0dca7e6d36d31c31d1d2d2479"
+  integrity sha512-Hc0RnPr2pZItI/OK9gi5oKQQaXLfTGhHms4celUkuaNyHTgWolCCc1Bg5AxpIyymoM/xhBvIhMA6au42R17Ajw==
 
 minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
@@ -5209,9 +5210,9 @@ parse-english@^5.0.0:
     unist-util-visit-children "^1.0.0"
 
 parse-entities@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/parse-entities/-/parse-entities-4.0.0.tgz#f67c856d4e3fe19b1a445c3fabe78dcdc1053eeb"
-  integrity sha512-5nk9Fn03x3rEhGaX1FU6IDwG/k+GxLXlFAkgrbM1asuAFl3BhdQWvASaIsmwWypRNcZKHPYnIuOSfIWEyEQnPQ==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/parse-entities/-/parse-entities-4.0.1.tgz#4e2a01111fb1c986549b944af39eeda258fc9e4e"
+  integrity sha512-SWzvYcSJh4d/SGLIOQfZ/CoNv6BTlI6YEQ7Nj82oDVnRpwe/Z/F1EMx42x3JAOwGBlCjeCH0BRJQbQ/opHL17w==
   dependencies:
     "@types/unist" "^2.0.0"
     character-entities "^2.0.0"
@@ -6286,9 +6287,9 @@ trough@^2.0.0:
   integrity sha512-AqTiAOLcj85xS7vQ8QkAV41hPDIJ71XJB4RCUrzo/1GM2CQwhkJGaf9Hgr7BOugMRpgGUrqRg/DrBDl4H40+8g==
 
 ts-mixer@^6.0.1, ts-mixer@^6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/ts-mixer/-/ts-mixer-6.0.2.tgz#3e4e4bb8daffb24435f6980b15204cb5b287e016"
-  integrity sha512-zvHx3VM83m2WYCE8XL99uaM7mFwYSkjR2OZti98fabHrwkjsCvgwChda5xctein3xGOyaQhtTeDq/1H/GNvF3A==
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/ts-mixer/-/ts-mixer-6.0.3.tgz#69bd50f406ff39daa369885b16c77a6194c7cae6"
+  integrity sha512-k43M7uCG1AkTyxgnmI5MPwKoUvS/bRvLvUb7+Pgpdlmok8AoqmUaZxUUw8zKM5B1lqZrt41GjYgnvAi0fppqgQ==
 
 tsconfig-paths@^3.14.1:
   version "3.14.1"
