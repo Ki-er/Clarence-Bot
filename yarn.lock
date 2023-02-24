@@ -56,22 +56,22 @@
     "@aws-sdk/types" "3.272.0"
     tslib "^2.3.1"
 
-"@aws-sdk/client-cognito-identity@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/client-cognito-identity/-/client-cognito-identity-3.272.0.tgz#00d29dde42ce5bd31eb1e05b6d8a6de1d06bc028"
-  integrity sha512-uMjRWcNvX7SoGaVn0mXWD43+Z1awPahQwGW3riDLfXHZdOgw2oFDhD3Jg5jQ8OzQLUfDvArhE3WyZwlS4muMuQ==
+"@aws-sdk/client-cognito-identity@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-cognito-identity/-/client-cognito-identity-3.278.0.tgz#50ac0e81566acb4e3267c8161f584f936785f4f0"
+  integrity sha512-YqHJwKKkV0Uodr647k83D8MVqNnFLm/Lgj5DMQOaCxylEsJC37lS2PveHe/EVWLbwQH6KRsn/85cZm0DPzDAXQ==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/client-sts" "3.272.0"
+    "@aws-sdk/client-sts" "3.278.0"
     "@aws-sdk/config-resolver" "3.272.0"
-    "@aws-sdk/credential-provider-node" "3.272.0"
+    "@aws-sdk/credential-provider-node" "3.278.0"
     "@aws-sdk/fetch-http-handler" "3.272.0"
     "@aws-sdk/hash-node" "3.272.0"
     "@aws-sdk/invalid-dependency" "3.272.0"
     "@aws-sdk/middleware-content-length" "3.272.0"
     "@aws-sdk/middleware-endpoint" "3.272.0"
-    "@aws-sdk/middleware-host-header" "3.272.0"
+    "@aws-sdk/middleware-host-header" "3.278.0"
     "@aws-sdk/middleware-logger" "3.272.0"
     "@aws-sdk/middleware-recursion-detection" "3.272.0"
     "@aws-sdk/middleware-retry" "3.272.0"
@@ -97,10 +97,10 @@
     "@aws-sdk/util-utf8" "3.254.0"
     tslib "^2.3.1"
 
-"@aws-sdk/client-sso-oidc@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/client-sso-oidc/-/client-sso-oidc-3.272.0.tgz#32ec5d4bd4d1f343d642a5846dae6e1864cc890c"
-  integrity sha512-ECcXu3xoa1yggnGKMTh29eWNHiF/wC6r5Uqbla22eOOosyh0+Z6lkJ3JUSLOUKCkBXA4Cs/tJL9UDFBrKbSlvA==
+"@aws-sdk/client-sso-oidc@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-sso-oidc/-/client-sso-oidc-3.278.0.tgz#d35ac29358da74801f29f3ed4eed1065b7165a90"
+  integrity sha512-9vLyk1xbSK97j0crumCcHpPPppkAmEC2GnJmzQ2CW1SARuUU9ybE4wOIzWW0AQgVcY5mckJewEE23BGmo9L+6A==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
@@ -110,7 +110,7 @@
     "@aws-sdk/invalid-dependency" "3.272.0"
     "@aws-sdk/middleware-content-length" "3.272.0"
     "@aws-sdk/middleware-endpoint" "3.272.0"
-    "@aws-sdk/middleware-host-header" "3.272.0"
+    "@aws-sdk/middleware-host-header" "3.278.0"
     "@aws-sdk/middleware-logger" "3.272.0"
     "@aws-sdk/middleware-recursion-detection" "3.272.0"
     "@aws-sdk/middleware-retry" "3.272.0"
@@ -135,10 +135,10 @@
     "@aws-sdk/util-utf8" "3.254.0"
     tslib "^2.3.1"
 
-"@aws-sdk/client-sso@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/client-sso/-/client-sso-3.272.0.tgz#6dedf03e5c1d31ef745e72091868082b10c0bca5"
-  integrity sha512-xn9a0IGONwQIARmngThoRhF1lLGjHAD67sUaShgIMaIMc6ipVYN6alWG1VuUpoUQ6iiwMEt0CHdfCyLyUV/fTA==
+"@aws-sdk/client-sso@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-sso/-/client-sso-3.278.0.tgz#af8d37d54b70a37253008b117df1eece5619c358"
+  integrity sha512-BrbarXxb2KFnZR/nlvdI6r2d6wPeFMWfYX3gtSpt5WFDPxb3LyH2piM6aKLkcEL9QVhgZTFhXf7766n2tMjyjA==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
@@ -148,7 +148,7 @@
     "@aws-sdk/invalid-dependency" "3.272.0"
     "@aws-sdk/middleware-content-length" "3.272.0"
     "@aws-sdk/middleware-endpoint" "3.272.0"
-    "@aws-sdk/middleware-host-header" "3.272.0"
+    "@aws-sdk/middleware-host-header" "3.278.0"
     "@aws-sdk/middleware-logger" "3.272.0"
     "@aws-sdk/middleware-recursion-detection" "3.272.0"
     "@aws-sdk/middleware-retry" "3.272.0"
@@ -173,21 +173,21 @@
     "@aws-sdk/util-utf8" "3.254.0"
     tslib "^2.3.1"
 
-"@aws-sdk/client-sts@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/client-sts/-/client-sts-3.272.0.tgz#a63993d53ca7243f8dadc715b539afdcfa482abf"
-  integrity sha512-kigxCxURp3WupufGaL/LABMb7UQfzAQkKcj9royizL3ItJ0vw5kW/JFrPje5IW1mfLgdPF7PI9ShOjE0fCLTqA==
+"@aws-sdk/client-sts@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/client-sts/-/client-sts-3.278.0.tgz#8eb700f5863122b55a9923261bf933a99778af7c"
+  integrity sha512-gYuaJxZG2Qjkfo8nnY65OfEP0Z0Iwzav5rLHVVQfKszBmbY9S/OTzODvM2NnK7fBJRk2QYSGEiob6VQXXhiAjA==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
     "@aws-sdk/config-resolver" "3.272.0"
-    "@aws-sdk/credential-provider-node" "3.272.0"
+    "@aws-sdk/credential-provider-node" "3.278.0"
     "@aws-sdk/fetch-http-handler" "3.272.0"
     "@aws-sdk/hash-node" "3.272.0"
     "@aws-sdk/invalid-dependency" "3.272.0"
     "@aws-sdk/middleware-content-length" "3.272.0"
     "@aws-sdk/middleware-endpoint" "3.272.0"
-    "@aws-sdk/middleware-host-header" "3.272.0"
+    "@aws-sdk/middleware-host-header" "3.278.0"
     "@aws-sdk/middleware-logger" "3.272.0"
     "@aws-sdk/middleware-recursion-detection" "3.272.0"
     "@aws-sdk/middleware-retry" "3.272.0"
@@ -212,7 +212,7 @@
     "@aws-sdk/util-user-agent-browser" "3.272.0"
     "@aws-sdk/util-user-agent-node" "3.272.0"
     "@aws-sdk/util-utf8" "3.254.0"
-    fast-xml-parser "4.0.11"
+    fast-xml-parser "4.1.2"
     tslib "^2.3.1"
 
 "@aws-sdk/config-resolver@3.272.0":
@@ -226,12 +226,12 @@
     "@aws-sdk/util-middleware" "3.272.0"
     tslib "^2.3.1"
 
-"@aws-sdk/credential-provider-cognito-identity@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-provider-cognito-identity/-/credential-provider-cognito-identity-3.272.0.tgz#65c4bf671f60ea47294fcb41f55dcb5d846d4a15"
-  integrity sha512-rVx0rtQjbiYCM0nah2rB/2ut2YJYPpRr1AbW/Hd4r/PI+yiusrmXAwuT4HIW2yr34zsQMPi1jZ3WHN9Rn9mzlg==
+"@aws-sdk/credential-provider-cognito-identity@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-provider-cognito-identity/-/credential-provider-cognito-identity-3.278.0.tgz#71d35dedf61211a03a57c44222cfdedb135e78ae"
+  integrity sha512-ykWufGr3u1nZPGAYGrlp0Z3Q7uBgBUt3DfiItkndLuFvZmrNYyZtT8LrTHGmeQ55GMG8m7QMkXgONSzz/w2JsQ==
   dependencies:
-    "@aws-sdk/client-cognito-identity" "3.272.0"
+    "@aws-sdk/client-cognito-identity" "3.278.0"
     "@aws-sdk/property-provider" "3.272.0"
     "@aws-sdk/types" "3.272.0"
     tslib "^2.3.1"
@@ -256,31 +256,31 @@
     "@aws-sdk/url-parser" "3.272.0"
     tslib "^2.3.1"
 
-"@aws-sdk/credential-provider-ini@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.272.0.tgz#86fe4faf38507fada22cbe6f422ebad8777e0172"
-  integrity sha512-iE3CDzK5NcupHYjfYjBdY1JCy8NLEoRUsboEjG0i0gy3S3jVpDeVHX1dLVcL/slBFj6GiM7SoNV/UfKnJf3Gaw==
+"@aws-sdk/credential-provider-ini@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.278.0.tgz#a2757836818e9c0a7c6ae7c9af587700ae2b7188"
+  integrity sha512-S0JaPwgiMrLcdDRKjh7Lg0rLnDOHyxRHBQMGP7v4UKvzFt67L7H4fx8Nnj2qwLCndMXOsIo8lyfVkLccj4Ucww==
   dependencies:
     "@aws-sdk/credential-provider-env" "3.272.0"
     "@aws-sdk/credential-provider-imds" "3.272.0"
     "@aws-sdk/credential-provider-process" "3.272.0"
-    "@aws-sdk/credential-provider-sso" "3.272.0"
+    "@aws-sdk/credential-provider-sso" "3.278.0"
     "@aws-sdk/credential-provider-web-identity" "3.272.0"
     "@aws-sdk/property-provider" "3.272.0"
     "@aws-sdk/shared-ini-file-loader" "3.272.0"
     "@aws-sdk/types" "3.272.0"
     tslib "^2.3.1"
 
-"@aws-sdk/credential-provider-node@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-provider-node/-/credential-provider-node-3.272.0.tgz#953f73468f87510f1dcd0480f6f17139b4b3c0bf"
-  integrity sha512-FI8uvwM1IxiRSvbkdKv8DZG5vxU3ezaseTaB1fHWTxEUFb0pWIoHX9oeOKer9Fj31SOZTCNAaYFURbSRuZlm/w==
+"@aws-sdk/credential-provider-node@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-provider-node/-/credential-provider-node-3.278.0.tgz#9f3634096b27d5f1891d681fafcc0057fd2cfc8f"
+  integrity sha512-MxGApXv0McA5CE5Rh51HYMF24TEAa6MSPI5PkU4lGBfLzXJIrQU0zIueTiwkI2+MZTM5slStkgSEq/ps81RiXw==
   dependencies:
     "@aws-sdk/credential-provider-env" "3.272.0"
     "@aws-sdk/credential-provider-imds" "3.272.0"
-    "@aws-sdk/credential-provider-ini" "3.272.0"
+    "@aws-sdk/credential-provider-ini" "3.278.0"
     "@aws-sdk/credential-provider-process" "3.272.0"
-    "@aws-sdk/credential-provider-sso" "3.272.0"
+    "@aws-sdk/credential-provider-sso" "3.278.0"
     "@aws-sdk/credential-provider-web-identity" "3.272.0"
     "@aws-sdk/property-provider" "3.272.0"
     "@aws-sdk/shared-ini-file-loader" "3.272.0"
@@ -297,15 +297,15 @@
     "@aws-sdk/types" "3.272.0"
     tslib "^2.3.1"
 
-"@aws-sdk/credential-provider-sso@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-provider-sso/-/credential-provider-sso-3.272.0.tgz#bd24f9b06088aed91c5d6aaddf3f7e7ab818afd7"
-  integrity sha512-hwYaulyiU/7chKKFecxCeo0ls6Dxs7h+5EtoYcJJGvfpvCncyOZF35t00OAsCd3Wo7HkhhgfpGdb6dmvCNQAZQ==
+"@aws-sdk/credential-provider-sso@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-provider-sso/-/credential-provider-sso-3.278.0.tgz#e308fc867d5a3237517d1d36f27c4c9bb1479699"
+  integrity sha512-vhNm1cgA/WIpYTGKt7tIU1dmAznxaa1G8X74k5IoDo/BO/yn4TcddZdCvrey1w6eou3Iyn95n8guy519zun/FA==
   dependencies:
-    "@aws-sdk/client-sso" "3.272.0"
+    "@aws-sdk/client-sso" "3.278.0"
     "@aws-sdk/property-provider" "3.272.0"
     "@aws-sdk/shared-ini-file-loader" "3.272.0"
-    "@aws-sdk/token-providers" "3.272.0"
+    "@aws-sdk/token-providers" "3.278.0"
     "@aws-sdk/types" "3.272.0"
     tslib "^2.3.1"
 
@@ -319,20 +319,20 @@
     tslib "^2.3.1"
 
 "@aws-sdk/credential-providers@^3.186.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-providers/-/credential-providers-3.272.0.tgz#fc606aedfaf0d11850f1b3158b2f876ec2b58d1a"
-  integrity sha512-ucd6Xq6aBMf+nM4uz5zkjL11mwaE5BV1Q4hkulaGu2v1dRA8n6zhLJk/sb4hOJ7leelqMJMErlbQ2T3MkYvlJQ==
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/credential-providers/-/credential-providers-3.278.0.tgz#c1497031851f0f1f6efcb5023bc11d6b73b7bb4e"
+  integrity sha512-XeCyXru9+gxePvrnPbdITZLSCC5qg3C/hgdItstDEvrQh+vMw9DJvX5ztoKh987C0puwkbB6HENC04ZTh/0Buw==
   dependencies:
-    "@aws-sdk/client-cognito-identity" "3.272.0"
-    "@aws-sdk/client-sso" "3.272.0"
-    "@aws-sdk/client-sts" "3.272.0"
-    "@aws-sdk/credential-provider-cognito-identity" "3.272.0"
+    "@aws-sdk/client-cognito-identity" "3.278.0"
+    "@aws-sdk/client-sso" "3.278.0"
+    "@aws-sdk/client-sts" "3.278.0"
+    "@aws-sdk/credential-provider-cognito-identity" "3.278.0"
     "@aws-sdk/credential-provider-env" "3.272.0"
     "@aws-sdk/credential-provider-imds" "3.272.0"
-    "@aws-sdk/credential-provider-ini" "3.272.0"
-    "@aws-sdk/credential-provider-node" "3.272.0"
+    "@aws-sdk/credential-provider-ini" "3.278.0"
+    "@aws-sdk/credential-provider-node" "3.278.0"
     "@aws-sdk/credential-provider-process" "3.272.0"
-    "@aws-sdk/credential-provider-sso" "3.272.0"
+    "@aws-sdk/credential-provider-sso" "3.278.0"
     "@aws-sdk/credential-provider-web-identity" "3.272.0"
     "@aws-sdk/property-provider" "3.272.0"
     "@aws-sdk/shared-ini-file-loader" "3.272.0"
@@ -398,10 +398,10 @@
     "@aws-sdk/util-middleware" "3.272.0"
     tslib "^2.3.1"
 
-"@aws-sdk/middleware-host-header@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/middleware-host-header/-/middleware-host-header-3.272.0.tgz#c47b8d35be6d5fbc548378b4694bf705adaae74d"
-  integrity sha512-Q8K7bMMFZnioUXpxn57HIt4p+I63XaNAawMLIZ5B4F2piyukbQeM9q2XVKMGwqLvijHR8CyP5nHrtKqVuINogQ==
+"@aws-sdk/middleware-host-header@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/middleware-host-header/-/middleware-host-header-3.278.0.tgz#d941a952d3f26453a4fff5939951e4bf99d7ce65"
+  integrity sha512-oTkF3exy89KE8NgSeXFwD+0H0GRKL2qUw92t3caEj7+4KzU/0m3t7NtKlq2NLRtTJhZ/izYRpV536oogLzGm3g==
   dependencies:
     "@aws-sdk/protocol-http" "3.272.0"
     "@aws-sdk/types" "3.272.0"
@@ -574,12 +574,12 @@
     "@aws-sdk/types" "3.272.0"
     tslib "^2.3.1"
 
-"@aws-sdk/token-providers@3.272.0":
-  version "3.272.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/token-providers/-/token-providers-3.272.0.tgz#9a6a0347a8417be4cd1930eac37ca1fb3e9da5b4"
-  integrity sha512-0GISJ4IKN2rXvbSddB775VjBGSKhYIGQnAdMqbvxi9LB6pSvVxcH9aIL28G0spiuL+dy3yGQZ8RlJPAyP9JW9A==
+"@aws-sdk/token-providers@3.278.0":
+  version "3.278.0"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/token-providers/-/token-providers-3.278.0.tgz#521f4c3178d3aa6925cba59bb64b38fa21da7e52"
+  integrity sha512-OgDLPnwRZ+yk1tssrYMDiApMc+E0n9qSmbVa5etRfCkXQSrFx/4LCqvW2g4XfDufHpVdXiedoRUV97SvklzDLg==
   dependencies:
-    "@aws-sdk/client-sso-oidc" "3.272.0"
+    "@aws-sdk/client-sso-oidc" "3.278.0"
     "@aws-sdk/property-provider" "3.272.0"
     "@aws-sdk/shared-ini-file-loader" "3.272.0"
     "@aws-sdk/types" "3.272.0"
@@ -841,14 +841,14 @@
   integrity sha512-8czAa/Mh96wu2xr0RXQEGMTBUGkTvYn/Pb0o+gqOO1YW+poXGQc3gx0YPqILDryP/KCERrNvkWUJz3iGbvwC2A==
 
 "@cspell/dict-companies@^3.0.6":
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-companies/-/dict-companies-3.0.6.tgz#59d016afcdb27a4a88749a56475bf790ec175dc0"
-  integrity sha512-6rWuwZxPisn/MP41DzBtChVgbz9b6HSjBH3X0s3k7zlBaxrw6xFAZGKH9KGFSPTiV+WD9j+IIn2/ITXERGjNLA==
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-companies/-/dict-companies-3.0.8.tgz#3fcbdb0dc9026195abd47a14135338f5547f17d0"
+  integrity sha512-tQPpkxgog+7xGN3dA9p2Hd4O95+hFYfJuHeY9GgxNahBQyq3bv0REAc6xlqdtkIpfV2ga93B0l37mQr1p107Iw==
 
 "@cspell/dict-cpp@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-cpp/-/dict-cpp-4.0.2.tgz#ca41ccba8cb7399abae2c7a7ba0c2dd432b9d23a"
-  integrity sha512-Wi/ZUPoGaqvxeyaAdMtXFtfc3mZ4bw5nKYZrVHCsMzyGTC6IXL9Xp6KbwU0zEJXyNvvmRP5zd+Q4RnMf4abgCg==
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-cpp/-/dict-cpp-4.0.3.tgz#5479e0a6477af9b1f6d0930e3f2f6025daf62cac"
+  integrity sha512-gbXY9cUgRpb5mpw19VBy+YNUqNMlT5Dj70d8V1yIFbqPVHxccmxwdU4rlNaRyYrC41kDZwxmG7QQwcng6FdGcg==
 
 "@cspell/dict-cryptocurrencies@^3.0.1":
   version "3.0.1"
@@ -861,34 +861,34 @@
   integrity sha512-1JMofhLK+4p4KairF75D3A924m5ERMgd1GvzhwK2geuYgd2ZKuGW72gvXpIV7aGf52E3Uu1kDXxxGAiZ5uVG7g==
 
 "@cspell/dict-css@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-css/-/dict-css-4.0.3.tgz#186c1f841b1ff882bb6b51599644a6e0882f15f9"
-  integrity sha512-sLhutH5hlhPGuOtObR3Q0qezywuwREIcyTeERQw14kizYA3jA/J8YxSPcX2r9TsNFPHY85NAMyrH6Q38iyBGbw==
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-css/-/dict-css-4.0.5.tgz#2233138a03c163f82b0f6fbe0cdd2aada3ca4afc"
+  integrity sha512-z5vw8nJSyKd6d3i5UmMNoVcAp0wxvs9OHWOmAeJKT9fO3tok02gK24VZhcJ0NJtiKdHQ2zRuzdfWl51wdAiY6A==
 
 "@cspell/dict-dart@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-dart/-/dict-dart-2.0.1.tgz#7edec0250f814eff7bf4a40b6fb4d2b4ce41af8c"
-  integrity sha512-YRuDX9k2qPSWDEsM26j8o7KMvaZ0DXc74ijK/VRwaksm1CBRPBW289pe2TE2K7y4SJjTKXgQ9urOVlozeQDpuA==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-dart/-/dict-dart-2.0.2.tgz#714285f4f8bd304c1c477779ccbbfae5949819d7"
+  integrity sha512-jigcODm7Z4IFZ4vParwwP3IT0fIgRq/9VoxkXfrxBMsLBGGM2QltHBj7pl+joX+c4cOHxfyZktGJK1B1wFtR4Q==
 
 "@cspell/dict-django@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-django/-/dict-django-4.0.1.tgz#97009b98bb1bef56a022416b08da8f523d1a4ab6"
-  integrity sha512-q3l7OH39qzeN2Y64jpY39SEAqki5BUzPTypnhzM40yT+LOGSWqSh9Ix5UecejtXPDVrD8vML+m7Bp5070h52HQ==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-django/-/dict-django-4.0.2.tgz#08d21ee3ce7e323e4d7634abf6d69a96a6d4930c"
+  integrity sha512-L0Yw6+Yh2bE9/FAMG4gy9m752G4V8HEBjEAGeRIQ9qvxDLR9yD6dPOtgEFTjv7SWlKSrLb9wA/W3Q2GKCOusSg==
 
 "@cspell/dict-docker@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-docker/-/dict-docker-1.1.5.tgz#925a0c5c3c888038acfc0785e363d32aee05d524"
-  integrity sha512-SNEohOScQ+0+y9dp/jKTx60OOJQrf5es5BJ32gh5Ck3jKXNo4wd9KLgPOmQMUpencb5SGjrBsC4rr1fyfCwytg==
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-docker/-/dict-docker-1.1.6.tgz#f84faed121e2093e3b212d19542fd27eda751c80"
+  integrity sha512-zCCiRTZ6EOQpBnSOm0/3rnKW1kCcAUDUA7SxJG3SuH6iZvKi3I8FEg8+O83WQUeXg0SyPNerD9F40JLnnJjJig==
 
 "@cspell/dict-dotnet@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-dotnet/-/dict-dotnet-4.0.1.tgz#41fa41c75c157d0097b35767fa92234e381549b6"
-  integrity sha512-l11TqlUX8cDgsE/1Zrea1PqLn63s20MY3jKWMbQVB5DMDPDO2f8Pukckkwxq5p/cxDABEjuGzfF1kTX3pAakBw==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-dotnet/-/dict-dotnet-4.0.2.tgz#f066040c88efc3a4419fb8844427430d44f970b3"
+  integrity sha512-Cu+Ob142tBQ2cYrpK/d3tjm/FvNXQXwdUShRIPKx03HbtUk9BoTdeFY5bX+Zz7GeV66OJCMrmpFANrtKpB8NTg==
 
 "@cspell/dict-elixir@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-elixir/-/dict-elixir-4.0.1.tgz#dca91412eb0026cb76cc56f9677602558f6caa78"
-  integrity sha512-IejBqiTTWSXpvBm6yg4qUfnJR0LwbUUCJcK5wXOMKEJitu3yDfrT9GPc6NQJXgokbg9nBjEyxVIzNcLgx2x3/Q==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-elixir/-/dict-elixir-4.0.2.tgz#1a37e92b45d744e1b78714c64811ca3dbc600a5c"
+  integrity sha512-/YeHlpZ1pE9VAyxp3V0xyUPapNyC61WwFuw2RByeoMqqYaIfS3Hw+JxtimOsAKVhUvgUH58zyKl5K5Q6FqgCpw==
 
 "@cspell/dict-en-common-misspellings@^1.0.2":
   version "1.0.2"
@@ -901,9 +901,9 @@
   integrity sha512-tKSSUf9BJEV+GJQAYGw5e+ouhEe2ZXE620S7BLKe3ZmpnjlNG9JqlnaBhkIMxKnNFkLY2BP/EARzw31AZnOv4g==
 
 "@cspell/dict-en_us@^4.2.2":
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-en_us/-/dict-en_us-4.2.2.tgz#3500bfea44b64a7c7ac4b24d4a695f4fa3fce668"
-  integrity sha512-NSlvE6bIkgRRlBkfltiwREu2NYT4PrLmpdi9zSeWuUMlGB+0wUGAal3B7zKC1pirhueH20W6to0lPdnEWaqa8Q==
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-en_us/-/dict-en_us-4.2.3.tgz#899f4d2b7136e42b2dd0e69ef75268acc1b13d39"
+  integrity sha512-6P6Jh2c5hf5w/dnmCIAu4Pd1WbBGm6NvHF4tuAaCN2raNPpj7Xvym6tPY+AoBhBQykBOZJ5o7cf7ozA65+Jskg==
 
 "@cspell/dict-filetypes@^3.0.0":
   version "3.0.0"
@@ -911,14 +911,14 @@
   integrity sha512-Fiyp0z5uWaK0d2TfR9GMUGDKmUMAsOhGD5A0kHoqnNGswL2iw0KB0mFBONEquxU65fEnQv4R+jdM2d9oucujuA==
 
 "@cspell/dict-fonts@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-fonts/-/dict-fonts-3.0.0.tgz#af2755305fbd62fb55a8515989a29f6e58aff9c9"
-  integrity sha512-zTZni0AbwBVG1MKA0WpwPyIJPVF+gp6neXDQzHcu4RUnuQ4uDu0PVEuZjGHCJWwwFoR5JmkqZxVSg1y3ufJODA==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-fonts/-/dict-fonts-3.0.1.tgz#0e0b875d463a9bd65e78145c9b6649ecad017df5"
+  integrity sha512-o2zVFKT3KcIBo88xlWhG4yOD0XQDjP7guc7C30ZZcSN8YCwaNc1nGoxU3QRea8iKcwk3cXH0G53nrQur7g9DjQ==
 
 "@cspell/dict-fullstack@^3.1.1":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-fullstack/-/dict-fullstack-3.1.2.tgz#6b9867779a527f000c7e97837e391699f7606998"
-  integrity sha512-Xw9DkEGGxI/6Wce1sThnuiO2JDjRxMQle1EOxVPf7mpsLjVHermKhSysK70ujxB2jc93rhY9ar2+5xlizapxig==
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-fullstack/-/dict-fullstack-3.1.4.tgz#930a66a1397f463c807e54dd01b0c79ec3f7fc21"
+  integrity sha512-OnCIn3GgAhdhsU6xMYes7/WXnbV6R/5k/zRAu/d+WZP4Ltf48z7oFfNFjHXH6b8ZwnMhpekLAnCeIfT5dcxRqw==
 
 "@cspell/dict-gaming-terms@^1.0.4":
   version "1.0.4"
@@ -931,9 +931,9 @@
   integrity sha512-n1AxyX5Kgxij/sZFkxFJlzn3K9y/sCcgVPg/vz4WNJ4K9YeTsUmyGLA2OQI7d10GJeiuAo2AP1iZf2A8j9aj2w==
 
 "@cspell/dict-golang@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-golang/-/dict-golang-5.0.1.tgz#1da6d02500fea7d404f087147d962a7e92deb7ec"
-  integrity sha512-djsJC7OVKUpFdRm/aqBJEUSGP3kw/MDhAt7udYegnyQt2WjL3ZnVoG7r5eOEhPEEKzWVBYoi6UKSNpdQEodlbg==
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-golang/-/dict-golang-5.0.2.tgz#3c2c36fbe84f8b83424e06809f0dff76bdf07aaa"
+  integrity sha512-TNOQzsiLv4I56w5188OnJW+2ttjekoBl8IyPpI25GeV3dky4d+TX5pujayvcKQ+SM8vV8u2lpQpvyr4YePhiQg==
 
 "@cspell/dict-haskell@^4.0.1":
   version "4.0.1"
@@ -946,19 +946,19 @@
   integrity sha512-HGRu+48ErJjoweR5IbcixxETRewrBb0uxQBd6xFGcxbEYCX8CnQFTAmKI5xNaIt2PKaZiJH3ijodGSqbKdsxhw==
 
 "@cspell/dict-html@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-html/-/dict-html-4.0.2.tgz#36bf81aea239fc92e277875f249b3d784e7fdeb7"
-  integrity sha512-BskOE2K3AtGLkcjdJmo+H6/fjdfDP4XYAsEGXpB26rvdnXAnGEstE/Q8Do6UfJCvgOVYCpdUZLcMIEpoTy7QhQ==
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-html/-/dict-html-4.0.3.tgz#155450cb57750774583fce463d01d6323ab41701"
+  integrity sha512-Gae8i8rrArT0UyG1I6DHDK62b7Be6QEcBSIeWOm4VIIW1CASkN9B0qFgSVnkmfvnu1Y3H7SSaaEynKjdj3cs8w==
 
 "@cspell/dict-java@^5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-java/-/dict-java-5.0.4.tgz#a5bf80474bbe10966c13701c0eab751ae959d5e7"
-  integrity sha512-43VrLOLcBxavv6eyL4BpsnHrhVOgyYYeJqQRJG5XKObcpWy3+Lpadj58CfTVOr7M/Je3pUpd4tvsUhf/lWXMVA==
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-java/-/dict-java-5.0.5.tgz#c673f27ce7a5d96e205f42e8be540aeda0beef11"
+  integrity sha512-X19AoJgWIBwJBSWGFqSgHaBR/FEykBHTMjL6EqOnhIGEyE9nvuo32tsSHjXNJ230fQxQptEvRZoaldNLtKxsRg==
 
 "@cspell/dict-k8s@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-k8s/-/dict-k8s-1.0.0.tgz#30353cef5a5310b5a6b8549e0a4fa6faf4956b55"
-  integrity sha512-XqIql+nd2DiuPuL+qPc24bN/L1mZY75kAYcuMBMW5iYgBoivkiVOg7br/aofX3ApajvHDln6tNkPZhmhsOg6Ww==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-k8s/-/dict-k8s-1.0.1.tgz#6c0cc521dd42fee2c807368ebfef77137686f3a1"
+  integrity sha512-gc5y4Nm3hVdMZNBZfU2M1AsAmObZsRWjCUk01NFPfGhFBXyVne41T7E62rpnzu5330FV/6b/TnFcPgRmak9lLw==
 
 "@cspell/dict-latex@^3.1.0":
   version "3.1.0"
@@ -971,9 +971,9 @@
   integrity sha512-msEV24qEpzWZs2kcEicqYlhyBpR0amfDkJOs+iffC07si9ftqtQ+yP3lf1VFLpgqw3SQh1M1vtU7RD4sPrNlcQ==
 
 "@cspell/dict-lua@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-lua/-/dict-lua-4.0.0.tgz#5c56f3543ace8951c72e7ff3982917d120a6cd23"
-  integrity sha512-aQPyc/nP67tOlW6ACpio9Q5mZ/Z1hqwXC5rt5tkoQ2GsnCqeyIXDrX0CN+RGK53Lj4P02Jz/dPxs/nX8eDUFsw==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-lua/-/dict-lua-4.0.1.tgz#4c31975646cb2d71f1216c7aeaa0c5ab6994ea25"
+  integrity sha512-j0MFmeCouSoC6EdZTbvGe1sJ9V+ruwKSeF+zRkNNNload7R72Co5kX1haW2xLHGdlq0kqSy1ODRZKdVl0e+7hg==
 
 "@cspell/dict-node@^4.0.2":
   version "4.0.2"
@@ -981,9 +981,9 @@
   integrity sha512-FEQJ4TnMcXEFslqBQkXa5HposMoCGsiBv2ux4IZuIXgadXeHKHUHk60iarWpjhzNzQLyN2GD7NoRMd12bK3Llw==
 
 "@cspell/dict-npm@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-npm/-/dict-npm-5.0.3.tgz#f1118168fb20bf1a3a2e02187dfffb90cd15def5"
-  integrity sha512-fEX67zIJISbS3gXVk/y/ZUvDIVtjc/CYJK7Mz0iTVrmlCKnLiD41lApe8v4g/12eE7hLfx/sfCXDrUWyzXVq1A==
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-npm/-/dict-npm-5.0.5.tgz#fa6c1bc983e34ddc6d97094c758a4e166afd6214"
+  integrity sha512-eirZm4XpJNEcbmLGIwI2qXdRRlCKwEsH9mT3qCUytmbj6S6yn63F+8bShMW/yQBedV7+GXq9Td+cJdqiVutOiA==
 
 "@cspell/dict-php@^3.0.4":
   version "3.0.4"
@@ -991,9 +991,9 @@
   integrity sha512-QX6zE/ZfnT3O5lSwV8EPVh8Va39ds34gSNNR8I4GWiuDpKcTkZPFi4OLoP3Tlhbl/3G0Ha35OkSDLvZfu8mnkA==
 
 "@cspell/dict-powershell@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-powershell/-/dict-powershell-4.0.0.tgz#7d89e7afca056734925c2c847c0095f15bd1dd4e"
-  integrity sha512-1Lbm+3+Sx63atl4MM3lPeCUc90JjRyKP9+exmy2cQimXNju9ngtuDWwapHUnhQ47qnzrsBY4ydm36KCfJarXJA==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-powershell/-/dict-powershell-4.0.2.tgz#d544e7ad9466b96bae49f6dd145eda61c67098a2"
+  integrity sha512-3Wk2Z0fxpewML0zq4a9W5IsPZ0YwvzA8c6ykFdwQ0xcBQc/xRfdb9Z5drYXf9bobck1+MacGrprSeQXrmeByNQ==
 
 "@cspell/dict-public-licenses@^2.0.1":
   version "2.0.1"
@@ -1011,29 +1011,29 @@
   integrity sha512-KCmKaeYMLm2Ip79mlYPc8p+B2uzwBp4KMkzeLd5E6jUlCL93Y5Nvq68wV5fRLDRTf7N1LvofkVFWfDcednFOgA==
 
 "@cspell/dict-ruby@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-ruby/-/dict-ruby-4.0.1.tgz#31adc6cb6f0ca91e7a045a4c1279715b67ff1265"
-  integrity sha512-p9nLDsffPadPLLwdLQj4Gk0IsZ64iCSxnSCaeFXslFiD17FtJVh1YMHP7KE9M73u22Hprq+a1Yw25/xp6Tkt3g==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-ruby/-/dict-ruby-4.0.2.tgz#f94dd18ce21825756f96b4510e1e6dc8cbe45f84"
+  integrity sha512-fCoQHvLhTAetzXCUZMpyoCUPFMiyLHuECIPOiuYW6TGnP2eGV9y4j2J8HAOVtkyxOKUoyK+zZgtrma64yTUMkg==
 
 "@cspell/dict-rust@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-rust/-/dict-rust-4.0.0.tgz#23fb18bb6c97c61b6ba382c8a7c76fae9d12fe92"
-  integrity sha512-nzJsgLR6/JXtM41Cr5FG89r8sBKW6aFjvCqPxeaBJYLAL0JuvsVUcd16rW2lTsdbx5J8yUQDD7mgCZFk6merJQ==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-rust/-/dict-rust-4.0.1.tgz#ef0b88cb3a45265824e2c9ce31b0baa4e1050351"
+  integrity sha512-xJSSzHDK2z6lSVaOmMxl3PTOtfoffaxMo7fTcbZUF+SCJzfKbO6vnN9TCGX2sx1RHFDz66Js6goz6SAZQdOwaw==
 
 "@cspell/dict-scala@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-scala/-/dict-scala-4.0.0.tgz#8901f40a00f801000245e932176e4718cedfb552"
-  integrity sha512-ugdjt66/Ah34yF3u3DUNjCHXnBqIuxUUfdeBobbGxfm29CNgidrISV1NUh+xi8tPynMzSTpGbBiArFBH6on5XQ==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-scala/-/dict-scala-4.0.1.tgz#ed7156ecdfa78b64c8e2477b5b8df075b7a3cef8"
+  integrity sha512-UvdQpAugrCqRC+2wfqJ4FFKpJr+spLrrrAmqdWEgAyZNMz8ib9FkO+yoIQnNFeodzI9xVPN9Hror+MjXbb2soQ==
 
 "@cspell/dict-software-terms@^3.1.3":
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-software-terms/-/dict-software-terms-3.1.3.tgz#c5a8f5b3e60abad934ca40070c435917ef39d035"
-  integrity sha512-gmVR+VgjLGPvUPaF4m1JEv9/mWvKE0bkj5w8nwtijZtAToZ6SKpWM/rkcZOsa691fMyhU6LbIfy4tAZbSSLVYA==
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-software-terms/-/dict-software-terms-3.1.5.tgz#9000ba07df6d868df257ca2438df36a0eb74acc6"
+  integrity sha512-wmkWHHkp2AN9EDWNBLB0VASB5OtsC3KnhoAHxCJzC6AB3xjYoBfKsvgI/o50gfbsCVQceHpqXjOEYSw/xxTKNw==
 
 "@cspell/dict-sql@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-sql/-/dict-sql-2.0.1.tgz#60177b82fb0ddfc0d63b0f6268e33f69627a9347"
-  integrity sha512-7fvVcvy751cl31KMD5j04yMGq2UKj018/1hx3FNtdUI9UuUTMvhBrTAqHEEemR3ZeIC9i/5p5SQjwQ13bn04qw==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-sql/-/dict-sql-2.0.2.tgz#1b23ace554bafb2acd3024bb69aadd0c855ab53e"
+  integrity sha512-XxUoamMFU9OGcDHLY6+pTlQDsqq9wcY7Oc4C55hqmotxFeFaaqinoD1UIAm1yDngRP7fKK4mVPPFmJI6bmspHg==
 
 "@cspell/dict-svelte@^1.0.2":
   version "1.0.2"
@@ -1046,9 +1046,9 @@
   integrity sha512-gxrCMUOndOk7xZFmXNtkCEeroZRnS2VbeaIPiymGRHj5H+qfTAzAKxtv7jJbVA3YYvEzWcVE2oKDP4wcbhIERw==
 
 "@cspell/dict-typescript@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@cspell/dict-typescript/-/dict-typescript-3.1.0.tgz#4b90c1cc01cf64ad1a87d1a38ebbeb23706c5820"
-  integrity sha512-4hdLlQMOYrUbGfJg2cWnbsBUevObwgL76TLVC0rwnrkSwzOxAxiGaG39VtRMvgAAe2lX6L+jka3fy0MmxzFOHw==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@cspell/dict-typescript/-/dict-typescript-3.1.1.tgz#25a9c241fa79c032f907db21b0aaf7c7baee6cc3"
+  integrity sha512-N9vNJZoOXmmrFPR4ir3rGvnqqwmQGgOYoL1+y6D4oIhyr7FhaYiyF/d7QT61RmjZQcATMa6PSL+ZisCeRLx9+A==
 
 "@cspell/dict-vue@^3.0.0":
   version "3.0.0"
@@ -1360,9 +1360,9 @@
     form-data "^3.0.0"
 
 "@types/node@*", "@types/node@^18.0.0":
-  version "18.14.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.0.tgz#94c47b9217bbac49d4a67a967fdcdeed89ebb7d0"
-  integrity sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==
+  version "18.14.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.1.tgz#90dad8476f1e42797c49d6f8b69aaf9f876fc69f"
+  integrity sha512-QH+37Qds3E0eDlReeboBxfHbX9omAcBCXEzswCu6jySP642jiM3cYSIkU/REqwhCUqXdonHFuBfJDiAJxMNhaQ==
 
 "@types/normalize-package-data@^2.4.1":
   version "2.4.1"
@@ -1624,10 +1624,10 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-axios@^1.1.3, axios@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.3.3.tgz#e7011384ba839b885007c9c9fae1ff23dceb295b"
-  integrity sha512-eYq77dYIFS77AQlhzEL937yUBSepBfPIe8FcgEDN35vMNZKMrs81pgnyrQpwfy4NF4b4XWX1Zgx7yX+25w8QJA==
+axios@^1.1.3, axios@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.3.4.tgz#f5760cefd9cfb51fd2481acf88c05f67c4523024"
+  integrity sha512-toYm+Bsyl6VC5wSkfkbbNB6ROv7KY93PEBBL6xyDczaIHasAiv4wPqQ/c4RjoQzipxRD2W5g21cOqQulZ7rHwQ==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
@@ -1768,9 +1768,9 @@ cacheable-lookup@^7.0.0:
   integrity sha512-+qJyx4xiKra8mZrcwhjMRMUhD5NR1R8esPkzIYxX96JiecFoxAXFuz/GpR3+ev4PE1WamHip78wV0vcmPQtp8w==
 
 cacheable-request@^10.2.1:
-  version "10.2.7"
-  resolved "https://registry.yarnpkg.com/cacheable-request/-/cacheable-request-10.2.7.tgz#8bb8da66338f321b3cbbc34a71ac231178171bcc"
-  integrity sha512-I4SA6mKgDxcxVbSt/UmIkb9Ny8qSkg6ReBHtAAXnZHk7KOSx5g3DTiAOaYzcHCs6oOdHn+bip9T48E6tMvK9hw==
+  version "10.2.8"
+  resolved "https://registry.yarnpkg.com/cacheable-request/-/cacheable-request-10.2.8.tgz#899ae6c0c8c7127f263b2005ecaac07c95124079"
+  integrity sha512-IDVO5MJ4LItE6HKFQTqT2ocAQsisOoCTUDu1ddCmnhyiwFQjXNPp4081Xj23N4tO+AFEFNzGuNEf/c8Gwwt15A==
   dependencies:
     "@types/http-cache-semantics" "^4.0.1"
     get-stream "^6.0.1"
@@ -2395,10 +2395,10 @@ discord-xp@^1.1.16:
   dependencies:
     mongoose "^5.11.11"
 
-discord.js@^13.12.0:
-  version "13.12.0"
-  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-13.12.0.tgz#e4839c14a02b1947e063b72f09a49b11336a58f5"
-  integrity sha512-K5qhREsYcTHkEqt7+7LcSoXTeQYZpI+SQRs9ei/FhbhUpirmjqFtN99P8W2mrKUyhhy7WXWm7rnna0AooKtIpw==
+discord.js@^13.13.1:
+  version "13.13.1"
+  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-13.13.1.tgz#084784a357ef9e4578dc264ce41be1504d320127"
+  integrity sha512-4QdeSIGOIeZ25cTOxaPdVqIXz8tN56DetXFAwEkDHX5sDqbsXm9gMaNhfaOwMap3d5mgdC7I78g70I82x5i5lw==
   dependencies:
     "@discordjs/builders" "^0.16.0"
     "@discordjs/collection" "^0.7.0"
@@ -2859,10 +2859,10 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.6:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
 
-fast-xml-parser@4.0.11:
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.0.11.tgz#42332a9aca544520631c8919e6ea871c0185a985"
-  integrity sha512-4aUg3aNRR/WjQAcpceODG1C3x3lFANXRo8+1biqfieHmg9pyMt7qB4lQV/Ta6sJCTbA5vfD8fnA8S54JATiFUA==
+fast-xml-parser@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-4.1.2.tgz#5a98c18238d28a57bbdfa9fe4cda01211fff8f4a"
+  integrity sha512-CDYeykkle1LiA/uqQyNwYpFbyF6Axec6YapmpUP+/RHWIoR1zKjocdvNaTsxCxZzQ6v9MLXaSYm9Qq0thv0DHg==
   dependencies:
     strnum "^1.0.5"
 
@@ -4002,9 +4002,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 lru-cache@^7.5.1:
-  version "7.16.1"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.16.1.tgz#7acea16fecd9ed11430e78443c2bb81a06d3dea9"
-  integrity sha512-9kkuMZHnLH/8qXARvYSjNvq8S1GYFFzynQTAfKeaJ0sIrR3PUPuu37Z+EiIANiZBvpfTf2B5y8ecDLSMWlLv+w==
+  version "7.17.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.17.0.tgz#00c7ba5919e5ea7c69ff94ddabbf32cb09ab805c"
+  integrity sha512-zSxlVVwOabhVyTi6E8gYv2cr6bXK+8ifYz5/uyJb9feXX6NACVDwY4p5Ut3WC3Ivo/QhpARHU3iujx2xGAYHbQ==
 
 make-dir@^3.0.0, make-dir@^3.1.0:
   version "3.1.0"
@@ -4739,9 +4739,9 @@ minipass@^3.0.0:
     yallist "^4.0.0"
 
 minipass@^4.0.0:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/minipass/-/minipass-4.0.3.tgz#00bfbaf1e16e35e804f4aa31a7c1f6b8d9f0ee72"
-  integrity sha512-OW2r4sQ0sI+z5ckEt5c1Tri4xTgZwYDxpE54eqWlQloQRoWtXjqt9udJ5Z4dSv7wK+nfFI7FRXyCpBSft+gpFw==
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-4.2.1.tgz#084031141113657662d40f66f9c2329036892128"
+  integrity sha512-KS4CHIsDfOZetnT+u6fwxyFADXLamtkPxkGScmmtTW//MlRrImV+LtbmbJpLQ86Hw7km/utbfEfndhGBrfwvlA==
 
 minizlib@^2.1.1:
   version "2.1.2"
@@ -4808,9 +4808,9 @@ mongoose@6.8.3:
     sift "16.0.1"
 
 mongoose@^5.11.11:
-  version "5.13.15"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.13.15.tgz#ba2cd0f22c1a5dd9ae15aaf6b10f03c59a4202dd"
-  integrity sha512-cxp1Gbb8yUWkaEbajdhspSaKzAvsIvOtRlYD87GN/P2QEUhpd6bIvebi36T6M0tIVAMauNaK9SPA055N3PwF8Q==
+  version "5.13.16"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.13.16.tgz#df317c87de6762ae5dc0c363aff9f8e357074ebb"
+  integrity sha512-kBNB+BfaQjn3Jjh1SfdZZub70pde9dI0sA8VN6AnnCOeK4TzbLDyB0lBmPBOajppm6U9orde5YfTRyyVa1U45w==
   dependencies:
     "@types/bson" "1.x || 4.0.x"
     "@types/mongodb" "^3.5.27"
@@ -5497,9 +5497,9 @@ read-pkg@^7.1.0:
     type-fest "^2.0.0"
 
 readable-stream@^2.3.5:
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.7.tgz#1eca1cf711aef814c04f62252a36a62f6cb23b57"
-  integrity sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.8.tgz#91125e8042bba1b9887f49345f6277027ce8be9b"
+  integrity sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==
   dependencies:
     core-util-is "~1.0.0"
     inherits "~2.0.3"
@@ -5510,9 +5510,9 @@ readable-stream@^2.3.5:
     util-deprecate "~1.0.1"
 
 readable-stream@^3.0.2, readable-stream@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.6.0.tgz#337bbda3adc0706bd3e024426a286d4b4b2c9198"
-  integrity sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA==
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.6.1.tgz#f9f9b5f536920253b3d26e7660e7da4ccff9bb62"
+  integrity sha512-+rQmrWMYGA90yenhTYsLWAsLsqVC8osOw6PKE1HDYiO0gdPeKe/xDHNzIAIn4C91YQ6oenEhfYqqc1883qHbjQ==
   dependencies:
     inherits "^2.0.3"
     string_decoder "^1.1.1"
