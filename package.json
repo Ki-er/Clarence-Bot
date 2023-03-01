@@ -40,7 +40,7 @@
 		"iso-639-1": "^2.1.15",
 		"jsdom": "^21.1.0",
 		"minecraft-assets": "^1.9.0",
-		"minecraft-data": "^3.28.0",
+		"minecraft-data": "^3.29.0",
 		"mongoose": "6.8.3",
 		"node-movie": "^3.0.0",
 		"openweather-apis": "^4.4.2",
@@ -48,10 +48,10 @@
 		"twemoji-parser": "^14.0.0"
 	},
 	"devDependencies": {
-		"@cspell/cspell-bundled-dicts": "^6.26.3",
+		"@cspell/cspell-bundled-dicts": "^6.27.0",
 		"alex": "^11.0.0",
-		"cspell": "^6.26.3",
-		"eslint": "^8.34.0",
+		"cspell": "^6.27.0",
+		"eslint": "^8.35.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-prettier": "^4.2.1",
