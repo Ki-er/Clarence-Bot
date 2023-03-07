@@ -39,8 +39,8 @@
 		"glob": "^7.2.3",
 		"iso-639-1": "^2.1.15",
 		"jsdom": "^21.1.0",
-		"minecraft-assets": "^1.9.0",
-		"minecraft-data": "^3.29.0",
+		"minecraft-assets": "^1.9.1",
+		"minecraft-data": "^3.30.0",
 		"mongoose": "6.8.3",
 		"node-movie": "^3.0.0",
 		"openweather-apis": "^4.4.2",
@@ -48,17 +48,17 @@
 		"twemoji-parser": "^14.0.0"
 	},
 	"devDependencies": {
-		"@cspell/cspell-bundled-dicts": "^6.27.0",
+		"@cspell/cspell-bundled-dicts": "^6.28.0",
 		"alex": "^11.0.0",
-		"cspell": "^6.27.0",
+		"cspell": "^6.28.0",
 		"eslint": "^8.35.0",
-		"eslint-config-prettier": "^8.6.0",
+		"eslint-config-prettier": "^8.7.0",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-sort-requires-by-path": "^1.0.2",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.1.2",
-		"nodemon": "^2.0.20",
+		"nodemon": "^2.0.21",
 		"prettier": "^2.8.4"
 	}
 }
