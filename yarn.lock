@@ -4851,7 +4851,7 @@ minecraft-assets@^1.9.1:
   resolved "https://registry.yarnpkg.com/minecraft-assets/-/minecraft-assets-1.9.1.tgz#36515314c3371f740226d55d3f104f684a81fc92"
   integrity sha512-vYKN5fhMilPafH0CnmYQBCP8zW0Fn3FVvPM25w7HC2PiXZQsP/p3Yl5QdCKjgqTk1LddNdmrw4notNoE6exVRQ==
 
-minecraft-data@^3.40.0:
+minecraft-data@^3.39.0:
   version "3.40.0"
   resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.40.0.tgz#348503b91c141fdb9a55b3aa59ed34cee733c1c1"
   integrity sha512-mBbMWdbi3+NwZHrLRQgblUsQ5vFjTXDsIy2mRMCcBfkQ+BeQEkXEffLq4bC5dMdMLMeNfdMFsRTLy+h7SF24+Q==

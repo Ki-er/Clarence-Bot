@@ -1,40 +1,63 @@
 require('dotenv').config();
+const { SlashCommandBuilder } = require('@discordjs/builders');
 const axios = require('axios');
-const { SlashCommandBuilder } = require('discord.js');
-const SHORTURL_API_KEY = process.env.SHORTURL_API_KEY;
 
 module.exports = {
-	data: new SlashCommandBuilder()
+	...new SlashCommandBuilder()
 		.setName('linkshorten')
 		.setDescription('Shorten links!')
 		.addStringOption((option) =>
 			option
-				.setName('link')
+				.setName('inputlink')
 				.setDescription(
 					'The destination URL you want your branded short link to point to'
 				)
 				.setRequired(true)
 		),
-	async execute(interaction) {
-		await interaction.deferReply();
-		const link = interaction.options.getString('link');
-		const url = 'https://url-link-shortener.p.rapidapi.com/v1/links/new';
-		const headers = {
-			'X-RapidAPI-Key': SHORTURL_API_KEY,
-			'X-RapidAPI-Host': 'url-link-shortener.p.rapidapi.com',
+
+	/**
+	 *
+	 * @param {Client} client
+	 * @param {CommandInteraction} interaction
+	 * @param {String[]} args
+	 */
+
+	run: async (client, interaction) => {
+		const SHORTURL_API_KEY = process.env.SHORTURL_API_KEY;
+
+		await interaction.deferReply({
+			ephemeral: true,
+		});
+
+		const link = interaction.options.getString('inputlink');
+
+		const encodedParams = new URLSearchParams();
+		encodedParams.set('url', link);
+
+		const options = {
+			method: 'POST',
+			url: 'https://url-shortener-service.p.rapidapi.com/shorten',
+			headers: {
+				'content-type': 'application/x-www-form-urlencoded',
+				'X-RapidAPI-Key': SHORTURL_API_KEY,
+				'X-RapidAPI-Host': 'url-shortener-service.p.rapidapi.com',
+			},
+			data: encodedParams,
 		};
-		const params = {
-			destination: link,
-		};
+
 		try {
-			const response = await axios.get(url, { headers, params });
-			const shortenedLink = response.data.result_url;
-			await interaction.editReply(
-				`Here's your shortened link: ${shortenedLink}`
-			);
+			const response = await axios.request(options);
+			console.log(response.data);
+
+			interaction.editReply({
+				content: `Your shortened url is ${response.data.result_url}`,
+				ephemeral: true,
+			});
 		} catch (error) {
-			console.error(error);
-			await interaction.editReply('Failed to shorten given link!');
+			interaction.editReply({
+				content: `There was an error \n\n ${error}`,
+				ephemeral: true,
+			});
 		}
 	},
 };
