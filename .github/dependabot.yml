@@ -9,11 +9,11 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
-      time: '00:01'
+      time: '07:00'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       # Check for updates to GitHub Actions every week
-      interval: 'daily'
-      time: '00:01'
+      interval: 'weekly'
+      time: '07:00'
