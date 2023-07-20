@@ -32,7 +32,7 @@
 		"@iamtraction/google-translate": "^2.0.1",
 		"axios": "^1.4.0",
 		"canvas": "^2.11.2",
-		"discord-api-types": "^0.37.49",
+		"discord-api-types": "^0.37.50",
 		"discord-xp": "^1.1.16",
 		"discord.js": "^13.16.0",
 		"dotenv": "^16.3.1",
