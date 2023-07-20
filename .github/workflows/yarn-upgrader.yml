@@ -36,5 +36,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: update/yarn-upgrade
-          title: 'chore(deps): Upgrade dependencies'
-          commit-message: 'chore(deps): Run yarn upgrade'
+          title: 'chore(deps): Bump yarn dependencies'
+          commit-message: 'chore(deps): Bump yarn dependencies'
+          labels: 'dependencies', 'javascript'
