@@ -1,11 +1,12 @@
-name: 'Check Spelling'
-on: # rebuild any PRs and main branch changes
-  pull_request:
-  push:
-
+name: Check Spelling
+on:
+  pull_request: null
+  push: null
 jobs:
-  spellcheck: # run the action
+  spellcheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.5.3
       - uses: streetsidesoftware/cspell-action@v2.26.2
+words:
+  - browniebroke
