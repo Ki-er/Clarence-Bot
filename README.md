@@ -30,7 +30,7 @@ This bot features multiple command types from:
 
 Due to the [Publish.yml](.github/workflows/publish.yml) workflow, the newest build will automatically be pushed to DockerHub.
 
-Using a tool like [Ourobros](https://github.com/gmt2001/ouroboros), you can automatically update containers without the need for restarts.
+Using a tool like [Ouroboros](https://github.com/gmt2001/ouroboros), you can automatically update containers without the need for restarts.
 
 ```console
 docker run -d \
