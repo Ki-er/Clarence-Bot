@@ -7,8 +7,8 @@
 Clarence is a multipurpose discord bot with admin, fun and information commands
 
 <img src="https://img.shields.io/github/actions/workflow/status/KieranRobson/Clarence-Bot/lint.yml?style=for-the-badge"> 
-<img src="https://img.shields.io/badge/Discord.JS-13.12.0-blue?style=for-the-badge&logo=DISCORD" /> 
-<img src="https://img.shields.io/badge/Node%20Version-16.17.1-brightgreen?style=for-the-badge&logo=Node.js"> 
+<img src="https://img.shields.io/badge/Discord.JS-13.16.0-blue?style=for-the-badge&logo=DISCORD" /> 
+<img src="https://img.shields.io/badge/Node%20Version-19.3.0-brightgreen?style=for-the-badge&logo=Node.js"> 
 <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge">
 </div align="center">
 
@@ -20,7 +20,6 @@ This bot features multiple command types from:
 - Fun
 - General
 - Info
-- Rainbow Six Siege
 
 ---
 
@@ -39,6 +38,7 @@ docker run -d \
 -e DISCORD_TOKEN='INSERT DISCORD TOKEN' \
 -e MONGOOSE='INSERT MONGODB URL' \
 -e OPEN_WEATHERS_API='INSERT OPENWEATHER API KEY' \
+-e SHORTURL_API_KEY ='INSERT SHORTURL API KEY' \
 -e PREFIX='-' \
 --restart unless-stopped \
 kieranr27/clarence:latest

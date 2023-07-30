@@ -1,16 +1,16 @@
+const lyricssearchermusixmatch = require('lyrics-searcher-musixmatch').default;
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const lyricssearchermusixmatch = require('lyrics-searcher-musixmatch').default
 
 module.exports = {
 	...new SlashCommandBuilder()
 		.setName('lyrics')
 		.setDescription('Search lyrics')
-        .addStringOption((option) =>
-        option
-            .setName('song')
-            .setDescription('song which you want lyrics')
-            .setRequired(true)
-        ),
+		.addStringOption((option) =>
+			option
+				.setName('song')
+				.setDescription('song which you want lyrics')
+				.setRequired(true)
+		),
 
 	/**
 	 *
@@ -24,14 +24,14 @@ module.exports = {
 		await interaction.deferReply({
 			ephemeral: true,
 		});
-		
-        let outputLyrics = lyricssearchermusixmatch(`${song}`)
-        .then((lyrics) => console.log(lyrics))
-        .catch(console.warn)
+
+		const outputLyrics = lyricssearchermusixmatch(`${song}`)
+			.then((lyrics) => console.log(lyrics))
+			.catch(console.warn);
 
 		interaction.editReply({
 			content: `${outputLyrics}`,
 			ephemeral: true,
 		});
-	}
+	},
 };

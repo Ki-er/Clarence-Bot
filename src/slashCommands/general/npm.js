@@ -1,6 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
-const  npm = require("npm-stats-api");
+const npm = require('npm-stats-api');
 
 module.exports = {
 	...new SlashCommandBuilder()
@@ -21,25 +20,31 @@ module.exports = {
 	 */
 	run: async (client, interaction) => {
 		const inputPackage = interaction.options.getString('package');
-  
-        let date_today = new Date();
 
-        let firstDay = new Date(date_today.getFullYear(), date_today.getMonth()-1);
-        let lastDay = new Date(date_today.getFullYear(), date_today.getMonth()-1);
+		const date_today = new Date();
 
-        let firstMonth = firstDay.toISOString().split('T')[0];
-        let lastMonth = lastDay.toISOString().split('T')[0];
-                
-        const res = await npm.stat(`${inputPackage}`, `${firstMonth}`, `${lastMonth}`);
+		const firstDay = new Date(
+			date_today.getFullYear(),
+			date_today.getMonth() - 1
+		);
+		const lastDay = new Date(
+			date_today.getFullYear(),
+			date_today.getMonth() - 1
+		);
 
-		interaction.reply({
-			content: `Added  ${createEmoji} - ${createEmoji.name} to the server`,
-		});
-		
+		const firstMonth = firstDay.toISOString().split('T')[0];
+		const lastMonth = lastDay.toISOString().split('T')[0];
+
+		const res = await npm.stat(
+			`${inputPackage}`,
+			`${firstMonth}`,
+			`${lastMonth}`
+		);
+
 		interaction.reply({
 			content: ':x: Not a valid emoji',
 			ephemeral: true,
 		});
-        console.log(res);
+		console.log(res);
 	},
 };
