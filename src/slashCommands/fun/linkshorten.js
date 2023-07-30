@@ -23,7 +23,7 @@ module.exports = {
 	 */
 
 	run: async (client, interaction) => {
-		const SHORTURL_API_KEY = process.env.SHORTURL_API_KEY;
+		const RAPID_API = process.env.RAPID_API;
 
 		await interaction.deferReply({
 			ephemeral: true,
@@ -39,7 +39,7 @@ module.exports = {
 			url: 'https://url-shortener-service.p.rapidapi.com/shorten',
 			headers: {
 				'content-type': 'application/x-www-form-urlencoded',
-				'X-RapidAPI-Key': SHORTURL_API_KEY,
+				'X-RapidAPI-Key': RAPID_API,
 				'X-RapidAPI-Host': 'url-shortener-service.p.rapidapi.com',
 			},
 			data: encodedParams,
