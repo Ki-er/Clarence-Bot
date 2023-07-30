@@ -15,15 +15,15 @@ module.exports = {
 					{ name: 'Aries', value: 'aries' },
 					{ name: 'Taurus', value: 'taurus' },
 					{ name: 'Gemini', value: 'gemini' },
-                    { name: 'Cancer', value: 'cancer' },
+					{ name: 'Cancer', value: 'cancer' },
 					{ name: 'Leo', value: 'leo' },
 					{ name: 'Virgo', value: 'virgo' },
 					{ name: 'Libra', value: 'libra' },
 					{ name: 'Scorpio', value: 'scorpio' },
 					{ name: 'Sagittarius', value: 'sagittarius' },
 					{ name: 'Capricorn', value: 'capricorn' },
-                    { name: 'Aquarius', value: 'aquarius' },
-                    { name: 'Pisces', value: 'pisces' },
+					{ name: 'Aquarius', value: 'aquarius' },
+					{ name: 'Pisces', value: 'pisces' }
 				)
 		),
 
@@ -37,21 +37,20 @@ module.exports = {
 	run: async (client, interaction) => {
 		const signInputted = interaction.options.getString('sign');
 
-
 		const RAPID_API = process.env.RAPID_API;
 
 		await interaction.deferReply({
 			ephemeral: true,
 		});
 
-        const options = {
-            method: 'GET',
-            url: `https://horoscopes-ai.p.rapidapi.com/get_horoscope_en/${signInputted}/today/general`,
-            headers: {
-              'X-RapidAPI-Key': RAPID_API,
-              'X-RapidAPI-Host': 'horoscopes-ai.p.rapidapi.com'
-            }
-          };
+		const options = {
+			method: 'GET',
+			url: `https://horoscopes-ai.p.rapidapi.com/get_horoscope_en/${signInputted}/today/general`,
+			headers: {
+				'X-RapidAPI-Key': RAPID_API,
+				'X-RapidAPI-Host': 'horoscopes-ai.p.rapidapi.com',
+			},
+		};
 
 		try {
 			const response = await axios.request(options);
@@ -59,7 +58,7 @@ module.exports = {
 
 			interaction.editReply({
 				content: `Your horoscope for the day is: \n\n ${response.data.general}`,
-            });
+			});
 		} catch (error) {
 			interaction.editReply({
 				content: `There was an error \n\n ${error}`,
