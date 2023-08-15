@@ -23,6 +23,8 @@ Levels.setURL(mongooseConnectionString);
 
 let isXpSystemOn = true;
 
+mongoose.set('strictQuery', false);
+
 mongoose
 	.connect(mongooseConnectionString, {
 		useNewUrlParser: true,

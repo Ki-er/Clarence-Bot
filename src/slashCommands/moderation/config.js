@@ -11,12 +11,14 @@ module.exports = {
 			option
 				.setName('welcomechannel')
 				.setDescription('Welcome channel')
+				.addChannelTypes(ChannelType.GuildText)
 				.setRequired(true)
 		)
 		.addChannelOption((option) =>
 			option
 				.setName('suggestionchannel')
 				.setDescription('Suggestion channel')
+				.addChannelTypes(ChannelType.GuildText)
 				.setRequired(true)
 		)
 		.addChannelOption((option) =>
@@ -56,5 +58,6 @@ module.exports = {
 		);
 
 		interaction.reply({ content: `Configuration added`, ephemeral: true });
+		console.log(`[NEW CONFIG]: ${interaction.guild.name}`)
 	},
 };
