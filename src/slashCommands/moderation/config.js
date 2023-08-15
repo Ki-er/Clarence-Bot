@@ -58,6 +58,6 @@ module.exports = {
 		);
 
 		interaction.reply({ content: `Configuration added`, ephemeral: true });
-		console.log(`[NEW CONFIG]: ${interaction.guild.name}`)
+		console.log(`[NEW CONFIG]: ${interaction.guild.name}`);
 	},
 };
