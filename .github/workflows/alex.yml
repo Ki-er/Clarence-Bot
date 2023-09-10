@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-node@v3.8.1
         with:
           node-version: 12.x
-      
+
         if: ${{ github.actor != 'dependabot[bot]' || 'github-actions[bot]' }}
       - name: Comment on new PR
         uses: brown-ccv/alex-recommends@v1.2.1
