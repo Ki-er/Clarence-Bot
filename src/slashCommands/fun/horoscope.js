@@ -55,7 +55,7 @@ module.exports = {
 		try {
 			const response = await axios.request(options);
 			console.log(response.data);
-
+			
 			interaction.editReply({
 				content: `Your horoscope for the day is: \n\n ${response.data.general}`,
 			});
