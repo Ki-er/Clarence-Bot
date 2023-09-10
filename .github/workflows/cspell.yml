@@ -6,5 +6,5 @@ jobs:
   spellcheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.3
-      - uses: streetsidesoftware/cspell-action@v2.26.3
+      - uses: actions/checkout@v3.6.0
+      - uses: streetsidesoftware/cspell-action@v3.1.0
