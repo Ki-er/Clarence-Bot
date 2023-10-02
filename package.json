@@ -30,9 +30,9 @@
 	"dependencies": {
 		"@discordjs/builders": "^1.6.5",
 		"@iamtraction/google-translate": "^2.0.1",
-		"axios": "^1.5.0",
+		"axios": "^1.5.1",
 		"canvas": "^2.11.2",
-		"discord-api-types": "^0.37.57",
+		"discord-api-types": "^0.37.58",
 		"discord-xp": "^1.1.16",
 		"discord.js": "^13.16.0",
 		"dotenv": "^16.3.1",
