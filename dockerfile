@@ -1,11 +1,7 @@
 FROM node:21.5.0
-
-WORKDIR /usr/clarence/
-
-COPY --chown=node:node . .
-
- RUN yarn install --ignore-engines
- 
-RUN apt-get update -y && apt-get install --no-install-recommends -y curl
-
+RUN mkdir -p ~/clarence/src
+WORKDIR ~/clarence/src
+COPY package.json ~/clarence/src
+RUN yarn install
+COPY . ~/clarence/src
 CMD ["node", "src/index.js"]
