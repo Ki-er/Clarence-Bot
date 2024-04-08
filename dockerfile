@@ -1,4 +1,4 @@
-FROM node:20.4.0
+FROM node:21.7.2
 RUN mkdir -p /usr/clarence/src
 WORKDIR /usr/clarence/src
 COPY package.json /usr/clarence/src
