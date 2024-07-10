@@ -1,11 +1,7 @@
-FROM node:21.5.0
-
-WORKDIR /usr/clarence/
-
-COPY --chown=node:node . .
-
-RUN yarn --verbose install
-
-RUN apt-get update -y && apt-get install --no-install-recommends -y curl
-
+FROM node:22.3.0
+RUN mkdir -p /usr/clarence/src
+WORKDIR /usr/clarence/src
+COPY package.json /usr/clarence/src
+RUN yarn install --verbose --network-timeout=300000
+COPY . /usr/clarence/src
 CMD ["node", "src/index.js"]

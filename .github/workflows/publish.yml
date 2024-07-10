@@ -1,25 +1,56 @@
-name: Publish Docker Image
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Publish Docker image
 
 on:
   push:
     branches:
-      - 'master'
+      - master
 
 jobs:
-  docker:
+  push_to_registries:
+    name: Push Docker image to multiple registries
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
     steps:
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3.0.0
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3.0.0
-      - name: Login to DockerHub
-        uses: docker/login-action@v3.0.0
+      - name: Check out the repo
+        uses: actions/checkout@v4.1.7
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.TOKEN }}
-      - name: Build and push
-        uses: docker/build-push-action@v5.1.0
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446
         with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81
+        with:
+          images: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/clarence
+            ghcr.io/${{ github.repository }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3.3.0
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@31159d49c0d4756269a0940a750801a1ea5d7003
+        with:
+          context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clarence:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          platforms: linux/amd64,linux/arm64
