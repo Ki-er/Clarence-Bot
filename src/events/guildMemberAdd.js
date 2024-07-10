@@ -1,6 +1,5 @@
 const client = require('../index');
 const guildSchema = require('../schemas/guild-schema');
-const { MessageAttachment } = require('discord.js');
 
 client.on('guildMemberAdd', async (guildmember) => {
 	const data = await guildSchema.findById(guildmember.guild.id);
@@ -10,6 +9,6 @@ client.on('guildMemberAdd', async (guildmember) => {
 	);
 
 	welcomechannel.send({
-		content: `<:hi:858281121611513897> Welcome! **${guildmember.user}** has just joined the server!`
+		content: `<:hi:858281121611513897> Welcome! **${guildmember.user}** has just joined the server!`,
 	});
 });
