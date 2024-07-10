@@ -30,7 +30,7 @@
 	"dependencies": {
 		"@discordjs/builders": "^1.7.0",
 		"@iamtraction/google-translate": "^2.0.1",
-		"axios": "^1.6.2",
+		"axios": "^1.6.3",
 		"discord-api-types": "^0.37.65",
 		"discord-xp": "^1.1.16",
 		"discord.js": "^13.17.1",
