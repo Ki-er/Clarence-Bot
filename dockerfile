@@ -2,6 +2,6 @@ FROM node:20.12.0
 RUN mkdir -p /usr/clarence/src
 WORKDIR /usr/clarence/src
 COPY package.json /usr/clarence/src
-RUN yarn install --verbose --network-timeout=300000
+RUN yarn install
 COPY . /usr/clarence/src
 CMD ["node", "src/index.js"]
