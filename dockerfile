@@ -7,7 +7,7 @@ WORKDIR /clarence
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
 COPY package*.json ./
-RUN yarn ci
+RUN yarn format
 
 # Bundle app source
 COPY . ./src
