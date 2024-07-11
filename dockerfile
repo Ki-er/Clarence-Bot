@@ -1,7 +1,19 @@
-FROM node:20.12.0
-RUN mkdir -p /usr/clarence/src
-WORKDIR /usr/clarence/src
-COPY package.json /usr/clarence/src
-RUN yarn install
-COPY . /usr/clarence/src
-CMD ["node", "src/index.js"]
+FROM node:19
+
+RUN mkdir -p /clarence
+WORKDIR /clarence
+
+# Install app production dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+RUN yarn ci --omit=dev
+
+# Bundle app source
+COPY . ./
+
+# Optional API/Backend port
+EXPOSE 3000
+
+# Run the start command
+CMD [ "yarn", "run", "start" ]
