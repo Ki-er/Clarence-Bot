@@ -10,7 +10,7 @@ COPY package*.json ./
 
 # Bundle app source
 COPY . ./src
-RUN yarn Install
+RUN yarn
 
 # Run the start command
 CMD [ "node ." ]
