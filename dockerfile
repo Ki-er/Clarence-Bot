@@ -15,4 +15,4 @@ COPY . ./src
 EXPOSE 3000
 
 # Run the start command
-CMD [ "yarn", "run", "start" ]
+CMD [ "node", "." ]
