@@ -10,7 +10,9 @@ COPY package*.json ./
 
 # Bundle app source
 COPY . ./src
-RUN yarn
+
+# Optional API/Backend port
+EXPOSE 3000
 
 # Run the start command
-CMD [ "node ." ]
+CMD [ "yarn", "run", "start" ]
