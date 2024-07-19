@@ -4,4 +4,4 @@ WORKDIR /usr/clarence/src
 COPY package.json /usr/clarence/src
 RUN yarn install
 COPY . /usr/clarence/src
-CMD ["node", "src/index.js"]
+CMD ["node", "index.js"]
