@@ -55,7 +55,7 @@
 		"cspell": "^6.31.3",
 		"eslint": "^8.57.1",
 		"eslint-config-prettier": "^8.10.0",
-		"eslint-plugin-import": "^2.30.0",
+		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-sort-requires-by-path": "^1.0.2",
 		"husky": "^8.0.3",
