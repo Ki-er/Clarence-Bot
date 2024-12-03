@@ -42,7 +42,7 @@
 		"lyrics-searcher-musixmatch": "https://github.com/Boxy-Boy-Bot/lyrics-searcher-musixmatch.git",
 		"minecraft-assets": "^1.12.2",
 		"minecraft-data": "^3.69.0",
-		"mongoose": "6.11.3",
+		"mongoose": "8.8.3",
 		"node-movie": "^3.0.0",
 		"npm-stats-api": "^1.2.3",
 		"openweather-apis": "^4.5.0",
