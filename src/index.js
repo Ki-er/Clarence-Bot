@@ -21,10 +21,7 @@ const mongooseConnectionString = process.env.MONGOOSE;
 mongoose.set('strictQuery', false);
 
 mongoose
-	.connect(mongooseConnectionString, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	})
+	.connect(mongooseConnectionString)
 	.then(() => {
 		console.log('Connected to db');
 	})
