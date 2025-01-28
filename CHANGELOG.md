@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/Ki-er/Clarence-Bot/compare/v1.0.0...v1.0.1) (2025-01-28)
+
+
+### Bug Fixes
+
+* Remove deprecated mongoose options ([15b11c4](https://github.com/Ki-er/Clarence-Bot/commit/15b11c44c2be58d02b21e23ae62a4de9afe3eb13))
+
 ## 1.0.0 (2023-09-18)
 
 

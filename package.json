@@ -1,6 +1,6 @@
 {
 	"name": "clarence",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A multipurpose bot with admin, fun and information commands",
 	"main": "src/index.js",
 	"author": "Kieran Robson",
